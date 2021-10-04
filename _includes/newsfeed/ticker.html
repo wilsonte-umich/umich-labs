@@ -1,0 +1,9 @@
+<!-- the ticker is the right side panel with current news -->
+<!-- about a currently displayed single item, or the home page  -->
+
+<div class="col-lg-4">
+    <h3>Recent News</h3>
+    {% for post in posts limit:site.max_news_posts %}
+        {% include newsfeed/post-card.html %}
+    {% endfor %}
+</div>

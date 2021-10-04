@@ -1,0 +1,30 @@
+---
+layout: base
+description: Template for homepage
+remark: See also page.layout == 'home' in head.html and jumbotron.html
+---
+
+<div class="row">
+  <div class="col">
+    <div class="row">
+
+      <!-- from home.md -->
+      <div class="col">
+        {{ content }}
+      </div>
+
+      <!-- from _posts -->
+      {% assign posts = site.posts %}
+      {% include newsfeed/ticker.html %}
+    </div>
+
+    <!-- from _projects -->
+    <div class="row cards mt-4">
+    {% for project in site.projects limit:site.projects_on_home %}
+      <div class="col-md-6 col-lg-4">
+        {% include project-card.html %}
+      </div>
+    {% endfor %}
+    </div>
+
+</div>

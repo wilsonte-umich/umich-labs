@@ -1,0 +1,23 @@
+#-------------------------------------------------------------------------------------
+# People are supported by Funding sources, enumerated in the "funding" fields in _data/people.yml
+# Projects are supported by Funding sources, enumerated in the "projects" fields below
+# Publications are associated with Funding sources, enumerated in the "funding" fields in _data/publications.yml
+# Newsfeed posts may report new Funding, connected by the "id" fields below and the "funding_id" fields in Newsfeed posts
+#-------------------------------------------------------------------------------------
+# in addition to information enumerated here, a PI may _optionally_ choose to 
+# have an expanded page of grant information in _funding/<id>.md
+#-------------------------------------------------------------------------------------
+# Funding sources are ordered on the Funding page as follows:
+#   descending by end_date
+#-------------------------------------------------------------------------------------
+
+- id: GM_yeast_DSB # internal identifier used in people.yml, newsfeed posts and other places
+  sponsor_id: GM120767 # the fixed grant number or other identifier from the sponsor; this should never change
+  sponsor_link: https://reporter.nih.gov/search/ZBDA5h93H0qMxITs5aN_uw/projects?shared=true
+  start_date: 2004-08-01 # the intent is to only list funding that was actually committed by the sponsor
+  end_date: 2021-06-30   # but including past funding sources if you'd like a complete list
+  title: Systematic Genetic Analysis of Yeast NHEJ
+  sponsor: NIH NIGMS # who provided the funding
+  grant type: R01
+  description: The goals of this project are to explore with base-pair precision the processing of double-strand break ends during normal and mutagenic nonhomologous end joining and to determine the genomic factors that shape the contribution of these processes to chromosomal translocations. 
+  projects: yeast_DSB # must match file names in _projects, without the ".md" extension

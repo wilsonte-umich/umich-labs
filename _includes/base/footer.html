@@ -1,0 +1,88 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg">
+        <ul class="list-inline">
+
+          <!-- site maintainer email link-->
+          {% if site.email %}
+            <li class="list-inline-item">
+              <a href="mailto:{{ site.email }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          {% endif %}
+
+          <!-- site maintainer twitter link -->
+          {% if site.twitter_username %}
+            <li class="list-inline-item">
+              <a href="https://twitter.com/{{ site.twitter_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          {% endif %}
+
+          <!-- site maintainer github link -->
+          {% if site.github_username %}
+            <li class="list-inline-item">
+              <a href="https://github.com/{{ site.github_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <!-- addtional information columns defined in _data/footer.yml -->
+      {% for col in site.data.footer.columns %}
+      <div class="col-lg">
+        {{ col.description | markdownify }}
+        {% if col.links %}
+          <ul class="fa-ul">
+          {% for item in col.links %}
+            <li>
+              <i class="fa-li fa fa-chevron-circle-right"></i>
+              <a href="{{ item.href | relative_url}}" {% if item.new_window %}target="_blank"{% endif %}>{{ item.text }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- last line of the footer with author and license -->
+    <div class="small mt-2">
+      {% if site.author %}
+        <p>© {{ site.author }}</p>
+      {% endif %}
+      {% if site.data.footer.license %}
+        {{ site.data.footer.license | markdownify }}
+      {% endif %}
+    </div>
+  </div>
+</footer>
+
+<!-- load page scripts -->
+<script src="{{ '/assets/theme/js/jquery.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/theme/js/popper.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/theme/js/bootstrap.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/theme/js/anchor.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/theme/js/umich-petridish.js' | relative_url }}"></script>
+
+<!-- pass page information to umich-petridish javascript  -->
+<script>
+  var page = {
+     type: "{{ page.layout }}",
+     url: "{{ page.layout | relative_url }}"
+  };
+</script>

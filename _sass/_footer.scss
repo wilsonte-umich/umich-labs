@@ -1,0 +1,38 @@
+// Footer
+
+body > footer {
+  background-color: $michigan-blue; //theme-color("footer");
+  // border-top: 5px solid lighten($michigan-blue, 50);
+  color: $muted-maize; //lighten(theme-color("footer"), 50);
+  font-size: 0.9rem;
+  padding: $grid-gutter-width / 2 0;
+
+  .container {
+    margin-top: 1rem;
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    color: $muted-maize; //$white;
+  }
+
+  // Font awesome icons
+  .fa-inverse {
+    color: $michigan-blue; //theme-color("footer");
+  }
+  .fa-ul {
+    margin-left: 1.5rem;
+  }
+
+  // License notice
+  .small.mt-2 {
+    p {
+      display: inline;
+
+      & + p:before {
+        content: " — ";
+      }
+    }
+  } 
+}

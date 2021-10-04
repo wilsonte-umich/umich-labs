@@ -1,0 +1,58 @@
+#-------------------------------------------------------------------------------------
+# Publications are authored by People, connected by the "authors" fields below and the "publishes_as" fields in _data/people.yml
+# Publications are associated with Projects, enumerated in the "projects" fields below
+# Publications are associated with Funding sources, enumerated in the "funding" fields below
+# Newsfeed posts may report new Publications, connected by the "pmid/id" fields below and the "publication_id" fields in Newsfeed posts
+#-------------------------------------------------------------------------------------
+# pmid is always used as the publication_id if not null, otherwise id is used (and must not be null)
+#-------------------------------------------------------------------------------------
+# Publications are ordered on the Publications page as follows:
+#   descending by year, then by pmid, then alphabetically by title
+# thus, newest articles appear first, PubMed articles appear before books or other items
+#-------------------------------------------------------------------------------------
+
+# - authors:  
+#     - Last AA
+#     - Lastt B
+#   title:    Title of the manuscript
+#   journal:  Journal or other source
+#   citation: xxxx  # typically volume(issue):page-page, or an online publication id
+#   year:     2021
+#   pmid:     00000000 # e.g., 00000000, required
+#   pmcid:    PMC0000000 # e.g., PMC0000000, can be missing or null
+#   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
+#   projects: null # must match file names in _projects, without the ".md" extension
+#   funding:  null # grant ids as found in funding.yml
+
+- authors:  
+    - Bazzano D
+    - Lomonaco S
+    - Wilson TE
+  title:    Mapping yeast mitotic 5' resection at base resolution reveals the sequence and positional dependence of nucleases in vivo
+  journal:  Nucleic Acids Research
+  citation: 10.1093/nar/gkab597  # typically volume(issue):page-page, or an online publication id
+  year:     2021
+  pmid:     34263309 # e.g., 00000000, required
+  pmcid:    PMC8287918 # e.g., PMC0000000, can be missing or null
+  id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
+  projects: yeast_dsb # must match file names in _projects, without the ".md" extension
+  funding:  GM_yeast_DSB # grant ids as found in funding.yml
+
+- authors:  
+    - Park SH
+    - Bennett-Baker P
+    - Ahmed S
+    - Arlt MF
+    - Ljungman M
+    - Glover TW
+    - Wilson TE
+  title:    Locus-specific transcription silencing at the FHIT gene suppresses replication stress-induced copy number variant formation and associated replication delay
+  journal:  Nucleic Acids Research
+  citation: 49(13):7507-7524  
+  year:     2021
+  pmid:     34181717
+  pmcid:    null
+  id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
+  projects: null # must match file names in _projects, without the ".md" extension
+  funding:  null # grant ids as found in funding.yml
+

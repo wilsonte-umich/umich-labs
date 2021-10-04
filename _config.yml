@@ -1,0 +1,100 @@
+#-------------------------------------------------------------------------------------
+# collections of data pages; *** please edit the project order here ***
+#-------------------------------------------------------------------------------------
+# collections folders carry markdown files with expanded views of certain types of data items
+# other data types only entail enumerated lists found in yml files in the _data folder
+# Newsfeed items use the hard-coded Jekyll _posts collection
+#-------------------------------------------------------------------------------------
+collections:
+  projects: # found in the _projects folder, etc.
+    output: true
+#-------------------------------------------------------------------------------------
+    order: # *** project order is set here; missing projects will be alphabetical at the end of site.projects ***
+      - mdi.md
+#-------------------------------------------------------------------------------------
+  people: 
+    order: null # people order is determined by fields in people.yml
+  funding: 
+    order: null # grants order is determined by dates in funding.yml
+
+#-------------------------------------------------------------------------------------
+# site settings
+#-------------------------------------------------------------------------------------
+title: Wilson et al. # in top navigation bar (navbar) and <head>
+#subtitle: University of Michigan
+description: Projects led by Thomas E. Wilson, Professor of Pathology and Human Genetics, University of Michigan Medical School # description in <head>
+author: Thomas E. Wilson                    # for copyright statement in footer
+url: "https://wilsonte-umich.github.io"  # no slash at the end
+# baseurl: "/petridish"                 # only required if your site is on a subdomain e.g. https://username.github.io/sitename
+                                        # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
+                                        # affects internal links, see http://peterdesmet.github.io/petridish/about/#links
+
+#-------------------------------------------------------------------------------------
+# social profile of the principal investigator; icon links shown in footer
+#-------------------------------------------------------------------------------------
+email: wilsonte@umich.edu
+twitter_username: null
+github_username: wilsonte-umich
+
+#-------------------------------------------------------------------------------------
+# theme display settings
+#-------------------------------------------------------------------------------------
+projects_on_home: 20                     # Show x number of active projects on homepage, must be > 0
+max_news_posts: 20                        # Show x number of latest news posts on homepage, must be > 0
+logo: /assets/images/1280px-Michigan_Wolverines_logo-90px_height.png  # Logo in navbar, will be displayed at 30px height
+colors:
+  links: "#2F65A7"                      # Color for links: use a readable color that contrasts well with dark text
+  banner: "#00274C"                     # Background color for page banners: use color that contrasts well with white
+  footer: "#6c757d"                     # Background color for footer: use color that contrasts well with white
+
+#-------------------------------------------------------------------------------------
+# frontmatter defaults; only developers should edit this section
+#-------------------------------------------------------------------------------------
+defaults:
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      permalink: "/projects/:slug/"
+  -
+    scope:
+      path: ""
+      type: "people"
+    values:
+      permalink: "/people/:slug/"
+  -
+    scope:
+      path: ""
+      type: "funding"
+    values:
+      permalink: "/funding/:slug/"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/newsfeed/:year/:slug/"
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default" # Only required for Petridish website, implied for sites using a theme
+
+#-------------------------------------------------------------------------------------
+# build settings; only developers should edit this section
+#-------------------------------------------------------------------------------------
+markdown: kramdown
+plugins:                                # If you build your site on gh-pages, only use these plugins: https://pages.github.com/versions/
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - LICENSE
+  - package-lock.json
+  - package.json
+  - petridish.gemspec

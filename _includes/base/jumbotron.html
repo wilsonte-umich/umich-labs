@@ -1,0 +1,38 @@
+{% if page.background %}
+  <header class="jumbotron bg-image" style="background-image: url('{{ page.background | relative_url }}')">
+{% else %}
+  <header class="jumbotron bg-no-image">
+{% endif %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto">
+        
+          <!-- page title + title2 + subtitle -->
+          <h1{% if page.layout == 'home' %} class="home"{% endif %}>
+            {{ page.title }}{% if page.title2 %}<br>{{ page.title2 }}{% endif %}
+          </h1>
+          <div class="lead">{{ page.subtitle }}</div>
+          
+          <!-- newsfeed post date -->
+          {% if page.date %}
+          <p class="meta">
+            <time>{{ page.date | date: "%B %d, %Y" }}</time>
+          </p>
+          {% endif %}
+
+          <!-- category badges -->
+          <div class="categories">
+            {% if page.categories %}
+              {% for category in page.categories %}
+                <a class="badge badge-pill" 
+                   href="{{ page.collection | relative_url }}?category={{ category | url_encode }}">
+                   {{ category }}
+                </a>
+              {% endfor %}
+            {% endif %}
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>

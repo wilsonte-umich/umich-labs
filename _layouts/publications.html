@@ -1,0 +1,19 @@
+---
+layout: base
+description: Template for publications page
+remark: See also page.layout == 'publications' in head.html and jumbotron.html
+---
+
+<div class="row">
+    <div class="col">
+        {{ content }}
+    </div>
+</div>
+  
+<div class="row publications">
+    {% for publication in site.data.publications %}
+    <div class="col-md-6 col-lg-4">
+      {% include publication.html %}
+    </div>
+    {% endfor %}
+</div>

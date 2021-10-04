@@ -1,0 +1,48 @@
+<!-- <div style="border-top: 1px solid grey; margin-bottom: 1rem;"> -->
+<div class="card">
+  <h4>{{post.title}}</h4>
+  <p>{{post.description}}</p>
+  <p>{{post.date}}</p>
+  <!-- <div>{{post.author}}</div> -->
+  <!-- {% if post.categories %}
+    <div class="card-footer">
+      {% assign url = 'newsfeed' | relative_url %}
+      {% for category in post.categories %}
+        <a class="badge badge-pill" href="{{ url }}?category={{ category | url_encode }}">{{ category }}</a>
+      {% endfor %}
+    </div>
+  {% endif %} -->
+</div>
+
+
+<!-- <div class="card" data-categories="{% for category in project.categories %}{{ category | downcase | strip }}|{% endfor %}">
+  <a href="{{ project.url | relative_url }}">
+    {% if project.background %}
+      <img class="card-img-top" src="{{ project.background | relative_url }}">
+    {% else %}
+      <div class="card-img-top bg-secondary"></div>
+    {% endif %}
+  </a>
+
+  <div class="card-body position-relative">
+    <h5 class="card-title">
+      <a class="stretched-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+    </h5>
+
+    <div class="card-text">
+      {% if project.description %}
+        {{ project.description | markdownify | truncatewords: 20 }}
+      {% else %}
+        {{ project.excerpt | truncatewords: 20 }}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if project.categories and site.projects_permalink %}
+    <div class="card-footer">
+      {% for category in project.categories %}
+        <a class="badge badge-pill" href="{{ site.projects_permalink | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div> -->

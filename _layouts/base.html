@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  {% include base/head.html %}
+  <body>
+    {% include base/navbar.html %}
+    <main>
+      {% include base/jumbotron.html %}
+      <div class="container content">  
+        {{ content | replace: '<table', '<table class="table"' }}
+      </div>
+    </main>
+    {% include base/footer.html %}
+  </body>
+</html>

@@ -1,0 +1,19 @@
+---
+layout: base
+description: Template for a list of project cards, with full width
+remarks: See also page.layout == 'projects' in footer.html
+---
+
+<div class="row">
+  <div class="col">
+    {{ content }}
+  </div>
+</div>
+
+<div class="row cards">
+  {% for project in site.projects %}
+  <div class="col-md-6 col-lg-4">
+    {% include project-card.html %}
+  </div>
+  {% endfor %}
+</div>

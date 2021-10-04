@@ -1,0 +1,10 @@
+---
+layout: base
+description: Template for people page
+---
+
+{{ content }}
+
+{% for person in site.data.people %}
+  {% include person-card.html %}
+{% endfor %}
