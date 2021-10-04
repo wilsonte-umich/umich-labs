@@ -1,0 +1,14 @@
+#-------------------------------------------------------------------------------------
+# in addition to information enumerated here, a PI may _optionally_ choose to 
+# have an expanded page of resource information in _resources/<id>.md
+#-------------------------------------------------------------------------------------
+# Resources are ordered on the Resources page as follows:
+#   descending by type
+#   alphabetical by title
+#-------------------------------------------------------------------------------------
+
+- id: cell_protocol # internal identifier used in newsfeed posts and other places
+  title: Cell Protocol
+  type: protocol
+  description: This is an important protocol for handling cells the way we do it. 
+  link: https://link.to.protocol/

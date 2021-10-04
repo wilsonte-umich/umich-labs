@@ -11,7 +11,7 @@
 #   descending by end_date
 #-------------------------------------------------------------------------------------
 
-- id: GM_yeast_DSB # internal identifier used in people.yml, newsfeed posts and other places
+- id: My_R01 # internal identifier used in people.yml, newsfeed posts and other places
   sponsor_id: GM120767 # the fixed grant number or other identifier from the sponsor; this should never change
   sponsor_link: https://reporter.nih.gov/search/ZBDA5h93H0qMxITs5aN_uw/projects?shared=true
   start_date: 2004-08-01 # the intent is to only list funding that was actually committed by the sponsor
@@ -19,5 +19,5 @@
   title: Systematic Genetic Analysis of Yeast NHEJ
   sponsor: NIH NIGMS # who provided the funding
   grant type: R01
-  description: The goals of this project are to explore with base-pair precision the processing of double-strand break ends during normal and mutagenic nonhomologous end joining and to determine the genomic factors that shape the contribution of these processes to chromosomal translocations. 
-  projects: yeast_DSB # must match file names in _projects, without the ".md" extension
+  description: The goals of this project are probably not relevant to the Doe laboratory! 
+  projects: project1 # must match file names in _projects, without the ".md" extension

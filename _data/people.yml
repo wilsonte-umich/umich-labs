@@ -16,59 +16,59 @@
 #-------------------------------------------------------------------------------------
 # Principal Investigator; many fields not relevant, they always apply to the PI for their own page
 #-------------------------------------------------------------------------------------
-- id: Tom_Wilson # used internally to identify this person, e.g., in a Newsfeed post "people" field
-  number: 37 # optional, used in Wilson lab to annotate database entries
-  name: Thomas E. Wilson # as display on the web page People item
+- id: John_Doe # used internally to identify this person, e.g., in a Newsfeed post "people" field
+  number: null # optional, used in Wilson lab to annotate database entries
+  name: John Doe # as display on the web page People item
   role: Principal Investigator # will appear next to name
-  image: assets/images/restricted/TEW_Sep_2021.png # can be external link
-  orcid: 0000-0002-8345-4985
-  email: wilsonte@umich.edu
-  github: wilsonte-umich
+  # image: assets/images/restricted/TEW_Sep_2021.png # can be external link
+  orcid: 0000-0000-0000-0000
+  email: jdoe@umich.edu
+  github: jdoe-umich
   twitter: null
 
 #-------------------------------------------------------------------------------------
 # active group members
 #-------------------------------------------------------------------------------------
-- id: Samreen_Ahmed # used internally to identify this person, e.g., in a Newsfeed post "people" field
-  number: 99 # optional, used in Wilson lab to annotate database entries
-  name: Samreen Ahmed # as display on the web page People item
+- id: Research_Tech # used internally to identify this person, e.g., in a Newsfeed post "people" field
+  number: null # optional, used in Wilson lab to annotate database entries
+  name: Research Tech # as display on the web page People item
   start_date: 2020-01-01
   end_date: null # when null, the person is presumed to still be active in the group
   role: Research Technician # will appear next to name
   program: null # omit if not applicable
   image: assets/images/vippng.com-face-silhouette-png-56170.png # can be external link
   orcid: null
-  email: samreena@umich.edu
+  email: rtech11@umich.edu
   github: null
   twitter: null
-  description: Master of all trades, Samreen fills many roles as needed
+  description: Master of all trades, fills many roles as needed
   projects: # must match file names in _projects, without the ".md" extension
-    - yeast_dsb
+    - project1
+    - project 2
   funding: # grant ids as found in funding.yml
-    - GM_yeast_DSB
+    - My_R01
   publishes_as: # as would be found in a PubMed entry; multiple entries allow for name changes, etc.
-    - Ahmed S
+    - Tech R
 
 #-------------------------------------------------------------------------------------
 # past group members
 #-------------------------------------------------------------------------------------
-- id: Dominic_Bazzano # used internally to identify this person, e.g., in a Newsfeed post "people" field
-  number: 99 # optional, used in Wilson lab to annotate database entries
-  name: Dominic Bazzano # as display on the web page People item
+- id: Postdoc_Fellow # used internally to identify this person, e.g., in a Newsfeed post "people" field
+  number: null # optional, used in Wilson lab to annotate database entries
+  name: Postdoc Fellow # as display on the web page People item
   start_date: 2020-01-01
   end_date: 2021-08-30 # an end data indicates that the person is no longer active
-  current_position: PhD student, Genetics and Genomics Program, University of Michigan (Hammoud lab) # optional, to indicate where people are now
-  role: Research Technician # will appear next to name
+  current_position: PhD student, Genetics and Genomics Program, University of Michigan # optional, to indicate where people are now
+  role: Postdoctoral Fellow # will appear next to name
   program: null # omit if not applicable
   image: assets/images/vippng.com-face-silhouette-png-56170.png # can be external link
   orcid: null
-  email: dbazzano@umich.edu
+  email: pfellow22@umich.edu
   github: null
   twitter: null
-  description: Mapping yeast DSB 5' resection at base-pair resolution by high throughput sequencing
+  description: Solved really important problems in project 2.
   projects: # must match file names in _projects, without the ".md" extension
-    - yeast_dsb
+    - project 2
   funding: # grant ids as found in funding.yml
-    - GM_yeast_DSB
   publishes_as: # as would be found in a PubMed entry; multiple entries allow for name changes, etc.
-    - Bazzano D
+    - Fellow PX

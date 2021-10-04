@@ -55,4 +55,3 @@
   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
   projects: null # must match file names in _projects, without the ".md" extension
   funding:  null # grant ids as found in funding.yml
-

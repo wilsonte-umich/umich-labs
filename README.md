@@ -1,30 +1,20 @@
-## Description
+# umich-labs
 
-This is the repository for the Jekyll website for Thomas E. Wilson
-at the University of Michigan.
+This is a Jekyll theme used for constructing research laboratory or project websites.
+It is a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, 
+with extensive modifications from that base but with an overall similar structure and feel.
+It is intended for use with [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
 
-If you find the site to be nonfunctional, please let me know!
+## Usage
+
+You will generally want to create a new web site instance using the 
+[umich-labs-template](https://github.com/wilsonte-umich/umich-labs-template),
+following the instructions provided by the template. 
+The template has the appropropriate configuration line to use this theme.
 
 ## License
 
-The software components of this web site that are directly derivative of
-the petridish Jekyll theme are licensed under the [MIT License](LICENSE).
-This license applies to everything not specifically identified below
-as using the Creative Commons license.
+This theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
-
-The content components of this web site are licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by].
-This license specifically applies to all components in the following 
-files and directories under the root directory of this repository:
-- _config.yml
-- _posts
-- assets/images/restricted
-- pages
-
-[![CC BY 4.0][cc-by-image]][cc-by]
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+Please see file 'LICENSE-petridish' for the license of the parent theme 
+and LICENSE for the license of modifications and additions made in umich-labs.
