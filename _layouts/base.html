@@ -3,10 +3,13 @@
   {% include base/head.html %}
   <body>
     {% include base/navbar.html %}
-    {% include newsfeed/banner-colors.html %}
+    {% include base/svg-color-defs.html %}
     <main>
       {% include base/jumbotron.html %}
-      <div class="container content">  
+      <div class="container content">
+
+        <!-- { % include base/color-demo.html % } -->
+
         {{ content | replace: '<table', '<table class="table"' }}
       </div>
     </main>

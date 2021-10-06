@@ -10,13 +10,13 @@
     </a>
 
     <!-- site navigations tabs -->
-    {% if site.data.navigation %}
+    {% if site.data.base.navigation %}
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
         Menu <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="navbar-nav ml-auto">
-        {% for item in site.data.navigation %}
+        {% for item in site.data.base.navigation %}
           {% if item.menu %}
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">

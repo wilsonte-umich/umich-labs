@@ -1,0 +1,3 @@
+{% for item in site.data.base.default-colors %}
+    {% include base/event-banner.html event_type=item.singular %}
+{% endfor  %}

@@ -1,0 +1,10 @@
+<svg width="135" height="30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="0,0 120,0 135,15 120,30 0,30" 
+             style="fill:url(#{{ include.event_type }}-linear-gradient);stroke: #333;" />  
+    <text x="60" y="16" 
+        font-family="'Source Code Pro', monospace" font-size="0.9rem" font-weight="bold"
+        fill="#eee" style="text-shadow: 1px 1px 2px black;"
+        alignment-baseline="middle" text-anchor="middle">
+    {{ include.event_type | capitalize }}
+    </text>
+</svg> 

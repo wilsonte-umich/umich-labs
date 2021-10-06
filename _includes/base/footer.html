@@ -43,7 +43,7 @@
       </div>
 
       <!-- addtional information columns defined in _data/footer.yml -->
-      {% for col in site.data.footer.columns %}
+      {% for col in site.data.base.footer.columns %}
       <div class="col-lg">
         {{ col.description | markdownify }}
         {% if col.links %}
@@ -65,8 +65,8 @@
       {% if site.author %}
         <p>© {{ site.author }}</p>
       {% endif %}
-      {% if site.data.footer.license %}
-        {{ site.data.footer.license | markdownify }}
+      {% if site.data.base.footer.license %}
+        {{ site.data.base.footer.license | markdownify }}
       {% endif %}
     </div>
   </div>
