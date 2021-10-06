@@ -1,0 +1,42 @@
+---
+# eight equally spaced hues: 
+# 0 red
+# 45 gold
+# 90 limegreen
+# 135 green
+# 180 cyan
+# 225 blue
+# 270 purple
+# 315 magenta
+
+- plural: resources
+  singular: resource
+  hue: 0 # red
+
+- plural: people
+  singular: person
+  hue: 45 # gold
+
+- plural: events
+  singular: event
+  hue: 90 # limegreen
+
+- plural: funding
+  singular: funding
+  hue: 135 # green
+
+- plural: newsfeed
+  singular: post
+  hue: 180 # cyan
+
+- plural: projects
+  singular: project
+  hue: 225 # blue
+
+- plural: publications
+  singular: publication
+  hue: 270 # purple
+
+- plural: contact
+  singular: contact
+  hue: 315 # magenta
