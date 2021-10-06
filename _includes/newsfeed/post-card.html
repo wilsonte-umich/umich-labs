@@ -1,20 +1,21 @@
 <!-- <div style="border-top: 1px solid grey; margin-bottom: 1rem;"> -->
 
-<div class="card">
+<div>
+  <svg width="135" height="30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="0,0 120,0 135,15 120,30 0,30" style="fill:url(#{{ post.event_type }});stroke: #333;" />  
+    <text x="60" y="16" 
+          font-family="'Source Code Pro', monospace" font-size="0.9rem" font-weight="bold"
+          fill="#eee" style="text-shadow: 1px 1px 2px black;"
+          alignment-baseline="middle" text-anchor="middle">
+      {{ post.event_type | capitalize }}
+    </text>
 
-  <div style="position: relative; line-height: 30px;">
-    <svg width="150" height="30" viewBox="0 0 150 100" preserveAspectRatio="none" style="position: absolute;">
-      <path d="M0,0 h120 l30,50 l-30,50 h-120z" fill="#575294	" />
-    </svg>
-    <div style="position: absolute; color: #eee; width: 120px; text-align: center;">
-      Publication
-    </div>
-    </div>
-  <div style="height: 30px;">&nbsp;</div>
+  </svg> 
+  <p style="height: 30px; line-height: 30px; margin-left: 30px;">XYZ</p>
+  <p>{{ post.date }}</p>
 
   <h4>{{post.title}}</h4>
   <p>{{post.description}}</p>
-  <p>{{post.date}}</p>
   <!-- <div>{{post.author}}</div> -->
   <!-- {% if post.categories %}
     <div class="card-footer">
