@@ -5,8 +5,3 @@
         {% endfor %}
     </defs> 
 </svg>
-<style>
-    {% for item in site.data.base.default-colors  %}
-        .{{ item.singular }}-hue { color: hsl({{ item.hue }},35%,40%); }
-    {% endfor %}
-</style>

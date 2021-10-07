@@ -1,5 +1,6 @@
-{% if page.background %}
-  <header class="jumbotron bg-image" style="background-image: url('{{ page.background | relative_url }}')">
+{% if page.background_image %}
+  <header class="jumbotron bg-image" 
+          style="background-image: url('{{ page.background_image | relative_url }}')">
 {% else %}
   <header class="jumbotron bg-no-image">
 {% endif %}

@@ -6,6 +6,11 @@
 
 // Set customizable colors
 //
+// from _data/base/default-colors.yml
+{% for item in site.data.base.default-colors  %}
+.{{ item.singular }}-hue { color: hsl({{ item.hue }},35%,40%); }
+{% endfor %}
+//
 // Set default colors
 $default_link_color: #007bff;
 $default_banner_color: #007bff;
