@@ -2,7 +2,7 @@
 layout: resources
 title: Shared Resources
 subtitle: null
-background: null
+banner_image: null
 permalink: /resources/
 ---
 

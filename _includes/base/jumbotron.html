@@ -1,8 +1,13 @@
-{% if page.background_image %}
+{% if page.banner_image %}
   <header class="jumbotron bg-image" 
-          style="background-image: url('{{ page.background_image | relative_url }}')">
+          style="background-image: url('{{ page.banner_image | relative_url }}')">
+{% elsif page.card_image %}
+  <header class="jumbotron bg-image" 
+          style="background-image: url('{{ page.card_image | relative_url }}')">   
 {% else %}
-  <header class="jumbotron bg-no-image">
+  <!-- <header class="jumbotron bg-no-image"> -->
+  <!-- <header class="jumbotron bg-image { { page.layout } }-linear-gradient"> -->
+  <header class="jumbotron bg-image banner-linear-gradient">
 {% endif %}
     <div class="container">
       <div class="row">
@@ -16,9 +21,9 @@
           
           <!-- newsfeed post date -->
           {% if page.date %}
-          <p class="meta">
-            <time>{{ page.date | date: "%B %d, %Y" }}</time>
-          </p>
+          <!-- <p class="meta">
+            <time>{ { page.date | date: "%B %d, %Y" } }</time>
+          </p> -->
           {% endif %}
 
           <!-- category badges -->

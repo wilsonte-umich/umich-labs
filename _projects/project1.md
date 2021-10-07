@@ -1,12 +1,14 @@
 ---
-title: Research Projecct 1
+title: Research Project 1
 subtitle: This is my first project
 description: This is slightly longer description of my first project
-# background: "/assets/images/restricted/portal_blur_200px.png"
+card_image: "assets/images/chemical-reaction-science-chemistry.jpg"
+card_title: null # used if card_image is null; defaults to title
 categories: 
     - Project Leader
     - Bioinformatics
 ---
 
 This is complete description of my first project.
-Keep adding markdown here.
+
+Keep adding markdown here. See pages/home.md for hints.

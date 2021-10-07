@@ -1,24 +1,36 @@
 <div class="card" data-categories="{% for category in project.categories %}{{ category | downcase | strip }}|{% endfor %}">
   <a href="{{ project.url | relative_url }}">
-    {% if project.background %}
-      <img class="card-img-top" src="{{ project.background | relative_url }}">
+    {% if project.card_image %}
+      <div class="card-img-top project-top" 
+           style="background-image: url('{{ project.card_image | relative_url }}')">
+      </div>
     {% else %}
-      <div class="card-img-top bg-secondary"></div>
+      <div class="card-img-top project-top projects-linear-gradient">
+        {% if project.card_title %}
+          {% assign card_title = project.card_title %}
+        {% else %}
+          {% assign card_title = project.title %}
+        {% endif %}
+        <h3>{{ card_title }}</h3>
+      </div>
     {% endif %}
   </a>
 
   <div class="card-body position-relative">
-    <h5 class="card-title">
-      <a class="stretched-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-    </h5>
+    <a href="{{ project.url | relative_url }}">
+      <h5 class="card-title">
+        <!-- <a class="stretched-link" href="{{ project.url | relative_url }}">{{ project.title }}</a> -->
+        <h5>{{ project.title }}</h5>
+      </h5>
 
-    <div class="card-text">
-      {% if project.description %}
-        {{ project.description | markdownify | truncatewords: 20 }}
-      {% else %}
-        {{ project.excerpt | truncatewords: 20 }}
-      {% endif %}
-    </div>
+      <div class="card-text">
+        {% if project.description %}
+          {{ project.description | markdownify | truncatewords: 20 }}
+        {% else %}
+          {{ project.excerpt | truncatewords: 20 }}
+        {% endif %}
+      </div>
+    </a>
   </div>
 
   {% if project.categories %}

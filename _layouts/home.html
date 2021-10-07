@@ -15,12 +15,15 @@ remark: See also page.layout == 'home' in head.html and jumbotron.html
 
       <!-- from _posts -->
       {% assign posts = site.posts %}
+      {% assign max_posts = site.max_news_home %}
       {% include newsfeed/ticker.html %}
     </div>
 
     <!-- from _projects -->
+    <hr>
+    <h3>Active Projects</h3>    
     <div class="row cards mt-4">
-    {% for project in site.projects limit:site.projects_on_home %}
+    {% for project in site.projects limit:site.max_projects_home %}
       <div class="col-md-6 col-lg-4">
         {% include project-card.html %}
       </div>

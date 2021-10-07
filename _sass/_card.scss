@@ -1,4 +1,3 @@
-// Blog post card
 
 .cards {
   // Mimics Bootstrap .card-deck, stretching cards to equal height, but without
@@ -16,6 +15,13 @@
   .card-img-top {
     height: 150px;
     object-fit: cover;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      line-height: 150px;
+    }
   }
 
   .card-subtitle {
@@ -23,8 +29,15 @@
     margin-bottom: 0.5rem;
   }
 
+
   a:hover {
     text-decoration: none;
+  }
+
+  .card-body {
+    a {
+      color: $body-color;
+    }    
   }
 
   .card-footer {
@@ -43,4 +56,17 @@
       }
     }
   }
+}
+
+.post-card {
+  border: none;
+  border-top: 1px solid grey;
+  border-radius: 0;
+
+  .card-body {
+    a {
+      color: $body-color;
+    }    
+  }
+
 }

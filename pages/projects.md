@@ -2,7 +2,7 @@
 layout: projects
 title: Current and Past Projects
 subtitle: null
-background: null
+banner_image: null
 permalink: /projects/
 ---
 

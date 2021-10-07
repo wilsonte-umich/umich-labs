@@ -55,9 +55,12 @@
     font-size: 1.25rem;
   }
 
+  .categories {
+    margin-top: 1rem;
+  }
   .badge {
-    border: 2px solid #ccc;
-    color: #ccc !important;
+    border: 2px solid #ddd;
+    color: #ddd !important;
     margin-top: 0.25rem;
     padding-left: $badge-pill-padding-x * 2;
     padding-right: $badge-pill-padding-x * 2;

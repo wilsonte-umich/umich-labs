@@ -9,34 +9,46 @@
 # 270 purple
 # 315 magenta
 
-- plural: resources
-  singular: resource
+# collection is the class of data hue is applied to
+# item_type is a singular noun used to label an instance of the collection
+
+- collection: resources
+  item_type: resource
   hue: 0 # red
 
-- plural: people
-  singular: person
+- collection: people
+  item_type: person
   hue: 45 # gold
 
-- plural: events
-  singular: event
+- collection: events
+  item_type: event
   hue: 90 # limegreen
 
-- plural: funding
-  singular: funding
+- collection: funding
+  item_type: funding
   hue: 135 # green
 
-- plural: newsfeed
-  singular: post
+- collection: newsfeed
+  item_type: post
   hue: 180 # cyan
 
-- plural: projects
-  singular: project
+- collection: projects
+  item_type: project
   hue: 225 # blue
+- collection: other
+  item_type: other
+  hue: 225 # blue, same as projects
+- collection: home
+  item_type: null
+  hue: 225 # blue, same as projects.
+- collection: banner
+  item_type: null
+  hue: 225 # blue, same as projects.
 
-- plural: publications
-  singular: publication
+- collection: publications
+  item_type: publication
   hue: 270 # purple
 
-- plural: contact
-  singular: contact
+- collection: contact
+  item_type: contact
   hue: 315 # magenta

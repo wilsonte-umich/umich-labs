@@ -2,7 +2,7 @@
 layout: funding
 title: Funding Sources
 subtitle: null
-background: null
+banner_image: null
 permalink: /funding/
 ---
 
