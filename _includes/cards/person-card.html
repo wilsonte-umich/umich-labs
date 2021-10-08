@@ -1,11 +1,11 @@
 <div class="media team-member">
 <img class="mr-3" src="{{ person.image | relative_url }}">
-<div class="media-body">
+<div class="media-body mt-3">
     <h5 id="{{ person.name | strip | url_encode }}">
-    {{ person.name }}
-    {% if person.role %}
-    <small class="text-muted">| {{ person.role }}</small>
-    {% endif %}
+        {{ person.name }}
+        {% if person.role %}
+        <small class="text-muted">| {{ person.role }}</small>
+        {% endif %}
     </h5>
 
     {{ person.description | markdownify }}

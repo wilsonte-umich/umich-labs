@@ -7,14 +7,20 @@
 // Set customizable colors
 //
 // from _data/base/default-colors.yml
-{% for item in site.data.base.default-colors  %}
-.{{ item.item_type }}-hue { color: hsl({{ item.hue }},35%,40%); }
+{% for item in site.data.base.default-colors %}
+{% assign hue = item.hue %}
+{% assign bright = "hsl(" | append: item.hue | append: ",40%,40%)" %}
+.{{ item.collection }}-badge { 
+  color: {{ bright }}; 
+  border-color: {{ bright }} !important;
+} 
+.{{ item.item_type }}-hue  { color: hsl({{ hue }},35%,40%); } 
 .{{ item.collection }}-linear-gradient {
   background-image: linear-gradient(
     to right, 
-    hsl({{ item.hue }},35%,20%) , 
-    hsl({{ item.hue }},35%,30%), 
-    hsl({{ item.hue }},35%,20%)
+    hsl({{ hue }},35%,20%) , 
+    hsl({{ hue }},35%,30%), 
+    hsl({{ hue }},35%,20%)
   );
 }
 {% endfor %}

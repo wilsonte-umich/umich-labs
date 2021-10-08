@@ -1,0 +1,19 @@
+<div class="card publication-card" data-categories="{% for category in publication.categories %}{{ category | downcase | strip }}|{% endfor %}">
+  <div class="card-body">
+    <div><strong>{{ publication.title }}</strong></div>  
+    <div class="mt-1">{{ publication.authors | join: ", " }}</div>
+    <div class="mt-1">
+      <i>{{ publication.journal }}</i>
+      {{ publication.citation }}
+      ({{ publication.year }})
+    </div>
+  </div>
+  {% if publication.categories %}
+    <div class="card-footer">
+      {% assign url = 'publications' | relative_url %}
+      {% for category in publication.categories %}
+        <a class="badge badge-pill" href="{{ url }}?category={{ category | url_encode }}">{{ category }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

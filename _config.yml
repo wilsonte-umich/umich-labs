@@ -47,13 +47,9 @@ max_news_other: 10     # Show x number of recent news posts on other pages, must
 logo: /assets/images/1280px-Michigan_Wolverines_logo-90px_height.png  # Logo in navbar, will be displayed at 30px height
 colors:
   links:  "#2F65A7"    # Color for links: use a readable color that contrasts well with dark text
-  banner: "#00274C"    # Background color for page banners: use color that contrasts well with white
-  footer: "#00274C"    # Background color for footer: use color that contrasts well with white
-
 
 
 # !!! only developers should edit below this line !!!
-
 
 
 #-------------------------------------------------------------------------------------
@@ -113,3 +109,9 @@ exclude:
   - package-lock.json
   - package.json
   - petridish.gemspec
+
+#-------------------------------------------------------------------------------------
+# legacy color settings from petridish, not used by umich-labs
+#-------------------------------------------------------------------------------------
+banner: "pink"    # Background color for page banners: use color that contrasts well with white
+footer: "pink"    # Background color for footer: use color that contrasts well with white

@@ -37,7 +37,8 @@
     <div class="card-footer">
       {% assign url = 'projects' | relative_url %}
       {% for category in project.categories %}
-        <a class="badge badge-pill" href="{{ url }}?category={{ category | url_encode }}">{{ category }}</a>
+        <a class="badge badge-pill projects-badge"
+           href="{{ url }}?category={{ category | url_encode }}">{{ category }}</a>
       {% endfor %}
     </div>
   {% endif %}

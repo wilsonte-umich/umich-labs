@@ -20,7 +20,7 @@
   number: null # optional, used in Wilson lab to annotate database entries
   name: John Doe # as display on the web page People item
   role: Principal Investigator # will appear next to name
-  # image: assets/images/restricted/TEW_Sep_2021.png # can be external link
+  image: assets/images/people/john-doe-cropped.jpg # can be external link
   orcid: 0000-0000-0000-0000
   email: jdoe@umich.edu
   github: jdoe-umich

@@ -58,6 +58,7 @@
   }
 }
 
+// newsfeed posts
 .post-card {
   border: none;
   border-top: 1px solid grey;
@@ -68,5 +69,21 @@
       color: $body-color;
     }    
   }
+
+}
+
+// publications
+.publication-card {
+  border: none;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-radius: 0;
+  border-top-left-radius: 10px;
+
+  // .card-body {
+  //   a {
+  //     color: $body-color;
+  //   }    
+  // }
 
 }
