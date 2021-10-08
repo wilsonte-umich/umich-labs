@@ -1,0 +1,35 @@
+{% if item.badges %}
+<div class="card-footer">
+
+{% assign card_collection = site.collections | where: "item", card_type | first %} 
+{% for type in card_collection.badges %}  
+  {% assign badges = item.badges | where: "type", type %} 
+  {% assign collection = site.collections | where: "item", type | first %} 
+  {% assign class = collection.name | append: "-badge" %}
+  {% for badge in badges %}  
+
+    {% include base/badge-label.html %}
+
+    {% if collection.link == 'never' %}
+      <span class="badge badge-pill {{ class }}">{{ label }}</span>
+    {% else %} 
+      {% if collection.link == 'hash_always' %}
+        {% assign sep = "#" %}
+      {% elsif collection.link == 'page_always' %}
+        {% assign sep = "/" %}
+      {% else %}
+        {% assign filename = badge.value | append: ".md" %}
+        {% if collection.badges contains filename %}
+          {% assign sep = "/" %}
+        {% else %}
+          {% assign sep = "#" %}
+        {% endif %} 
+      {% endif %} 
+      {% assign path = collection.name | append: sep | append: badge.value %}
+      <a class="badge badge-pill {{ class }}" href="{{ path | relative_url }}">{{ label }}</a>
+    {% endif %} 
+  {% endfor %}
+{% endfor %}
+
+</div>
+{% endif %}

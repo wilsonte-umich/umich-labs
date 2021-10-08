@@ -1,14 +1,12 @@
 #-------------------------------------------------------------------------------------
-# Publications are authored by People, connected by the "authors" fields below and the "publishes_as" fields in _data/people.yml
-# Publications are associated with Projects, enumerated in the "projects" fields below
-# Publications are associated with Funding sources, enumerated in the "funding" fields below
-# Newsfeed posts may report new Publications, connected by the "pmid/id" fields below and the "publication_id" fields in Newsfeed posts
-#-------------------------------------------------------------------------------------
 # pmid is always used as the publication_id if not null, otherwise id is used (and must not be null)
 #-------------------------------------------------------------------------------------
 # Publications are ordered on the Publications page as follows:
 #   descending by year, then by pmid, then alphabetically by title
 # thus, newest articles appear first, PubMed articles appear before books or other items
+#-------------------------------------------------------------------------------------
+# the 'pmid' field, or if missing, the 'id' field, is the unique identifier used for tagging and md files
+# authors[1] last name et al. (e.g., 'Wilson et al.') is used as the badge label
 #-------------------------------------------------------------------------------------
 
 # - authors:  
@@ -18,7 +16,7 @@
 #   journal:  Journal or other source
 #   citation: xxxx  # typically volume(issue):page-page, or an online publication id
 #   year:     2021
-#   pmid:     00000000 # e.g., 00000000, required
+#   pmid:     00000000 # e.g., 00000000, can be missing or null
 #   pmcid:    PMC0000000 # e.g., PMC0000000, can be missing or null
 #   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
 #   projects: null # must match file names in _projects, without the ".md" extension
@@ -32,7 +30,7 @@
   journal:  Nucleic Acids Research
   citation: 10.1093/nar/gkab597  # typically volume(issue):page-page, or an online publication id
   year:     2021
-  pmid:     34263309 # e.g., 00000000, required
+  pmid:     34263309 # e.g., 00000000, can be missing or null
   pmcid:    PMC8287918 # e.g., PMC0000000, can be missing or null
   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
   projects: yeast_dsb # must match file names in _projects, without the ".md" extension

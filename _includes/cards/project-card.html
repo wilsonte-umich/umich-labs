@@ -1,4 +1,5 @@
-<div class="card" data-categories="{% for category in project.categories %}{{ category | downcase | strip }}|{% endfor %}">
+<div class="card {{ include.hide }}" 
+     data-categories="{% for category in project.categories %}{{ category | downcase | strip }}|{% endfor %}">
   <a href="{{ project.url | relative_url }}">
     {% if project.card_image %}
       <div class="card-img-top project-top" 

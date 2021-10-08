@@ -1,0 +1,19 @@
+#-------------------------------------------------------------------------------------
+# Newsfeed posts must always have an extended markdown description in content/_newsfeed/<id>.md
+# they are _not_ listed in the _data folder, only in the content/_newsfeed collection folder
+#-------------------------------------------------------------------------------------
+# Newsfeed posts are ordered on the Newsfeed page as follows:
+#   by descending date order
+#-------------------------------------------------------------------------------------
+# Jekyll frontmatter for each Newsfeed posts is as follows:
+# ---
+# title: News short headline
+# subtitle: A bit more explanation # shown in the top banner
+# description: A little bit longer description of the news item, but not too long # shown in a card
+# event_type: person # the single, primary item that this news post refers to
+# date: 2021-06-15 # the data of the post
+# badges: # one or many associated data items
+#   - type:  project # singular form of the item referred to, person, project, funding, etc.
+#     value: project1 # the id value of the item
+# ---
+#-------------------------------------------------------------------------------------

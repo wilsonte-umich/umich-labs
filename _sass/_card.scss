@@ -48,7 +48,7 @@
     .badge {
       border: 1px solid $michigan-arboretum-blue;
       font-family: $font-family-base;
-      text-transform: uppercase;
+      text-transform: capitalize;
 
       &:hover,
       &:focus {

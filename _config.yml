@@ -1,43 +1,18 @@
 #-------------------------------------------------------------------------------------
-# collections of data pages; *** please edit the project order here ***
-#-------------------------------------------------------------------------------------
-# collections folders carry markdown files with expanded views of certain types of data items
-# other data types only entail enumerated lists found in yml files in the _data folder
-# Newsfeed items use the hard-coded Jekyll _posts collection
-#-------------------------------------------------------------------------------------
-collections:
-  projects: # found in the _projects folder, etc.
-    output: true
-#-------------------------------------------------------------------------------------
-    order: # *** order is set here; missing projects will be alphabetical at the end of site.projects ***
-      - project1.md
-      - project2.md
-#-------------------------------------------------------------------------------------
-  people: 
-    order: null # order is determined by fields in people.yml
-  funding: 
-    order: null # order is determined by dates in funding.yml
-  resources: 
-    order: null # order is determined by fields in resources.yml
-
-#-------------------------------------------------------------------------------------
 # site settings
 #-------------------------------------------------------------------------------------
 title: John Doe Laboratory # in top navigation bar (navbar) and <head>
-#subtitle: University of Michigan
 description: John Doe Laboratory, University of Michigan Medical School # description in <head>
 author: John Doe                    # for copyright statement in footer
-url: "https://jdoe-umich.github.io"  # no slash at the end
-# baseurl: "/sitename"                 # only required if your site is on a subdomain e.g. https://username.github.io/sitename
-                                        # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
-
+url: "https://jdoe-umich.github.io" # no slash at the end
+# baseurl: "/sitename"              # only required if your site is on a subdomain e.g. https://username.github.io/sitename
+                                    # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
 #-------------------------------------------------------------------------------------
 # social profile of the principal investigator; icon links shown in footer
 #-------------------------------------------------------------------------------------
 email: jdoe@umich.edu
 twitter_username: null
 github_username: jdoe-umich
-
 #-------------------------------------------------------------------------------------
 # theme display settings
 #-------------------------------------------------------------------------------------
@@ -47,6 +22,87 @@ max_news_other: 10     # Show x number of recent news posts on other pages, must
 logo: /assets/images/1280px-Michigan_Wolverines_logo-90px_height.png  # Logo in navbar, will be displayed at 30px height
 colors:
   links:  "#2F65A7"    # Color for links: use a readable color that contrasts well with dark text
+#-------------------------------------------------------------------------------------
+# collections of data pages; *** ORDER PROJECTS AND RESOURCES HERE ***
+#-------------------------------------------------------------------------------------
+# collections folders carry markdown files with expanded views of some or all data items
+# Newsfeed items use the hard-coded Jekyll _posts collection
+#-------------------------------------------------------------------------------------
+collections_dir: content
+collections:
+#-------------------------------------------------------------------------------------
+  projects: # found in the _projects folder, etc.
+    order: # *** project order is set here; missing projects will be alphabetical at the end of site.projects ***
+      - project1.md
+      - project2.md
+#-------------------------------------------------------------------------------------      
+    name: projects
+    item: project
+    link: page_always
+    output: true   
+    hue: 225 # blue
+    badges: null # most stable/longest-lived items; projects have self-referential categories but don't tag other collections
+#------------------------------------------------------------------------------------- 
+  resources: 
+    order: # *** resource order is set here; missing resources will not have dedicated page views ***
+      - cell_protocol.md # order is determined by fields in resources.yml
+#-------------------------------------------------------------------------------------
+    name: resources
+    item: resource
+    link: page_if_exists
+    output: true 
+    hue: 0 # red
+    badges: # long-lived items; resources might tag a source project
+      - project
+  people: 
+    name: people
+    item: person
+    link: hash_always
+    hue: 45 # gold
+    badges: # people and funding come and go; can tag collections of higher order
+      - project
+      - resource
+  funding: 
+    name: funding
+    item: funding
+    link: hash_always
+    hue: 135 # green
+    badges: # people and funding come and go; can tag collections of higher order 
+      - project
+      - person
+      - resource
+  publications: 
+    name: publications
+    item: publication
+    link: hash_always
+    hue: 270 # purple
+    badges: # typically the most recent items; everything else can be tagged by a publication
+      - project
+      - person
+      - resource
+      - funding
+  newsfeed: 
+    name: newsfeed
+    item: post
+    link: never
+    output: true
+    hue: 180 # cyan
+    badges: # most volatile collection; anything can be tagged by a news post
+      - project
+      - person
+      - publication
+      - resource
+      - funding
+
+# eight equally spaced color hues: 
+# 0 red
+# 45 gold
+# 90 limegreen
+# 135 green
+# 180 cyan
+# 225 blue
+# 270 purple
+# 315 magenta
 
 
 # !!! only developers should edit below this line !!!
@@ -71,6 +127,12 @@ defaults:
   -
     scope:
       path: ""
+      type: "publications"
+    values:
+      permalink: "/publications/:slug/"
+  -
+    scope:
+      path: ""
       type: "funding"
     values:
       permalink: "/funding/:slug/"
@@ -83,9 +145,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
+      type: "newsfeed"
     values:
-      permalink: "/newsfeed/:year/:slug/"
+      permalink: "/newsfeed/:slug/"
   -
     scope:
       path: ""

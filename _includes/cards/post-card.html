@@ -1,4 +1,4 @@
-<div class="card post-card pt-2 mb-4" data-categories="{% for category in post.categories %}{{ category | downcase | strip }}|{% endfor %}">
+<div class="card post-card pt-2 mb-4" >
   <div class="card-body">
     <a href="{{ post.url | relative_url }}">
       <p>
@@ -10,12 +10,8 @@
       <h6>{{post.subtitle}}</h6>
     </a>
   </div>
-  {% if post.categories %}
-    <div class="card-footer">
-      {% assign url = 'newsfeed' | relative_url %}
-      {% for category in post.categories %}
-        <a class="badge badge-pill" href="{{ url }}?category={{ category | url_encode }}">{{ category }}</a>
-      {% endfor %}
-    </div>
-  {% endif %}
+
+  {% assign item = post %}    
+  {% assign card_type = 'post' %}    
+  {% include base/badges.html %}    
 </div>

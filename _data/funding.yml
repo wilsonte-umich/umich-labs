@@ -1,14 +1,12 @@
 #-------------------------------------------------------------------------------------
-# People are supported by Funding sources, enumerated in the "funding" fields in _data/people.yml
-# Projects are supported by Funding sources, enumerated in the "projects" fields below
-# Publications are associated with Funding sources, enumerated in the "funding" fields in _data/publications.yml
-# Newsfeed posts may report new Funding, connected by the "id" fields below and the "funding_id" fields in Newsfeed posts
-#-------------------------------------------------------------------------------------
 # in addition to information enumerated here, a PI may _optionally_ choose to 
-# have an expanded page of grant information in _funding/<id>.md
+# create expanded grant information in _funding/<id>.md
 #-------------------------------------------------------------------------------------
 # Funding sources are ordered on the Funding page as follows:
 #   descending by end_date
+#-------------------------------------------------------------------------------------
+# the 'id' field is the unique identifier used for tagging and md files
+# '_' characters are removed from the 'id' field to create the name used in Badges
 #-------------------------------------------------------------------------------------
 
 - id: My_R01 # internal identifier used in people.yml, newsfeed posts and other places

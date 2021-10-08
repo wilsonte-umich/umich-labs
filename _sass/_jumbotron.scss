@@ -64,7 +64,7 @@
     margin-top: 0.25rem;
     padding-left: $badge-pill-padding-x * 2;
     padding-right: $badge-pill-padding-x * 2;
-    text-transform: uppercase;
+    text-transform: capitalize;
 
     .close {
       color: $black;

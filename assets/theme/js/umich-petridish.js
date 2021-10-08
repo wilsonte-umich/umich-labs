@@ -16,11 +16,11 @@ $(document).ready(function() {
         const category = urlParams.get("category"); // returns 1st category value + decode URI
         const cleanCategory = $.trim(category.toLowerCase()); // as written in .card data-categories
         
-        // hide card if it does not contain the selected category
+        // show card if it does contains the selected category
         $(".card").each(function() {
             const cardCategories = $(this).data("categories").split("|");
-            if (!cardCategories.includes(cleanCategory)) {
-                $(this).parent().addClass("d-none");
+            if (cardCategories.includes(cleanCategory)) {
+                $(this).parent().removeClass("d-none");
             }
         });
 

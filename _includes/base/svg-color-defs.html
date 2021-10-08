@@ -1,6 +1,6 @@
 <svg width="0" height="0" style="position: absolute;" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        {% for item in site.data.base.default-colors %}
+        {% for collection in site.collections %}
             {% include base/svg-linear-gradient.html %}
         {% endfor %}
     </defs> 

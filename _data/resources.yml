@@ -1,10 +1,12 @@
 #-------------------------------------------------------------------------------------
 # in addition to information enumerated here, a PI may _optionally_ choose to 
-# have an expanded page of resource information in _resources/<id>.md
+# create expanded resource information in _resources/<id>.md
 #-------------------------------------------------------------------------------------
 # Resources are ordered on the Resources page as follows:
-#   descending by type
-#   alphabetical by title
+#   in the order they are found in this file
+#-------------------------------------------------------------------------------------
+# the 'id' field is the unique identifier used for tagging and md files
+# '_' characters are removed from the 'id' field to create the name used in Badges
 #-------------------------------------------------------------------------------------
 
 - id: cell_protocol # internal identifier used in newsfeed posts and other places

@@ -1,16 +1,14 @@
 #-------------------------------------------------------------------------------------
-# People work on Projects, enumerated in the "projects" fields below
-# People are supported by Funding sources, enumerated in the "funding" fields below
-# People author Publications, connected by the "publishes_as" fields below and the "authors" fields in _data/publications.yml
-# Newsfeed posts may be about People, connected by the "id" fields below and the "people_ids" fields in Newsfeed posts
-#-------------------------------------------------------------------------------------
 # in addition to information enumerated here, a person may _optionally_ choose to 
-# have an expanded page of personal information in _people/<id>.md
+# create expanded information in _people/<id>.md
 #-------------------------------------------------------------------------------------
 # People are ordered on the People page as follows:
 #   PI first, then active members, than inactive members (i.e., those with an end_date)
 #   within the active group, by start_date (oldest members first)
 #   within the inactive group, by end_date (most recently departed members first)
+#-------------------------------------------------------------------------------------
+# the 'id' field is the unique identifier used for tagging and md files
+# '_' characters are removed from the 'id' field to create the name used in Badges
 #-------------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------------

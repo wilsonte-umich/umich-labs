@@ -4,11 +4,11 @@
 - text: Home # users can also reach the homepage by clicking the site's title in the navbar
   href: /
 
-- text: People # simpler data set set in people.yml
-  href: /people/ 
-
 - text: Projects # extended project descriptions in _projects .md files
   href: /projects/  
+
+- text: People # simpler data set set in people.yml
+  href: /people/ 
 
 - text: Publications # simpler data set set in publications.yml
   href: /publications/ 
