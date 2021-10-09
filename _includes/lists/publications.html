@@ -1,12 +1,20 @@
-{% if publications.size > 0 %}
+{% assign collection = site.data.publications %}
+{% include lists/filtered-list.html %}
 
-{% if header_prefix %}<h4>{{ header_prefix }} Publications</h4>{% endif %}
+{% if filtered.size > 0 %}
 <div class="row publications">
-    {% for publication in publications %}
-    <div class="{% if page.layout == 'publications' %}col-xl-6{% else %}col-12{% endif %}">
-      {% include cards/publication-card.html %}
-    </div>
-    {% endfor %}
-</div>
+{% if layout.embedded_lists %}<h4 class="col mt-2">Publications</h4>{% endif %}
 
+{% assign group_by_year = filtered | group_by: "year" %}
+{% assign by_year_desc = group_by_year | sort: "name" | reverse %}
+
+{% for year_group in by_year_desc %}
+  {% for publication in year_group.items | sort: "pmid" | reverse %}
+  <div class="{% if page.layout == 'publications' %}col-xl-6{% else %}col-12{% endif %}">
+    {% include cards/publication-card.html %}
+  </div>
+  {% endfor %}
+{% endfor %}
+
+</div>
 {% endif %}

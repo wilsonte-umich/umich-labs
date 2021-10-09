@@ -1,5 +1,7 @@
 ---
 layout: base/base
+type: project
+embedded_lists: true
 ---
 
 <div class="row">
@@ -7,18 +9,6 @@ layout: base/base
 
     {{ content }}
 
-    {% assign output = "" %}
-    {% for item in site.data.publications %}
-      {% assign badge_types  = item.badges | map: "type" %}
-      {% assign badge_values = item.badges | map: "value" %}
-      {% if badge_types contains 'project' and badge_values contains page.slug %}
-        {% assign output = output | append: item.pmid | append: "~~" %}
-      {% endif %}
-    {% endfor %}
-
-    {% assign publications = site.data.publications | where_exp: "item", "output contains item.pmid " %}
-
-    {% assign header_prefix = "Project" %}
     {% include lists/publications.html %}
 
   </div>

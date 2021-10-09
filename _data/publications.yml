@@ -2,7 +2,7 @@
 # pmid is always used as the publication_id if not null, otherwise id is used (and must not be null)
 #-------------------------------------------------------------------------------------
 # Publications are ordered on the Publications page as follows:
-#   descending by year, then by pmid, then alphabetically by title
+#   descending by year, then descending by pmid
 # thus, newest articles appear first, PubMed articles appear before books or other items
 #-------------------------------------------------------------------------------------
 # the 'pmid' field, or if missing, the 'id' field, is the unique identifier used for tagging and md files
@@ -21,8 +21,7 @@
 #   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
 #   url:      null # a non-PubMed (Central) link; used only if pmid and pmcid are both null
 #   badges:
-#     - type: TYPE # e.g. person, project...
-#       value: ID
+#     - TYPE=ID # e.g. person=John_Doe, project = project1, etc.
       
 - authors:  
     - Bazzano D
@@ -37,8 +36,7 @@
   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
   url: null
   badges:
-    - type: person
-      value: Dominic_Bazzano
+    - person = Dominic_Bazzano
 
 - authors:  
     - Park SH
@@ -51,13 +49,11 @@
   title:    Locus-specific transcription silencing at the FHIT gene suppresses replication stress-induced copy number variant formation and associated replication delay
   journal:  Nucleic Acids Research
   citation: 49(13):7507-7524  
-  year:     2021
+  year:     2020
   pmid:     34181717
   pmcid:    PMC8287918
   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
   url: null 
   badges: 
-    - type: funding
-      value: My_R01
-    - type: project
-      value: project1
+    - funding=My_R01
+    - project=project1

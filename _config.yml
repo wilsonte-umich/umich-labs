@@ -90,12 +90,6 @@ collections:
 #-------------------------------------------------------------------------------------
 # frontmatter defaults; only developers should edit this section
 #-------------------------------------------------------------------------------------
-badge_types:
-  - project
-  - person
-  - publication
-  - resource
-  - funding  
 defaults:
   -
     scope:

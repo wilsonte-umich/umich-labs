@@ -28,8 +28,7 @@
 #   publishes_as: # as would be found in a PubMed entry; multiple entries allow for name changes, etc.
 #     - Fellow PX
 #   badges:
-#     - type: TYPE # e.g. person, project...
-#       value: ID
+#     - TYPE=ID # e.g. person=John_Doe, project = project1, etc.
 
 
 #-------------------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+{% if publication.pmid %}
+  {% assign url = "https://pubmed.ncbi.nlm.nih.gov/" | append: publication.pmid %}
+  {% assign prefix = "PMID: " %}
+  {% assign id = publication.pmid %}
+  {% include base/publication-link.html %}
+{% endif %}
+ 
+{% if publication.pmcid %}
+  {% assign url = "https://www.ncbi.nlm.nih.gov/pmc/articles/" | append: publication.pmcid %}
+  {% assign prefix = "" %}
+  {% assign id = publication.pmcid %}
+  {% include base/publication-link.html %}
+{% endif %}
+ 
+{% if publication.id and publication.url %}
+  {% assign url = publication.url %}
+  {% assign prefix = "" %}
+  {% assign id = publication.id %}
+  {% include base/publication-link.html %}
+{% endif %}

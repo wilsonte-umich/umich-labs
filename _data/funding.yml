@@ -20,8 +20,7 @@
 #   description: The goals of this project are probably not relevant to the Doe laboratory!
 #   url: null 
 #   badges:
-#     - type: TYPE # e.g. person, project...
-#       value: ID
+#     - TYPE=ID # e.g. person=John_Doe, project = project1, etc.
 
 - id: My_R01 # internal identifier used in people.yml, newsfeed posts and other places
   sponsor_id: GM120767 # the fixed grant number or other identifier from the sponsor; this should never change
