@@ -1,31 +1,33 @@
+<!-- called by all card types EXCEPT project cards, which uses custom categories -->
 {% if item.badges %}
 <div class="card-footer">
 
-{% assign card_collection = site.collections | where: "item", card_type | first %} 
-{% for type in card_collection.badges %}  
-  {% assign badges = item.badges | where: "type", type %} 
-  {% assign collection = site.collections | where: "item", type | first %} 
+{% for badge_type in site.badge_types %} 
+  {% assign badges = item.badges | where: "type", badge_type %}
+  {% assign collection = site.collections | where: "item", badge_type | first %} 
   {% assign class = collection.name | append: "-badge" %}
-  {% for badge in badges %}  
-
+  {% for badge in badges %} 
     {% include base/badge-label.html %}
-
     {% if collection.link == 'never' %}
       <span class="badge badge-pill {{ class }}">{{ label }}</span>
     {% else %} 
       {% if collection.link == 'hash_always' %}
         {% assign sep = "#" %}
+        {% assign target = badge.value %}
       {% elsif collection.link == 'page_always' %}
         {% assign sep = "/" %}
+        {% assign target = badge.value | replace: "_", "-" %}
       {% else %}
         {% assign filename = badge.value | append: ".md" %}
-        {% if collection.badges contains filename %}
+        {% if collection.order contains filename %}
           {% assign sep = "/" %}
+          {% assign target = badge.value | replace: "_", "-" %}
         {% else %}
           {% assign sep = "#" %}
+          {% assign target = badge.value %}
         {% endif %} 
       {% endif %} 
-      {% assign path = collection.name | append: sep | append: badge.value %}
+      {% assign path = collection.name | append: sep | append: target %}
       <a class="badge badge-pill {{ class }}" href="{{ path | relative_url }}">{{ label }}</a>
     {% endif %} 
   {% endfor %}

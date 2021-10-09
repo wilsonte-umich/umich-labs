@@ -41,7 +41,6 @@ collections:
     link: page_always
     output: true   
     hue: 225 # blue
-    badges: null # most stable/longest-lived items; projects have self-referential categories but don't tag other collections
 #------------------------------------------------------------------------------------- 
   resources: 
     order: # *** resource order is set here; missing resources will not have dedicated page views ***
@@ -52,47 +51,27 @@ collections:
     link: page_if_exists
     output: true 
     hue: 0 # red
-    badges: # long-lived items; resources might tag a source project
-      - project
   people: 
     name: people
     item: person
     link: hash_always
     hue: 45 # gold
-    badges: # people and funding come and go; can tag collections of higher order
-      - project
-      - resource
   funding: 
     name: funding
     item: funding
     link: hash_always
     hue: 135 # green
-    badges: # people and funding come and go; can tag collections of higher order 
-      - project
-      - person
-      - resource
   publications: 
     name: publications
     item: publication
     link: hash_always
     hue: 270 # purple
-    badges: # typically the most recent items; everything else can be tagged by a publication
-      - project
-      - person
-      - resource
-      - funding
   newsfeed: 
     name: newsfeed
     item: post
     link: never
     output: true
     hue: 180 # cyan
-    badges: # most volatile collection; anything can be tagged by a news post
-      - project
-      - person
-      - publication
-      - resource
-      - funding
 
 # eight equally spaced color hues: 
 # 0 red
@@ -111,6 +90,12 @@ collections:
 #-------------------------------------------------------------------------------------
 # frontmatter defaults; only developers should edit this section
 #-------------------------------------------------------------------------------------
+badge_types:
+  - project
+  - person
+  - publication
+  - resource
+  - funding  
 defaults:
   -
     scope:

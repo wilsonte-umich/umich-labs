@@ -1,5 +1,5 @@
 <div class="card {{ include.hide }}" 
-     data-categories="{% for category in project.categories %}{{ category | downcase | strip }}|{% endfor %}">
+     data-categories="{% for category in project.categories %}{{ category | strip }}|{% endfor %}">
   <a href="{{ project.url | relative_url }}">
     {% if project.card_image %}
       <div class="card-img-top project-top" 
@@ -20,7 +20,6 @@
   <div class="card-body position-relative">
     <a href="{{ project.url | relative_url }}">
       <h5 class="card-title">
-        <!-- <a class="stretched-link" href="{{ project.url | relative_url }}">{{ project.title }}</a> -->
         <h5>{{ project.title }}</h5>
       </h5>
 
@@ -39,7 +38,7 @@
       {% assign url = 'projects' | relative_url %}
       {% for category in project.categories %}
         <a class="badge badge-pill projects-badge"
-           href="{{ url }}?category={{ category | url_encode }}">{{ category }}</a>
+           href="{{ url }}?category={{ category | strip | url_encode }}">{{ category }}</a>
       {% endfor %}
     </div>
   {% endif %}

@@ -9,12 +9,16 @@
 {% for collection in site.collections %}
 {% if collection.label != 'posts' %}
 {% assign hue = collection.hue %}
-{% assign bright = "hsl(" | append: hue | append: ",40%,40%)" %}
+{% assign bright   = "hsl(" | append: hue | append: ",35%,30%)" %}
+.{{ collection.item }}-hue  { color: {{ bright }}; } 
 .{{ collection.name }}-badge { 
   color: {{ bright }}; 
   border-color: {{ bright }} !important;
 } 
-.{{ collection.item }}-hue  { color: hsl({{ hue }},35%,40%); } 
+.{{ collection.name }}-badge:hover { 
+  background-color: {{ bright }};
+  color: white;
+} 
 .{{ collection.name }}-linear-gradient {
   background-image: linear-gradient(
     to right, 

@@ -1,4 +1,4 @@
-{% if type == 'publication' %}
+{% if badge_type == 'publication' %}
   {% assign publication = site.data.publications | where: "pmid", badge.value | first %} 
   {% if publication %}
   {% else %}

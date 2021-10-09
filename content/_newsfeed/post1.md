@@ -16,7 +16,7 @@ badges:
   - type: person
     value: Research_Tech
   - type: resource
-    value: Cell_Protocol
+    value: cell_protocol
 ---
 
 We are happy to report about a research publication.

@@ -14,13 +14,15 @@ $(document).ready(function() {
     
     if (urlParams.has("category") && urlParams.get("category") != "") {
         const category = urlParams.get("category"); // returns 1st category value + decode URI
-        const cleanCategory = $.trim(category.toLowerCase()); // as written in .card data-categories
-        
+        const cleanCategory = $.trim(category); // as written in .card data-categories
+
         // show card if it does contains the selected category
+        $(".card").parent().addClass("d-none"); // suppress parent containers to ensure card stacking to top left of page
         $(".card").each(function() {
             const cardCategories = $(this).data("categories").split("|");
             if (cardCategories.includes(cleanCategory)) {
-                $(this).parent().removeClass("d-none");
+                console.log('changing class');
+                $(this).removeClass("d-none").parent().removeClass("d-none"); 
             }
         });
 
@@ -28,5 +30,7 @@ $(document).ready(function() {
         $(".jumbotron .categories").append(
             '<a class="badge badge-pill" href="' +  page.url  + '">' + category + '</a>'
         );
+    } else {
+        $(".card").removeClass("d-none"); // no filter, show all cards
     }
 });
