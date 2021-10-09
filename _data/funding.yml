@@ -9,6 +9,20 @@
 # '_' characters are removed from the 'id' field to create the name used in Badges
 #-------------------------------------------------------------------------------------
 
+# - id: My_R01 # internal identifier used in people.yml, newsfeed posts and other places
+#   sponsor_id: GM000000 # the fixed grant number or other identifier from the sponsor; this should never change
+#   sponsor_link: https://reporter.nih.gov/search/ZBDA5h93H0qMxITs5aN_uw/projects?shared=true
+#   start_date: 2004-08-01 # the intent is to only list funding that was actually committed by the sponsor
+#   end_date: 2021-06-30   # but including past funding sources if you'd like a complete list
+#   title: Title of the grant
+#   sponsor: NIH NIGMS # who provided the funding
+#   grant type: R01
+#   description: The goals of this project are probably not relevant to the Doe laboratory!
+#   url: null 
+#   badges:
+#     - type: TYPE # e.g. person, project...
+#       value: ID
+
 - id: My_R01 # internal identifier used in people.yml, newsfeed posts and other places
   sponsor_id: GM120767 # the fixed grant number or other identifier from the sponsor; this should never change
   sponsor_link: https://reporter.nih.gov/search/ZBDA5h93H0qMxITs5aN_uw/projects?shared=true
@@ -17,5 +31,5 @@
   title: Systematic Genetic Analysis of Yeast NHEJ
   sponsor: NIH NIGMS # who provided the funding
   grant type: R01
-  description: The goals of this project are probably not relevant to the Doe laboratory! 
-  projects: project1 # must match file names in _projects, without the ".md" extension
+  description: The goals of this project are probably not relevant to the Doe laboratory!
+  url: null 

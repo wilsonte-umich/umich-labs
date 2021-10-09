@@ -1,7 +1,12 @@
+{% if publications.size > 0 %}
+
+{% if header_prefix %}<h4>{{ header_prefix }} Publications</h4>{% endif %}
 <div class="row publications">
     {% for publication in publications %}
-    <div class="col-lg-6"> <!-- col-md-6 col-lg-4 -->
+    <div class="{% if page.layout == 'publications' %}col-xl-6{% else %}col-12{% endif %}">
       {% include cards/publication-card.html %}
     </div>
     {% endfor %}
 </div>
+
+{% endif %}

@@ -80,10 +80,10 @@
   border-radius: 0;
   border-top-left-radius: 10px;
 
-  // .card-body {
-  //   a {
-  //     color: $body-color;
-  //   }    
-  // }
+  .external-link {
+    color: $link-color !important; 
+  }
 
 }
+
+

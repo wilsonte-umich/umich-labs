@@ -1,4 +1,5 @@
 ---
+layout: base/default
 title: Contact Information
 # banner_image: null
 permalink: /contact/

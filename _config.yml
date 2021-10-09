@@ -103,6 +103,7 @@ defaults:
       type: "projects"
     values:
       permalink: "/projects/:slug/"
+      layout: "items/project"
   -
     scope:
       path: ""
@@ -137,7 +138,7 @@ defaults:
     scope:
       path: ""
     values:
-      layout: "default" # Only required for Petridish website, implied for sites using a theme
+      layout: "base/default" # Only required for Petridish website, implied for sites using a theme
 
 #-------------------------------------------------------------------------------------
 # build settings; only developers should edit this section

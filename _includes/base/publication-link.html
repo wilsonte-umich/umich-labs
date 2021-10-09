@@ -1,0 +1,13 @@
+{% if publication.pmcid %}
+  {% assign pub_url = "https://www.ncbi.nlm.nih.gov/pmc/articles/" | append: publication.pmcid %}
+{% elsif publication.pmid %}
+  {% assign pub_url = "https://pubmed.ncbi.nlm.nih.gov/" | append: publication.pmid %}
+{% elsif publication.url %}
+  {% assign pub_url = publication.url %}
+{% endif %}
+
+{% if pub_url %}
+<a href="{{ pub_url }}" 
+class="external-link"
+target="umich-labs-publication" ><i class="fa fa-external-link fa-lg"></i></a>
+{% endif %}

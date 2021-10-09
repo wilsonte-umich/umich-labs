@@ -19,9 +19,11 @@
 #   pmid:     00000000 # e.g., 00000000, can be missing or null
 #   pmcid:    PMC0000000 # e.g., PMC0000000, can be missing or null
 #   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
-#   projects: null # must match file names in _projects, without the ".md" extension
-#   funding:  null # grant ids as found in funding.yml
-
+#   url:      null # a non-PubMed (Central) link; used only if pmid and pmcid are both null
+#   badges:
+#     - type: TYPE # e.g. person, project...
+#       value: ID
+      
 - authors:  
     - Bazzano D
     - Lomonaco S
@@ -31,10 +33,12 @@
   citation: 10.1093/nar/gkab597  # typically volume(issue):page-page, or an online publication id
   year:     2021
   pmid:     34263309 # e.g., 00000000, can be missing or null
-  pmcid:    PMC8287918 # e.g., PMC0000000, can be missing or null
+  pmcid:    null # e.g., PMC0000000, can be missing or null
   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
-  projects: yeast_dsb # must match file names in _projects, without the ".md" extension
-  funding:  GM_yeast_DSB # grant ids as found in funding.yml
+  url: null
+  badges:
+    - type: person
+      value: Dominic_Bazzano
 
 - authors:  
     - Park SH
@@ -49,7 +53,11 @@
   citation: 49(13):7507-7524  
   year:     2021
   pmid:     34181717
-  pmcid:    null
+  pmcid:    PMC8287918
   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
-  projects: null # must match file names in _projects, without the ".md" extension
-  funding:  null # grant ids as found in funding.yml
+  url: null 
+  badges: 
+    - type: funding
+      value: My_R01
+    - type: project
+      value: project1

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: base/home
 title: John Doe Laboratory
 title2: University of Michigan
 subtitle: Research laboratory and other projects

@@ -9,8 +9,17 @@
 # '_' characters are removed from the 'id' field to create the name used in Badges
 #-------------------------------------------------------------------------------------
 
+# - id: cell_protocol # internal identifier used in newsfeed posts and other places
+#   title: Cell Protocol
+#   type: protocol
+#   description: This is an important protocol for handling cells the way we do it. 
+#   url: https://link.to.protocol/
+#   badges:
+#     - type: TYPE # e.g. person, project...
+#       value: ID
+
 - id: cell_protocol # internal identifier used in newsfeed posts and other places
   title: Cell Protocol
   type: protocol
   description: This is an important protocol for handling cells the way we do it. 
-  link: https://link.to.protocol/
+  url: https://link.to.protocol/
