@@ -1,0 +1,17 @@
+{% if max_posts %}
+{% else %}
+    {% assign max_posts = site.max_posts_other %}
+{% endif %}
+
+{% include lists/posts.html %}
+
+{% if is_news %}
+<div class="{{ ticker_class }} col-lg-4">
+<h3>Recent News</h3>
+    
+{% for post in filtered limit:max_posts %}
+    {% include cards/post-card.html %}
+{% endfor %}
+
+</div>
+{% endif %}

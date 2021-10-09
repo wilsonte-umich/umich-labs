@@ -10,10 +10,12 @@ remarks: See also page.layout == 'newsfeed' in footer.html
   </div>
 </div>
 
-<div class="row cards">
-  {% for post in site.newsfeed %}
-  <div class="col-md-6 col-lg-4">
-    {% include  cards/post-card.html %}
-  </div>
-  {% endfor %}
+{% include lists/posts.html %}
+
+<div class="row">
+{% for post in filtered limit:site.max_posts_newsfeed %}
+    <div class="col-lg-4">
+    {% include cards/post-card.html %}
+    </div>
+{% endfor %}
 </div>

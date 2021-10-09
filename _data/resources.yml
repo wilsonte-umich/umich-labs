@@ -15,7 +15,7 @@
 #   description: This is an important protocol for handling cells the way we do it. 
 #   url: https://link.to.protocol/
 #   badges:
-#     - TYPE=ID # e.g. person=John_Doe, project = project1, etc.
+#     - TYPE=ID # e.g. person=John_Doe, project=project1 (no spaces)
 
 - id: cell_protocol # internal identifier used in newsfeed posts and other places
   title: Cell Protocol

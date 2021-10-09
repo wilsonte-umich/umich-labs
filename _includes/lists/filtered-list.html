@@ -1,11 +1,6 @@
 {% if layout.embedded_lists %}
     {% assign badge = layout.type | append: "=" | append: page.slug %}
     {% assign filtered = collection | where_exp: "item", "item.badges contains badge" %}
-    {% if filtered %}
-    {% else %}
-        {% assign badge = layout.type | append: " = " | append: page.slug %}
-        {% assign filtered = collection | where_exp: "item", "item.badges contains badge" %}
-    {% endif %}
 {% else %}
     {% assign filtered = collection %}
 {% endif %}

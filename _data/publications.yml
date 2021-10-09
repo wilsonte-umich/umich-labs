@@ -21,7 +21,7 @@
 #   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
 #   url:      null # a non-PubMed (Central) link; used only if pmid and pmcid are both null
 #   badges:
-#     - TYPE=ID # e.g. person=John_Doe, project = project1, etc.
+#     - TYPE=ID # e.g. person=John_Doe, project=project1 (no spaces)
       
 - authors:  
     - Bazzano D
@@ -31,12 +31,13 @@
   journal:  Nucleic Acids Research
   citation: 10.1093/nar/gkab597  # typically volume(issue):page-page, or an online publication id
   year:     2021
+  date:     2021-09-21
   pmid:     34263309 # e.g., 00000000, can be missing or null
   pmcid:    null # e.g., PMC0000000, can be missing or null
   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed
   url: null
   badges:
-    - person = Dominic_Bazzano
+    - person=Dominic_Bazzano
 
 - authors:  
     - Park SH
@@ -50,6 +51,7 @@
   journal:  Nucleic Acids Research
   citation: 49(13):7507-7524  
   year:     2020
+  date:     2020-07-15
   pmid:     34181717
   pmcid:    PMC8287918
   id:       null # use some other ID (must be unique) if the publication is not listed on PubMed

@@ -3,9 +3,11 @@
 .team-member {
   margin-bottom: $grid-gutter-width;
 
-  & > img {
-    height: 150px;
-    width: 150px;
+  // & > 
+  img {
+    width: 100%;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 150px;
     border: 1px solid $gray-500; 
     object-fit: cover;

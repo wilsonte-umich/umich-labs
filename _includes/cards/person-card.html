@@ -1,39 +1,46 @@
-<div class="media team-member">
-<img class="mr-3" src="{{ person.image | relative_url }}">
-<div class="media-body mt-3">
-    <h5 id="{{ person.name | strip | url_encode }}">
-        {{ person.name }}
-        {% if person.role %}
-        <small class="text-muted">| {{ person.role }}</small>
+<div class="row team-member col col-12 col-lg-6">
+    <div class="col-4 text-right">
+        <img class="mr-3" src="{{ person.image | relative_url }}">
+    </div>
+    <div class="col-8 text-left mt-3">
+        <h5 id="{{ person.name | strip | url_encode }}">
+            {{ person.name }}
+            {% assign collection_name = 'people' %}
+            {% assign item_type = 'person' %}
+            {% assign slug = person.id %}
+            <span class="float-right">{% include base/recent-news-link.html %}</span>
+            {% if person.role %}
+            <small class="text-muted"><br>{{ person.role }}</small>
+            {% endif %}
+        </h5>
+
+        {{ person.description | markdownify }}
+
+        <ul class="list-inline">
+        {% if person.orcid %}
+        <li class="list-inline-item">
+            <a href="https://orcid.org/{{ person.orcid }}"><img class="orcid" src="{{ '/assets/theme/img/orcid.png' | relative_url }}"></a>
+        </li>
         {% endif %}
-    </h5>
 
-    {{ person.description | markdownify }}
+        {% if person.email %}
+        <li class="list-inline-item">
+            <a href="mailto:{{ person.email }}"><i class="fa fa-envelope"></i></a>
+        </li>
+        {% endif %}
 
-    <ul class="list-inline">
-    {% if person.orcid %}
-    <li class="list-inline-item">
-        <a href="https://orcid.org/{{ person.orcid }}"><img class="orcid" src="{{ '/assets/theme/img/orcid.png' | relative_url }}"></a>
-    </li>
-    {% endif %}
+        {% if person.twitter %}
+        <li class="list-inline-item">
+            <a href="https://twitter.com/{{ person.twitter }}"><i class="fa fa-twitter"></i></a>
+        </li>
+        {% endif %}
 
-    {% if person.email %}
-    <li class="list-inline-item">
-        <a href="mailto:{{ person.email }}"><i class="fa fa-envelope"></i></a>
-    </li>
-    {% endif %}
+        {% if person.github %}
+        <li class="list-inline-item">
+            <a href="https://github.com/{{ person.github }}"><i class="fa fa-github"></i></a>
+        </li>
+        {% endif %}
 
-    {% if person.twitter %}
-    <li class="list-inline-item">
-        <a href="https://twitter.com/{{ person.twitter }}"><i class="fa fa-twitter"></i></a>
-    </li>
-    {% endif %}
-
-    {% if person.github %}
-    <li class="list-inline-item">
-        <a href="https://github.com/{{ person.github }}"><i class="fa fa-github"></i></a>
-    </li>
-    {% endif %}
-    </ul>
-</div>
+        </ul>
+    </div>
 </div>

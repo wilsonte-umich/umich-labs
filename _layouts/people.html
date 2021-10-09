@@ -5,6 +5,8 @@ description: Template for people page
 
 {{ content }}
 
+<div class="row">
 {% for person in site.data.people %}
   {% include cards/person-card.html %}
 {% endfor %}
+</div>

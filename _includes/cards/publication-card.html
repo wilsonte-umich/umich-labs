@@ -6,6 +6,10 @@
       <i>{{ publication.journal }}</i>
       {{ publication.citation }}
       ({{ publication.year }})
+      {% assign collection_name = 'publications' %}
+      {% assign item_type = 'publication' %}
+      {% assign slug = publication.pmid %}
+      <span class="float-right">{% include base/recent-news-link.html %}</span>
     </div>
     <div class="mt-1">
       {% include base/publication-links.html %}

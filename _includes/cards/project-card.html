@@ -29,6 +29,10 @@
         {% else %}
           {{ project.excerpt | truncatewords: 20 }}
         {% endif %}
+        {% assign collection_name = 'projects' %}
+        {% assign item_type = 'project' %}
+        {% assign slug = project.id | split: '/' | last %}
+        {% include base/recent-news-link.html %}
       </div>
     </a>
   </div>

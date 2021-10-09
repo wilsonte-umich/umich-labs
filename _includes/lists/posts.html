@@ -1,0 +1,11 @@
+{% assign collection = site.newsfeed | sort: date | reverse %}
+
+{% include lists/filtered-list.html %}
+
+{% if filtered.size > 0 %}
+  {% assign is_news = true %}
+  {% if layout.suppress_narrow_ticker %}
+    {% assign item_class   = "col-lg-8" %}
+    {% assign ticker_class = "d-none d-lg-inline-block" %}    
+  {% endif %}
+{% endif %}

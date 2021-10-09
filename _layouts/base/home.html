@@ -2,24 +2,24 @@
 layout: base/base
 description: Template for homepage
 remark: See also page.layout == 'home' in head.html and jumbotron.html
+date: 2021-10-05
 ---
 
 <div class="row">
   <div class="col">
     <div class="row">
 
-      <!-- from home.md -->
+      <!-- from home.md (top left) -->
       <div class="col">
         {{ content }}
       </div>
 
-      <!-- from _posts -->
-      {% assign posts = site.newsfeed | sort: date | reverse %}
-      {% assign max_posts = site.max_news_home %}
-      {% include news-ticker.html %}
+      <!-- news posts (to right, or in middle) -->
+      {% assign max_posts = site.max_posts_home %}
+      {% include lists/news-ticker.html %}
     </div>
 
-    <!-- from _projects -->
+    <!-- projects (at bottom) -->
     <hr>
     <h3>Active Projects</h3>    
     <div class="row cards mt-4">
@@ -29,5 +29,5 @@ remark: See also page.layout == 'home' in head.html and jumbotron.html
       </div>
     {% endfor %}
     </div>
-
+  </div>
 </div>

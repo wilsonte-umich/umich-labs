@@ -1,6 +1,7 @@
 #-------------------------------------------------------------------------------------
 # site settings
 #-------------------------------------------------------------------------------------
+version: 1 # increment version to force a site rebuild and update Recent News even if content is unchanged
 title: John Doe Laboratory # in top navigation bar (navbar) and <head>
 description: John Doe Laboratory, University of Michigan Medical School # description in <head>
 author: John Doe                    # for copyright statement in footer
@@ -16,9 +17,12 @@ github_username: jdoe-umich
 #-------------------------------------------------------------------------------------
 # theme display settings
 #-------------------------------------------------------------------------------------
-max_projects_home: 12  # Show x number of active projects on home page, must be > 0
-max_news_home: 3       # Show x number of recent news posts on home page, must be > 0
-max_news_other: 10     # Show x number of recent news posts on other pages, must be > 0
+max_posts_newsfeed: 24  # Show x number of recent news posts on the dedicated Newsfeed page, must be > 0  
+max_posts_home: 3       # Show x number of recent news posts on home page, must be > 0
+max_posts_other: 10     # Show x number of recent news posts on other pages, must be > 0
+max_age_newsfeed: 180   # Suppress old news on the dedicated Newsfeed page (from the top navbar)
+max_age_other: 30       # Suppress old news in the Recent News ticker on all other pages
+max_projects_home: 12   # Show x number of active projects on home page, must be > 0
 logo: /assets/images/1280px-Michigan_Wolverines_logo-90px_height.png  # Logo in navbar, will be displayed at 30px height
 colors:
   links:  "#2F65A7"    # Color for links: use a readable color that contrasts well with dark text
