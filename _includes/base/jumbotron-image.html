@@ -1,0 +1,10 @@
+{% if include.source.banner_image %}
+<header class="jumbotron bg-image" 
+        style="background-image: url('{{ include.source.banner_image | relative_url }}')">
+{% elsif include.source.card_image %}
+<header class="jumbotron bg-image" 
+        style="background-image: url('{{ include.source.card_image | relative_url }}')">   
+{% else %}
+<!-- always use projects color as the default -->
+<header class="jumbotron bg-image projects-linear-gradient"> 
+{% endif %}

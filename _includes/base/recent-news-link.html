@@ -2,5 +2,5 @@
 {% assign filtered = site.newsfeed | where_exp: "item", "item.badges contains badge" %}
 {% if filtered.size > 0 %}
   {% assign post = filtered | sort: "date" | reverse | first %}
-  <a class="recent-news {{ collection_name }}-linear-gradient" href="{{ post.url }}">Recent News</a>
+  <a class="recent-news {{ collection_name }}-linear-gradient" href="{{ post.id | relative_url }}">Recent News</a>
 {% endif %}

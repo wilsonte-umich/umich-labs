@@ -6,12 +6,12 @@ permalink: /contact/
 assistant_email: doe-asst@umich.edu
 ---
 
-## Administrative Assistant
+### Administrative Assistant
 
 **Admin Asst Name**  
 <a href="mailto:{{ page.assistant_email }}">{{ page.assistant_email }}</a>
 
-## Principal Investigator
+### Principal Investigator
 
 **John Doe, Ph.D.**  
 etc.

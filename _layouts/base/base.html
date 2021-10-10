@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-  {% include base/head.html %}
+  {% include layout/head.html %}
   <body>
-    {% include base/svg-color-defs.html %}    
-    {% include base/navbar.html %}
+    {% include color/svg-color-defs.html %}    
+    {% include layout/navbar.html %}
     <main>
-      {% include base/jumbotron.html %}
+      {% include layout/jumbotron.html %}
       <div class="container content">
-        <!-- { % include base/color-demo.html % } -->
+        <!-- { % include color/color-demo.html % } -->
         {{ content | replace: '<table', '<table class="table"' }}
       </div>
     </main>
-    {% include base/footer.html %}
+    {% include layout/footer.html %}
   </body>
 </html>

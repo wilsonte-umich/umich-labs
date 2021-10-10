@@ -1,0 +1,44 @@
+
+{% if page.collection == "newsfeed" and page.banner_image_source %}
+  {% assign title_prefix = "NEWS: " %}
+  {% include base/split-badge.html badge=page.banner_image_source %}
+  {% assign collection = site.collections | where: "item", badge_type | first %}
+  {% assign id = "/" | append: collection.name | append: "/" | append: badge_id %}
+  {% assign doc = collection.docs | where: "id", id | first %}
+  {% include base/jumbotron-image.html source=doc %}
+{% else %}
+  {% include base/jumbotron-image.html source=page %}
+{% endif %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 mx-auto">
+      
+        <!-- page title + title2 + subtitle -->
+        <h1{% if page.layout == 'home' %} class="home"{% endif %}>
+          {{ title_prefix }}{{ page.title }}{% if page.title2 %}<br>{{ page.title2 }}{% endif %}
+        </h1>
+        <div class="lead">{{ page.subtitle }}</div>
+        
+        <!-- newsfeed post date -->
+        {% if page.date %}
+        <!-- <p class="meta">
+          <time>{ { page.date | date: "%B %d, %Y" } }</time>
+        </p> -->
+        {% endif %}
+
+        <!-- category badges -->
+        <div class="categories">
+          {% if page.categories %}
+            {% for category in page.categories %}
+              <a class="badge badge-pill" 
+                  href="{{ page.collection | relative_url }}?category={{ category | url_encode }}">
+                  {{ category }}
+              </a>
+            {% endfor %}
+          {% endif %}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</header>
