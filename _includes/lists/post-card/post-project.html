@@ -1,0 +1,7 @@
+{% assign project_id = "/projects/" | append: badge_id  %}
+{% assign project = site.projects | where_exp: "item", "item.id == project_id" | first %}
+{% if project %}
+    <div class="{{ col_class }}">
+        {% include cards/project-card.html %}
+    </div> 
+{% endif %}

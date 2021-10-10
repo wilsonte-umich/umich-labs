@@ -85,7 +85,17 @@
   .external-link {
     color: $link-color !important; 
   }
+}
 
+// funding and resources
+.funding-card, .resource-card {
+  border-radius: 10px;
+  .external-link {
+    color: $link-color !important; 
+  }
+  .external-link:hover {
+    color: lighten($link-color, 10%) !important;
+  }
 }
 
 .recent-news {

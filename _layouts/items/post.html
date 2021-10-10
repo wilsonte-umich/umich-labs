@@ -1,0 +1,42 @@
+---
+layout: base/base
+type: post
+suppress_recent_news: true
+suppress_project_image: true
+force_wide_person: true
+---
+
+{% assign col_class = "col-md-10 mx-auto" %}
+
+<div class="row">
+
+  <div class="{{ col_class }}">
+    {{ content }}
+  </div>
+
+  {% include lists/post-card/post-list.html 
+    item_type="person" 
+    collection_name="People" 
+    badge_script="lists/post-card/post-person.html" %}
+
+  {% include lists/post-card/post-list.html 
+    item_type="publication" 
+    collection_name="Publications" 
+    badge_script="lists/post-card/post-publication.html" %}
+
+  {% include lists/post-card/post-list.html 
+    item_type="resource" 
+    collection_name="Resources" 
+    badge_script="lists/post-card/post-resource.html" %}
+
+  {% include lists/post-card/post-list.html 
+    item_type="funding" 
+    collection_name="Funding" 
+    badge_script="lists/post-card/post-funding.html" %}
+
+  {% include lists/post-card/post-list.html 
+    item_type="project" 
+    collection_name="Projects" 
+    badge_script="lists/post-card/post-project.html" %}
+
+</div>

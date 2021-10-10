@@ -10,25 +10,25 @@
 #-------------------------------------------------------------------------------------
 
 # - id: My_R01 # internal identifier used in people.yml, newsfeed posts and other places
+#   sponsor: "NIH/NIGMS" # who provided the funding
 #   sponsor_id: GM000000 # the fixed grant number or other identifier from the sponsor; this should never change
 #   sponsor_link: https://reporter.nih.gov/search/ZBDA5h93H0qMxITs5aN_uw/projects?shared=true
+#   grant_type: R01
 #   start_date: 2004-08-01 # the intent is to only list funding that was actually committed by the sponsor
 #   end_date: 2021-06-30   # but including past funding sources if you'd like a complete list
 #   title: Title of the grant
-#   sponsor: NIH NIGMS # who provided the funding
-#   grant type: R01
 #   description: The goals of this project are probably not relevant to the Doe laboratory!
-#   url: null 
 #   badges:
 #     - TYPE=ID # e.g. person=John_Doe, project=project1 (no spaces)
 
 - id: My_R01 # internal identifier used in people.yml, newsfeed posts and other places
+  sponsor: NIH/NIGMS # who provided the funding
   sponsor_id: GM120767 # the fixed grant number or other identifier from the sponsor; this should never change
   sponsor_link: https://reporter.nih.gov/search/ZBDA5h93H0qMxITs5aN_uw/projects?shared=true
+  grant_type: R01  
   start_date: 2004-08-01 # the intent is to only list funding that was actually committed by the sponsor
   end_date: 2021-06-30   # but including past funding sources if you'd like a complete list
   title: Systematic Genetic Analysis of Yeast NHEJ
-  sponsor: NIH NIGMS # who provided the funding
-  grant type: R01
   description: The goals of this project are probably not relevant to the Doe laboratory!
-  url: null 
+  badges:
+    - project=project1

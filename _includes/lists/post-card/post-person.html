@@ -1,0 +1,6 @@
+{% assign person = site.data.people | where_exp: "item", "item.id == badge_id" | first %}
+{% if person %}
+    <div class="{{ col_class }}">
+        {% include cards/person-card.html %}
+    </div> 
+{% endif %}

@@ -1,0 +1,15 @@
+{% assign collection = site.data.resources %}
+{% include lists/filtered-list.html %}
+
+{% if filtered.size > 0 %}
+<div class="row resources">
+{% if layout.embedded_lists %}<h4 class="col mt-2">Resources</h4>{% endif %}
+
+{% for resource in filtered %}
+    <div class="{% if page.layout == 'resources' %}col-xl-6{% else %}col-12{% endif %}">
+    {% include cards/resource-card.html %}
+    </div>
+{% endfor %}
+
+</div>
+{% endif %}

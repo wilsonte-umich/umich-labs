@@ -1,21 +1,23 @@
 <div class="card {{ include.hide }}" 
      data-categories="{% for category in project.categories %}{{ category | strip }}|{% endfor %}">
-  <a href="{{ project.url | relative_url }}">
-    {% if project.card_image %}
-      <div class="card-img-top project-top" 
-           style="background-image: url('{{ project.card_image | relative_url }}')">
-      </div>
-    {% else %}
-      <div class="card-img-top project-top projects-linear-gradient">
-        {% if project.card_title %}
-          {% assign card_title = project.card_title %}
-        {% else %}
-          {% assign card_title = project.title %}
-        {% endif %}
-        <h3>{{ card_title }}</h3>
-      </div>
-    {% endif %}
-  </a>
+  {% unless layout.suppress_project_image %}
+    <a href="{{ project.url | relative_url }}">
+      {% if project.card_image %}
+        <div class="card-img-top project-top" 
+            style="background-image: url('{{ project.card_image | relative_url }}')">
+        </div>
+      {% else %}
+        <div class="card-img-top project-top projects-linear-gradient">
+          {% if project.card_title %}
+            {% assign card_title = project.card_title %}
+          {% else %}
+            {% assign card_title = project.title %}
+          {% endif %}
+          <h3>{{ card_title }}</h3>
+        </div>
+      {% endif %}
+    </a>
+  {% endunless %}
 
   <div class="card-body position-relative">
     <a href="{{ project.url | relative_url }}">

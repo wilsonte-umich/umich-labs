@@ -1,0 +1,22 @@
+<!-- TODO: sort resources into headered 'type' groups -->
+<div class="card resource-card mb-3">
+    <div class="card-body">
+        <div>
+            <strong>{{ resource.title }}</strong>
+            {% include base/external-link.html url=resource.url %}    
+        </div> 
+        <div>
+            {{ resource.type | capitalize }}    
+            {% assign collection_name = 'resources' %}
+            {% assign item_type = 'resource' %}
+            {% assign slug = resource.id %}
+            <span class="float-right">{% include base/recent-news-link.html %}</span>
+        </div> 
+        <div class="mt-1 pl-4">{{ resource.description }}</div>
+    </div>
+
+    {% if page.layout == 'resources' %}
+        {% assign item = resource %}    
+        {% include base/badges.html %}  
+    {% endif %}  
+</div>

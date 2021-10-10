@@ -1,0 +1,6 @@
+{% assign funding = site.data.funding | where_exp: "item", "item.id == badge_id" | first %}
+{% if funding %}
+    <div class="{{ col_class }}">
+        {% include cards/funding-card.html %}
+    </div> 
+{% endif %}

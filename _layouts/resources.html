@@ -2,6 +2,7 @@
 layout: base/base
 description: Template for resources page
 remark: See also page.layout == 'resources' in head.html and jumbotron.html
+type: resource
 ---
 
 <div class="row">
@@ -9,3 +10,5 @@ remark: See also page.layout == 'resources' in head.html and jumbotron.html
         {{ content }}
     </div>
 </div>
+  
+{% include lists/resources.html %}

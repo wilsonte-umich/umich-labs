@@ -1,0 +1,15 @@
+{% assign collection = site.data.funding %}
+{% include lists/filtered-list.html %}
+
+{% if filtered.size > 0 %}
+<div class="row funding">
+{% if layout.embedded_lists %}<h4 class="col mt-2">Funding</h4>{% endif %}
+
+{% for funding in filtered | sort: "end_date" | reverse %}
+    <div class="{% if page.layout == 'funding' %}col-xl-6{% else %}col-12{% endif %}">
+    {% include cards/funding-card.html %}
+    </div>
+{% endfor %}
+
+</div>
+{% endif %}

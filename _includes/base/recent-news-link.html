@@ -1,6 +1,10 @@
+{% unless layout.suppress_recent_news %}
+
 {% assign badge = item_type | append: "=" | append: slug %}
 {% assign filtered = site.newsfeed | where_exp: "item", "item.badges contains badge" %}
 {% if filtered.size > 0 %}
   {% assign post = filtered | sort: "date" | reverse | first %}
   <a class="recent-news {{ collection_name }}-linear-gradient" href="{{ post.id | relative_url }}">Recent News</a>
 {% endif %}
+
+{% endunless %}

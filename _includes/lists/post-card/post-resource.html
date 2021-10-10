@@ -1,0 +1,6 @@
+{% assign resource = site.data.resources | where_exp: "item", "item.id == badge_id" | first %}
+{% if resource %}
+    <div class="{{ col_class }}">
+        {% include cards/resource-card.html %}
+    </div> 
+{% endif %}

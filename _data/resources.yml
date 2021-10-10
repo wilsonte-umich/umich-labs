@@ -22,3 +22,6 @@
   type: protocol
   description: This is an important protocol for handling cells the way we do it. 
   url: https://link.to.protocol/
+  badges:
+    - person=John_Doe
+    - project=project3

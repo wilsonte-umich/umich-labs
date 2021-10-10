@@ -2,6 +2,7 @@
 layout: base/base
 description: Template for funding sources page
 remark: See also page.layout == 'funding' in head.html and jumbotron.html
+type: funding
 ---
 
 <div class="row">
@@ -10,10 +11,4 @@ remark: See also page.layout == 'funding' in head.html and jumbotron.html
     </div>
 </div>
   
-<div class="row publications">
-    {% for grant in site.data.funding %}
-    <div class="col-md-6 col-lg-4">
-      {% include funding.html %}
-    </div>
-    {% endfor %}
-</div>
+{% include lists/funding.html %}

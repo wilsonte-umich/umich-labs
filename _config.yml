@@ -108,30 +108,35 @@ defaults:
       type: "people"
     values:
       permalink: "/people/:slug/"
+      layout: "items/person"
   -
     scope:
       path: ""
       type: "publications"
     values:
       permalink: "/publications/:slug/"
+      layout: "items/publication"
   -
     scope:
       path: ""
       type: "funding"
     values:
       permalink: "/funding/:slug/"
+      layout: "items/funding"
   -
     scope:
       path: ""
       type: "resources"
     values:
-      permalink: "/resources/:slug/" 
+      permalink: "/resources/:slug/"
+      layout: "items/resource" 
   -
     scope:
       path: ""
       type: "newsfeed"
     values:
       permalink: "/newsfeed/:slug/"
+      layout: "items/post"
   -
     scope:
       path: ""

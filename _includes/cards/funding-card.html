@@ -1,0 +1,21 @@
+<!-- TODO: consider having Current and Past categories, or probably better, set a marker on the card -->
+<div class="card funding-card mb-3">
+  <div class="card-body">
+    <div><strong>{{ funding.title }}</strong></div> 
+    <div>
+        {{ funding.sponsor }} {{ funding.grant_type }} {{ funding.sponsor_id }}   
+        {% include base/external-link.html url=funding.sponsor_link %}    
+        {% assign collection_name = 'funding' %}
+        {% assign item_type = 'funding' %}
+        {% assign slug = funding.id %}
+        <span class="float-right">{% include base/recent-news-link.html %}</span>
+    </div> 
+    <div><i>{{ funding.start_date | date: "%m/%d/%Y" }} to {{ funding.end_date | date: "%m/%d/%Y" }}</i></div> 
+    <div class="mt-1 pl-4">{{ funding.description }}</div>
+  </div>
+
+  {% if page.layout == 'funding' %}
+    {% assign item = funding %}    
+    {% include base/badges.html %}  
+  {% endif %}  
+</div>
