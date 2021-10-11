@@ -2,10 +2,17 @@
 {% assign by_status = group_by_status | sort: "name" %}
 
 {% for status_group in by_status %}
-{% if status_group.name == "past" %}<h4 class="col mb-4">{{ status_group.name | capitalize}} members and associates</h4>{% endif %}
+
+{% if status_group.name == "past" %}
+<div class="col mb-4 pt-4" style="border-top: 1px solid #ccc;">
+<h4>{{ status_group.name | capitalize}} members and associates</h4>
+</div>
+{% endif %}
+
 <div class="row people mb-4">
 {% for person in status_group.items %}
     {% include cards/person-card.html %}
 {% endfor %}
 </div>
+
 {% endfor %}
