@@ -1,7 +1,7 @@
 # umich-labs
 
 This is a Jekyll theme used for constructing research laboratory or project websites.
-It is a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, with extensive modifications from that base but with an overall similar structure and feel.
+It is a permanent fork of the [petridish](https://github.com/peterdesmet/petridish) theme, with extensive modifications from that base but with an overall similar look and feel.
 It is intended for use with [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
 
 ## Usage

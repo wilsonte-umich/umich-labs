@@ -25,6 +25,13 @@
     <div class="mt-1">
       {% include base/publication-links.html %}
     </div>
+
+    {% if page.layout == 'publications' %}
+    {% capture link_html %} 
+        <div class="mt-1 pl-4">{{ publication.abstract | truncatewords: site.max_words_card_long }}</div>
+    {% endcapture %}
+    {% include base/optional-item-link.html link_html=link_html %}
+    {% endif %}  
   </div>
 
   {% if page.layout == 'publications' %}

@@ -27,15 +27,3 @@
 
   - text: Contact # simple page unto itself, no connections to other data types
     href: /contact/
-
-# - text: More
-#   menu: # Dropdown menu (one level deep only)
-#   - text: Page 1
-#     href: /there-is-no-page-for-this-permalink/
-#   - text: Page 2
-#     href: /some_page/
-#   - text: "---" # Divider to separate blocks of menu items (at least 3 "-")
-#   - text: "Dropdown header" # Title for block of menu items
-#   - text: External link
-#     href: https://github.com/peterdesmet/petridish/blob/master/_data/navigation.yml
-#     new_window: true

@@ -28,9 +28,9 @@
 
       <div class="card-text">
         {% if project.description %}
-          {{ project.description | markdownify | truncatewords: 20 }}
+          {{ project.description | markdownify | truncatewords: site.max_words_card_short }}
         {% else %}
-          {{ project.excerpt | truncatewords: 20 }}
+          {{ project.excerpt | truncatewords: site.max_words_card_short }}
         {% endif %}
         {% assign collection_name = 'projects' %}
         {% assign item_type = 'project' %}

@@ -21,7 +21,9 @@
 
         {% capture link_html %}
             <div>{{ resource.type | capitalize }}</div> 
-            <div class="mt-1 pl-4">{{ resource.description }}</div>
+            {% if page.layout == 'resources' %}
+            <div class="mt-1 pl-4">{{ resource.description | truncatewords: site.max_words_card_long }}</div>
+            {% endif %}  
         {% endcapture %}
         {% include base/optional-item-link.html link_html=link_html %}
     </div>

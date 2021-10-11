@@ -6,4 +6,4 @@ banner_image: null
 permalink: /resources/
 ---
 
-We are happy to make the following protocols and resources publicly available.
+We are happy to make the following protocols and resources publicly available.  

@@ -3,6 +3,8 @@
     {% assign max_posts = site.max_posts_other %}
 {% endif %}
 
+{% if max_posts > 0 %}
+
 {% include lists/posts.html %}
 
 {% if is_news %}
@@ -14,4 +16,6 @@
 {% endfor %}
 
 </div>
+{% endif %}
+
 {% endif %}

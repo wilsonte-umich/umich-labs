@@ -32,3 +32,5 @@
   description: The goals of this project are probably not relevant to the Doe laboratory!
   badges:
     - project=project1
+    - resource=cell_protocol
+    - publication=bazzano_2021

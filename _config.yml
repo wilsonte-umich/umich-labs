@@ -17,12 +17,12 @@ github_username: jdoe-umich
 #-------------------------------------------------------------------------------------
 # theme display settings
 #-------------------------------------------------------------------------------------
-max_posts_newsfeed: 24  # Show x number of recent news posts on the dedicated Newsfeed page, must be > 0  
-max_posts_home: 3       # Show x number of recent news posts on home page, must be > 0
-max_posts_other: 10     # Show x number of recent news posts on other pages, must be > 0
-max_age_newsfeed: 180   # Suppress old news on the dedicated Newsfeed page (from the top navbar)
-max_age_other: 30       # Suppress old news in the Recent News ticker on all other pages
-max_projects_home: 12   # Show x number of active projects on home page, must be > 0
+max_posts_newsfeed: 24  # Show x number of recent news posts on the dedicated Newsfeed page
+max_posts_home: 3       # Show x number of recent news posts on home page
+max_posts_other: 10     # Show x number of recent news posts on other pages
+max_projects_home: 12   # Show x number of active projects on home page
+max_words_card_short: 25  # truncate project, people and news descriptions after this many words in cards
+max_words_card_long: 50   # truncate other descriptions after this many words in cards
 logo: /assets/images/1280px-Michigan_Wolverines_logo-90px_height.png  # Logo in navbar, will be displayed at 30px height
 colors:
   links:  "#2F65A7"    # Color for links: use a readable color that contrasts well with dark text

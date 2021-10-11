@@ -27,7 +27,9 @@
 
     {% capture link_html %}
     <div><i>{{ funding.start_date | date: "%m/%d/%Y" }} to {{ funding.end_date | date: "%m/%d/%Y" }}</i></div> 
-    <div class="mt-1 pl-4">{{ funding.description }}</div> 
+    {% if page.layout == 'funding' %}
+    <div class="mt-1 pl-4">{{ funding.description | truncatewords: site.max_words_card_long }}</div> 
+    {% endif %} 
     {% endcapture %}    
     {% include base/optional-item-link.html link_html=link_html %}
   </div>

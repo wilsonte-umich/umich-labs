@@ -3,6 +3,8 @@
 # create expanded information in _people/<id>.md
 #-------------------------------------------------------------------------------------
 # People are ordered on the People page as follows:
+#   in the order they are found in this file
+# However, we recommend using the order (but it is not enforced by the code):
 #   PI first, then active members, than inactive members (i.e., those with an end_date)
 #   within the active group, by start_date (oldest members first)
 #   within the inactive group, by end_date (most recently departed members first)
@@ -12,11 +14,7 @@
 #-------------------------------------------------------------------------------------
 
 # - id: Postdoc_Fellow # used internally to identify this person, e.g., in a Newsfeed post "people" field
-#   number: null # optional, used in Wilson lab to annotate database entries
 #   name: Postdoc Fellow # as display on the web page People item
-#   start_date: 2020-01-01
-#   end_date: 2021-08-30 # an end data indicates that the person is no longer active
-#   current_position: PhD student, Genetics and Genomics Program, University of Michigan # optional, to indicate where people are now
 #   role: Postdoctoral Fellow # will appear next to name
 #   program: null # omit if not applicable
 #   image: assets/images/vippng.com-face-silhouette-png-56170.png # can be external link
@@ -25,8 +23,8 @@
 #   github: null
 #   twitter: null
 #   description: Solved really important problems in project 2.
-#   publishes_as: # as would be found in a PubMed entry; multiple entries allow for name changes, etc.
-#     - Fellow PX
+#   status: current # or "past"
+#   current_position: PhD student, Genetics and Genomics Program, University of Michigan # optional, to indicate where people are now
 #   badges:
 #     - TYPE=ID # e.g. person=John_Doe, project=project1 (no spaces)
 
@@ -35,7 +33,6 @@
 # Principal Investigator; many fields not relevant, they always apply to the PI for their own page
 #-------------------------------------------------------------------------------------
 - id: John_Doe # used internally to identify this person, e.g., in a Newsfeed post "people" field
-  number: null # optional, used in Wilson lab to annotate database entries
   name: John Doe # as display on the web page People item
   role: Principal Investigator # will appear next to name
   image: assets/images/people/john-doe-cropped.jpg # can be external link
@@ -43,15 +40,13 @@
   email: jdoe@umich.edu
   github: jdoe-umich
   twitter: null
+  status: current
 
 #-------------------------------------------------------------------------------------
-# active group members
+# current group members
 #-------------------------------------------------------------------------------------
 - id: Research_Tech # used internally to identify this person, e.g., in a Newsfeed post "people" field
-  number: null # optional, used in Wilson lab to annotate database entries
   name: Research Tech # as display on the web page People item
-  start_date: 2020-01-01
-  end_date: null # when null, the person is presumed to still be active in the group
   role: Research Technician # will appear next to name
   program: null # omit if not applicable
   image: assets/images/vippng.com-face-silhouette-png-56170.png # can be external link
@@ -60,8 +55,7 @@
   github: null
   twitter: null
   description: Master of all trades, fills many roles as needed
-  publishes_as: # as would be found in a PubMed entry; multiple entries allow for name changes, etc.
-    - Tech R
+  status: current
   badges:
     - project=project1
 
@@ -69,18 +63,14 @@
 # past group members
 #-------------------------------------------------------------------------------------
 - id: Postdoc_Fellow # used internally to identify this person, e.g., in a Newsfeed post "people" field
-  number: null # optional, used in Wilson lab to annotate database entries
   name: Postdoc Fellow # as display on the web page People item
-  start_date: 2020-01-01
-  end_date: 2021-08-30 # an end data indicates that the person is no longer active
-  current_position: PhD student, Genetics and Genomics Program, University of Michigan # optional, to indicate where people are now
   role: Postdoctoral Fellow # will appear next to name
-  program: null # omit if not applicable
+  program: PSTP # omit if not applicable
   image: assets/images/vippng.com-face-silhouette-png-56170.png # can be external link
   orcid: null
   email: pfellow22@umich.edu
   github: null
   twitter: null
   description: Solved really important problems in project 2.
-  publishes_as: # as would be found in a PubMed entry; multiple entries allow for name changes, etc.
-    - Fellow PX
+  status: past
+  current_position: PhD student, Genetics and Genomics Program, University of Michigan # optional, to indicate where people are now

@@ -10,11 +10,10 @@
 # date: 2021-06-15 # the data of the post
 # title: News short headline
 # subtitle: A bit more explanation # shown in the top banner
-# description: A little bit longer description of the news item, but not too long # shown in a card
+# description: A little bit longer description of the news item, but not too long # shown in a news card
 # event_type: project # primary type of the event, used to create the small, colored post callout
 # banner_image_source: project=project1 # the item whose banner image will be adopted by this event
 # badges: # one or many associated data items
-#   - type:  project # singular form of the item referred to, person, project, funding, etc.
-#     value: project1 # the id value of the item
+#   - project=project1 # form is item_type=item_id
 # ---
 #-------------------------------------------------------------------------------------

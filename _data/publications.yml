@@ -23,6 +23,7 @@
 #   citation: xxxx  # typically volume(issue):page-page, or an online publication id
 #   year:     2021
 #   url:      null # a non-PubMed (Central) link; used only if pmid and pmcid are both null
+#   abstract: text # typically entered using the CMS, use on card
 #   badges:
 #     - TYPE=ID # e.g. person=John_Doe, project=project1 (no spaces)
       
@@ -39,8 +40,10 @@
   citation: 10.1093/nar/gkab597
   year:     2021
   url: null
+  abstract: adflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjas adflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjas  
   badges:
     - person=Dominic_Bazzano
+    - resource=cell_protocol
 
 - id: park_2020
   date:  2020-07-15

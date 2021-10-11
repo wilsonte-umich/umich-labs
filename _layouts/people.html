@@ -1,13 +1,14 @@
 ---
 layout: base/base
 description: Template for people page
+remark: See also page.layout == 'people' in head.html and jumbotron.html
 type: person
 ---
 
-{{ content }}
-
 <div class="row">
-{% for person in site.data.people %}
-  {% include cards/person-card.html %}
-{% endfor %}
+    <div class="col">
+        {{ content }}
+    </div>
 </div>
+
+{% include lists/people.html %}

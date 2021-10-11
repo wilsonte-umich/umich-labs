@@ -20,6 +20,7 @@ date: 2021-10-05
     </div>
 
     <!-- projects (at bottom) -->
+    {% if site.max_projects_home > 0 %}
     <hr>
     <h3>Active Projects</h3>    
     <div class="row cards mt-4">
@@ -29,5 +30,6 @@ date: 2021-10-05
       </div>
     {% endfor %}
     </div>
+    {% endif %}
   </div>
 </div>

@@ -14,9 +14,9 @@
         {% include base/optional-item-link.html link_html=link_html %}        
     </div>
 
-    <div class="col-8 text-left mt-3">
+    <div class="col-8 text-left mt-2">
         <div class="team-member-body">
-            <h5> <!-- id="{ { person.name | strip | url_encode } }" -->
+            <h5> 
                 {% capture link_html %}
                 {{ person.name }}
                 {% endcapture %}
@@ -33,7 +33,9 @@
             </h5>
 
             {% capture link_html %}
-            {{ person.description | markdownify }}
+            {{ person.description | truncatewords: site.max_words_card_short }}
+            {% if person.program %}<div class="mt-2">{{ person.program }}</div>{% endif %}
+            {% if person.current_position %}<div class="mt-2">Current position: {{ person.current_position }}</div>{% endif %}
             {% endcapture %}
             {% include base/optional-item-link.html link_html=link_html %}
         </div>

@@ -1,0 +1,11 @@
+{% assign group_by_status = site.data.people | group_by: "status" %}
+{% assign by_status = group_by_status | sort: "name" %}
+
+{% for status_group in by_status %}
+{% if status_group.name == "past" %}<h4 class="col mb-4">{{ status_group.name | capitalize}} members and associates</h4>{% endif %}
+<div class="row people mb-4">
+{% for person in status_group.items %}
+    {% include cards/person-card.html %}
+{% endfor %}
+</div>
+{% endfor %}
