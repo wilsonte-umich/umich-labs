@@ -28,7 +28,7 @@
         {% assign target = badge_value %}
       {% endif %} 
     {% endif %} 
-    {% assign path = collection.name | append: sep | append: target %}
+    {% assign path = collection.name | append: sep | append:  | downcase %}
     <a class="badge badge-pill {{ class }}" href="{{ path | relative_url }}">{{ label }}</a>
   {% endif %}
 {% endfor %}

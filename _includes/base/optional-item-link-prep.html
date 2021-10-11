@@ -3,7 +3,7 @@
 
 {% if ids contains id %}
     {% assign optional_link_tag = "a" %}
-    {% assign tmp = id | replace: "_", "-" | relative_url %}
+    {% assign tmp = id | replace: "_", "-" | downcase | relative_url %}
     {% assign optional_link_url = 'href="' | append: tmp | append: '"' %}
 {% else %}
     {% if layout.type == item_type %}
@@ -11,7 +11,7 @@
         {% assign optional_link_url = "" %}
     {% else %}
         {% assign optional_link_tag = "a" %}
-        {% assign tmp = "/" | append: collection_name | append: '#' | append: item_id | relative_url %}
+        {% assign tmp = "/" | append: collection_name | append: '#' | append: item_id | downcase | relative_url %}
         {% assign optional_link_url = 'href="' | append: tmp | append: '"' %}
     {% endif %}
 {% endif %}
