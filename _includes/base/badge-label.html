@@ -1,16 +1,12 @@
 {% if badge_type == 'publication' %}
-  {% assign publication = site.data.publications | where: "pmid", badge_value | first %} 
-  {% if publication %}
-  {% else %}
-    {% assign publication = site.data.publications | where: "id", badge_value | first %} 
-  {% endif %}
+  {% assign publication = site.data.publications | where: "id", badge_value | first %} 
   {% assign first_author = publication.authors[0] | split: " " %}
   {% if publication.authors.size > 1 %}
     {% assign suffix = " et al." %} 
   {% else %}
     {% assign suffix = "" %} 
   {% endif %}
-  {% assign label = first_author[0] | append: suffix %}
+  {% assign label = first_author[0] | append: suffix | append: " " | append: publication.year  %}
 {% else %}
   {% assign label = badge_value | replace: "_", " " %}
 {% endif %}

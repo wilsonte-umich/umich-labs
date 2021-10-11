@@ -1,3 +1,4 @@
+<a id="{{ project.id }}"></a>
 <div class="card {{ include.hide }}" 
      data-categories="{% for category in project.categories %}{{ category | strip }}|{% endfor %}">
   {% unless layout.suppress_project_image %}
@@ -38,8 +39,8 @@
       </div>
     </a>
   </div>
-
-  {% if project.categories %}
+  
+  {% if project.categories and page.layout == "projects" %}
     <div class="card-footer">
       {% assign url = 'projects' | relative_url %}
       {% for category in project.categories %}

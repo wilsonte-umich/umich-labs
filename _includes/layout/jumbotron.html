@@ -28,7 +28,7 @@
 
         <!-- category badges -->
         <div class="categories">
-          {% if page.categories %}
+          {% if page.categories and page.layout == 'projects' %}
             {% for category in page.categories %}
               <a class="badge badge-pill" 
                   href="{{ page.collection | relative_url }}?category={{ category | url_encode }}">

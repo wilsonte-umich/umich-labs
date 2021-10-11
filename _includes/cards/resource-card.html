@@ -1,18 +1,29 @@
-<!-- TODO: sort resources into headered 'type' groups -->
+{% assign collection = site.resources %}
+{% assign item_id = resource.id %}
+{% assign collection_name = "resources" %}
+{% assign item_type = "resource" %}
+{% assign slug = resource.id %}
+{% include base/optional-item-link-prep.html %}
+
+<a id="{{ resource.id }}"></a>
 <div class="card resource-card mb-3">
     <div class="card-body">
         <div>
-            <strong>{{ resource.title }}</strong>
-            {% include base/external-link.html url=resource.url %}    
-        </div> 
-        <div>
-            {{ resource.type | capitalize }}    
-            {% assign collection_name = 'resources' %}
-            {% assign item_type = 'resource' %}
-            {% assign slug = resource.id %}
+            {% capture link_html %}
+                <strong>{{ resource.title }}</strong>
+            {% endcapture %}
+            {% include base/optional-item-link.html link_html=link_html %}
+            
+            {% include base/external-link.html url=resource.url %}   
+
             <span class="float-right">{% include base/recent-news-link.html %}</span>
         </div> 
-        <div class="mt-1 pl-4">{{ resource.description }}</div>
+
+        {% capture link_html %}
+            <div>{{ resource.type | capitalize }}</div> 
+            <div class="mt-1 pl-4">{{ resource.description }}</div>
+        {% endcapture %}
+        {% include base/optional-item-link.html link_html=link_html %}
     </div>
 
     {% if page.layout == 'resources' %}

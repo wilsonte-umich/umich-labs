@@ -13,9 +13,37 @@
     object-fit: cover;
   }
 
+  a:hover {
+    text-decoration: none;
+  }
+
+  .team-member-body {
+    a {
+      color: $body-color;
+    }   
+  }  
+
   .orcid {
     height: 16px;
     width: 16px;
     margin-top: -3px;
+  }
+
+  .card-footer {
+    background: inherit;
+    border-top: none;
+    padding: 0;
+
+    // Smaller badge then the one defined in _jumbotron.scss
+    .badge {
+      border: 1px solid $michigan-arboretum-blue;
+      font-family: $font-family-base;
+      text-transform: capitalize;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $link-hover-color;
+      }
+    }
   }
 }

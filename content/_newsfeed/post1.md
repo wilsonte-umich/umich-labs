@@ -8,7 +8,7 @@ banner_image_source: project=project2 # the item whose banner image will be adop
 badges: # e.g. person=John_Doe, project=project1 (no spaces)
   - project=project1
   - project=project2
-  - publication=34181717
+  - publication=park_2020
   - funding=My_R01
   - person=Research_Tech
   - resource=cell_protocol

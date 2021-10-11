@@ -1,16 +1,27 @@
-<div class="card publication-card mb-3">
-  <div class="card-body">
+{% assign collection = site.publications %}
+{% assign item_id = publication.id %}
+{% assign collection_name = "publications" %}
+{% assign item_type = "publication" %}
+{% assign slug = publication.id %}
+{% include base/optional-item-link-prep.html %}
+
+{% capture link_html %}
     <div><strong>{{ publication.title }}</strong></div>  
     <div class="mt-1">{{ publication.authors | join: ", " }}</div>
     <div class="mt-1">
       <i>{{ publication.journal }}</i>
       {{ publication.citation }}
       ({{ publication.year }})
-      {% assign collection_name = 'publications' %}
-      {% assign item_type = 'publication' %}
-      {% assign slug = publication.pmid %}
-      <span class="float-right">{% include base/recent-news-link.html %}</span>
     </div>
+{% endcapture %}
+
+<a id="{{ publication.id }}"></a>
+<div class="card publication-card mb-3">
+  <div class="card-body">
+    {% include base/optional-item-link.html link_html=link_html %}
+
+    <span class="float-right">{% include base/recent-news-link.html %}</span>
+    
     <div class="mt-1">
       {% include base/publication-links.html %}
     </div>

@@ -62,6 +62,8 @@
   description: Master of all trades, fills many roles as needed
   publishes_as: # as would be found in a PubMed entry; multiple entries allow for name changes, etc.
     - Tech R
+  badges:
+    - project=project1
 
 #-------------------------------------------------------------------------------------
 # past group members

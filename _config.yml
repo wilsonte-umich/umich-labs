@@ -59,16 +59,19 @@ collections:
     name: people
     item: person
     link: hash_always
+    output: true   
     hue: 45 # gold
   funding: 
     name: funding
     item: funding
     link: hash_always
+    output: true   
     hue: 135 # green
   publications: 
     name: publications
     item: publication
     link: hash_always
+    output: true   
     hue: 270 # purple
   newsfeed: 
     name: newsfeed

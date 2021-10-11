@@ -1,11 +1,4 @@
-{% assign pmid = badge_id | to_integer %}
-{% assign publication = site.data.publications | where_exp: "item", "item.pmid == pmid" | first %}
-{% unless publication %}
-    {% assign publication = site.data.publications | where_exp: "item", "item.pmcid == badge_id" | first %}
-{% endunless %}
-{% unless publication %}
-    {% assign publication = site.data.publications | where_exp: "item", "item.id == badge_id" | first %}
-{% endunless %}
+{% assign publication = site.data.publications | where_exp: "item", "item.id == badge_id" | first %}
 {% if publication %}
     <div class="{{ col_class }}">
         {% include cards/publication-card.html %}

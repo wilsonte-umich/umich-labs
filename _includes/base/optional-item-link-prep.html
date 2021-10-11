@@ -1,0 +1,16 @@
+{% assign ids = collection | map: "id" %}
+{% assign id = "/" | append: collection_name | append: "/" | append: item_id %}
+
+{% if ids contains id %}
+    {% assign optional_link_tag = "a" %}
+    {% assign tmp = id | replace: "_", "-" | relative_url %}
+    {% assign optional_link_url = 'href="' | append: tmp | append: '"' %}
+{% else %}
+    {% if layout.type == item_type %}
+        {% assign optional_link_tag = "span" %}
+        {% assign optional_link_url = "" %}
+    {% else %}
+        {% assign optional_link_tag = "a" %}
+        {% assign optional_link_url = 'href="/' | append: collection_name | append: '#' | append: item_id | append: '"' %}
+    {% endif %}
+{% endif %}

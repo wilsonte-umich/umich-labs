@@ -12,9 +12,9 @@
   {% include base/publication-link.html %}
 {% endif %}
  
-{% if publication.id and publication.url %}
+{% if publication.url %}
   {% assign url = publication.url %}
   {% assign prefix = "" %}
-  {% assign id = publication.id %}
+  {% assign id = " " %}
   {% include base/publication-link.html %}
 {% endif %}
