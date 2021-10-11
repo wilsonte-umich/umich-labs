@@ -11,6 +11,7 @@
         {% assign optional_link_url = "" %}
     {% else %}
         {% assign optional_link_tag = "a" %}
-        {% assign optional_link_url = 'href="/' | append: collection_name | append: '#' | append: item_id | append: '"' %}
+        {% assign tmp = collection_name | append: '#' | append: item_id | relative_url %}
+        {% assign optional_link_url = 'href="/' | append: tmp | append: '"' %}
     {% endif %}
 {% endif %}
