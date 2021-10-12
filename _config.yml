@@ -142,6 +142,7 @@ defaults:
 #-------------------------------------------------------------------------------------
 # build settings; only developers should edit this section
 #-------------------------------------------------------------------------------------
+remote_theme: wilsonte-umich/umich-labs
 markdown: kramdown
 plugins: # If you build your site on gh-pages, only use these plugins: https://pages.github.com/versions/
   - jekyll-feed
