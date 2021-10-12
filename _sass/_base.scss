@@ -16,15 +16,3 @@ pre.highlight {
   padding: 0.25rem;
   margin-bottom: $grid-gutter-width / 2;
 }
-
-.project-top {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: blue;  
-  border-radius: 0; // Should always be square, independent from $enable-rounded
-  color: $white;
-  text-shadow: 2px 2px 3px #333;
-  position: relative; // To contain overlay
-  text-align: center;
-}

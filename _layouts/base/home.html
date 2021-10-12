@@ -22,9 +22,10 @@ date: 2021-10-05
     <!-- projects (at bottom) -->
     {% if site.max_projects_home > 0 %}
     <hr>
-    <h3>Active Projects</h3>    
+    <h3><a class="section-header-link" href="{{ 'projects' | relative_url }}">Active Projects</a></h3>  
     <div class="row cards mt-4">
-    {% for project in site.projects limit:site.max_projects_home %}
+    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% for project in sorted_projects limit:site.max_projects_home %}
       <div class="col-md-6 col-lg-4">
         {% include cards/project-card.html %}
       </div>

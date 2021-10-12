@@ -11,7 +11,8 @@ remarks: See also page.layout == 'projects' in footer.html
 </div>
 
 <div class="row cards">
-  {% for project in site.projects %}
+  {% assign sorted_projects = site.projects | sort: "order" %}
+  {% for project in sorted_projects %}
   <div class="col-md-6 col-lg-4">
     {% include cards/project-card.html hide="d-none" %}
   </div>

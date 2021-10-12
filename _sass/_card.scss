@@ -47,7 +47,7 @@
     .badge {
       border: 1px solid $michigan-arboretum-blue;
       font-family: $font-family-base;
-      text-transform: capitalize;
+      // text-transform: capitalize;
 
       &:hover,
       &:focus {
@@ -55,6 +55,21 @@
       }
     }
   }
+}
+
+.project-top {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  border-radius: 0;
+  color: #fff;
+  text-shadow: 2px 2px 3px #333;
+  position: relative;
+  text-align: center;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow-x: clip;
 }
 
 // newsfeed posts
@@ -115,4 +130,12 @@
   color: white !important;
   border-color: #888;
   text-decoration: none;
+}
+.section-header-link {
+  color: $body-color !important;
+  text-decoration: none !important;
+}
+.section-header-link:hover {
+  color: lighten($body-color, 20%) !important;
+  text-shadow: 1px 1px #ddd;
 }

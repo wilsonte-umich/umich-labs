@@ -3,7 +3,7 @@
 # they are _not_ listed in the _data folder, only in the _projects collection folder
 #-------------------------------------------------------------------------------------
 # Projects are ordered on the Projects page as follows:
-#   by the order the file names are found in _config.yml, then in default order
+#   by the "order" field in the projects front matter
 #-------------------------------------------------------------------------------------
 # the name of the project file is its unique identifier for tagging (without the ".md")
 # e.g. file '/_projects/project1.md' is tagged as

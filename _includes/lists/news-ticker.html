@@ -9,7 +9,7 @@
 
 {% if is_news %}
 <div class="{{ ticker_class }} col-lg-4">
-<h3>Recent News</h3>
+<h3><a class="section-header-link" href="{{ 'newsfeed' | relative_url }}">Recent News</a></h3>
     
 {% for post in filtered limit:max_posts %}
     {% include cards/post-card.html %}
