@@ -1,0 +1,2 @@
+this folder will be populated with prior versions of 'publications.yml'
+that are created when you use 'import_pubmed.R' to import file 'pubmed.txt'

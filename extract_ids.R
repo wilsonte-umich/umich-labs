@@ -23,6 +23,7 @@ for(type in contentTypes){
         }
     }
 }
+print(config$publications[[1]])
 
 # extract all known badges
 badgeTypes <- c('projects', dataTypes)

@@ -1,0 +1,689 @@
+PMID- 34263309
+OWN - NLM
+STAT- Publisher
+LR  - 20210715
+IS  - 1362-4962 (Electronic)
+IS  - 0305-1048 (Linking)
+DP  - 2021 Jul 15
+TI  - Mapping yeast mitotic 5' resection at base resolution reveals the sequence and 
+      positional dependence of nucleases in vivo.
+LID - gkab597 [pii]
+LID - 10.1093/nar/gkab597 [doi]
+AB  - Resection of the 5'-terminated strand at DNA double-strand breaks (DSBs) is the 
+      critical regulated step in the transition to homologous recombination. Recent 
+      studies have described a multi-step model of DSB resection where endonucleolytic 
+      cleavage mediated by Mre11 and Sae2 leads to further degradation mediated by 
+      redundant pathways catalyzed by Exo1 and Sgs1/Dna2. These models have not been well 
+      tested at mitotic DSBs in vivo because most methods used to monitor resection cannot 
+      precisely map early cleavage events. Here we report resection monitoring with 
+      high-throughput sequencing using molecular identifiers, allowing exact counting of 
+      cleaved 5' ends at base resolution. Mutant strains, including exo1Δ, mre11-H125N and 
+      exo1Δ sgs1Δ, revealed a major Mre11-dependent cleavage position 60-70 bp from the 
+      DSB end whose exact position depended on local sequence. They further revealed an 
+      Exo1-dependent pause point approximately 200 bp from the DSB. Suppressing resection 
+      extension in exo1Δ sgs1Δ yeast exposed a footprint of regions where cleavage was 
+      restricted within 119 bp of the DSB. These results provide detailed in vivo views of 
+      prevailing models of DSB resection and extend them to show the combined influence of 
+      sequence specificity and access restrictions on Mre11 and Exo1 nucleases.
+CI  - © The Author(s) 2021. Published by Oxford University Press on behalf of Nucleic 
+      Acids Research.
+FAU - Bazzano, Dominic
+AU  - Bazzano D
+AD  - Department of Pathology, Ann Arbor, MI 48109, USA.
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Lomonaco, Stephanie
+AU  - Lomonaco S
+AD  - Department of Pathology, Ann Arbor, MI 48109, USA.
+FAU - Wilson, Thomas E
+AU  - Wilson TE
+AUID- ORCID: 0000-0002-8345-4985
+AD  - Department of Pathology, Ann Arbor, MI 48109, USA.
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109, USA.
+LA  - eng
+GR  - GM120767/NH/NIH HHS/United States
+PT  - Journal Article
+DEP - 20210715
+PL  - England
+TA  - Nucleic Acids Res
+JT  - Nucleic acids research
+JID - 0411011
+SB  - IM
+EDAT- 2021/07/16 06:00
+MHDA- 2021/07/16 06:00
+CRDT- 2021/07/15 06:30
+PHST- 2021/06/28 00:00 [accepted]
+PHST- 2021/06/22 00:00 [revised]
+PHST- 2021/05/09 00:00 [received]
+PHST- 2021/07/15 06:30 [entrez]
+PHST- 2021/07/16 06:00 [pubmed]
+PHST- 2021/07/16 06:00 [medline]
+AID - 6321018 [pii]
+AID - 10.1093/nar/gkab597 [doi]
+PST - aheadofprint
+SO  - Nucleic Acids Res. 2021 Jul 15:gkab597. doi: 10.1093/nar/gkab597.
+
+PMID- 34181717
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210809
+LR  - 20210906
+IS  - 1362-4962 (Electronic)
+IS  - 0305-1048 (Print)
+IS  - 0305-1048 (Linking)
+VI  - 49
+IP  - 13
+DP  - 2021 Jul 21
+TI  - Locus-specific transcription silencing at the FHIT gene suppresses replication 
+      stress-induced copy number variant formation and associated replication delay.
+PG  - 7507-7524
+LID - 10.1093/nar/gkab559 [doi]
+AB  - Impaired replication progression leads to de novo copy number variant (CNV) 
+      formation at common fragile sites (CFSs). We previously showed that these hotspots 
+      for genome instability reside in late-replicating domains associated with large 
+      transcribed genes and provided indirect evidence that transcription is a factor in 
+      their instability. Here, we compared aphidicolin (APH)-induced CNV and CFS frequency 
+      between wild-type and isogenic cells in which FHIT gene transcription was ablated by 
+      promoter deletion. Two promoter-deletion cell lines showed reduced or absent CNV 
+      formation and CFS expression at FHIT despite continued instability at the NLGN1 
+      control locus. APH treatment led to critical replication delays that remained 
+      unresolved in G2/M in the body of many, but not all, large transcribed genes, an 
+      effect that was reversed at FHIT by the promoter deletion. Altering RNase H1 
+      expression did not change CNV induction frequency and DRIP-seq showed a paucity of 
+      R-loop formation in the central regions of large genes, suggesting that R-loops are 
+      not the primary mediator of the transcription effect. These results demonstrate that 
+      large gene transcription is a determining factor in replication stress-induced 
+      genomic instability and support models that CNV hotspots mainly result from the 
+      transcription-dependent passage of unreplicated DNA into mitosis.
+CI  - © The Author(s) 2021. Published by Oxford University Press on behalf of Nucleic 
+      Acids Research.
+FAU - Park, So Hae
+AU  - Park SH
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Bennett-Baker, Pamela
+AU  - Bennett-Baker P
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Ahmed, Samreen
+AU  - Ahmed S
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109, USA.
+AD  - Department of Pathology, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Arlt, Martin F
+AU  - Arlt MF
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Ljungman, Mats
+AU  - Ljungman M
+AUID- ORCID: 0000-0003-1553-6695
+AD  - Department of Radiation Oncology, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Glover, Thomas W
+AU  - Glover TW
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109, USA.
+AD  - Department of Pathology, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Wilson, Thomas E
+AU  - Wilson TE
+AUID- ORCID: 0000-0002-8345-4985
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109, USA.
+AD  - Department of Pathology, University of Michigan, Ann Arbor, MI 48109, USA.
+LA  - eng
+GR  - T32 GM007544/GM/NIGMS NIH HHS/United States
+GR  - UM1 HG009382/HG/NHGRI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+TA  - Nucleic Acids Res
+JT  - Nucleic acids research
+JID - 0411011
+RN  - 0 (Neoplasm Proteins)
+RN  - 0 (fragile histidine triad protein)
+RN  - 38966-21-1 (Aphidicolin)
+RN  - EC 3.1.26.4 (Ribonuclease H)
+RN  - EC 3.1.26.4 (ribonuclease HI)
+RN  - EC 3.6.- (Acid Anhydride Hydrolases)
+SB  - IM
+MH  - Acid Anhydride Hydrolases/biosynthesis/*genetics
+MH  - Animals
+MH  - Aphidicolin/pharmacology
+MH  - Cell Line
+MH  - Chromosome Fragile Sites
+MH  - *DNA Copy Number Variations
+MH  - *DNA Replication
+MH  - Genetic Loci
+MH  - Humans
+MH  - Mice
+MH  - Mutation
+MH  - Neoplasm Proteins/biosynthesis/*genetics
+MH  - Promoter Regions, Genetic
+MH  - R-Loop Structures
+MH  - Ribonuclease H/metabolism
+MH  - Stress, Physiological
+MH  - *Transcription, Genetic
+PMC - PMC8287918
+EDAT- 2021/06/29 06:00
+MHDA- 2021/08/10 06:00
+CRDT- 2021/06/28 17:21
+PHST- 2021/06/15 00:00 [accepted]
+PHST- 2021/06/09 00:00 [revised]
+PHST- 2020/07/27 00:00 [received]
+PHST- 2021/06/29 06:00 [pubmed]
+PHST- 2021/08/10 06:00 [medline]
+PHST- 2021/06/28 17:21 [entrez]
+AID - 6310785 [pii]
+AID - gkab559 [pii]
+AID - 10.1093/nar/gkab559 [doi]
+PST - ppublish
+SO  - Nucleic Acids Res. 2021 Jul 21;49(13):7507-7524. doi: 10.1093/nar/gkab559.
+
+PMID- 33975916
+OWN - NLM
+STAT- Publisher
+LR  - 20210702
+IS  - 1469-9001 (Electronic)
+IS  - 1355-8382 (Print)
+IS  - 1355-8382 (Linking)
+VI  - 27
+IP  - 7
+DP  - 2021 May 11
+TI  - Co-transcriptional splicing efficiencies differ within genes and between cell types.
+PG  - 829-40
+LID - rna.078662.120 [pii]
+LID - 10.1261/rna.078662.120 [doi]
+AB  - Pre-mRNA splicing is carried out by the spliceosome and involves splice site 
+      recognition, removal of introns, and ligation of exons. Components of the 
+      spliceosome have been shown to interact with the elongating RNA polymerase II 
+      (RNAPII) which is thought to allow splicing to occur concurrently with 
+      transcription. However, little is known about the regulation and efficiency of 
+      co-transcriptional splicing in human cells. In this study, we used Bru-seq and 
+      BruChase-seq to determine the co-transcriptional splicing efficiencies of 17,000 
+      introns expressed across 6 human cell lines. We found that less than half of all 
+      introns across these 6 cell lines were co-transcriptionally spliced. Splicing 
+      efficiencies for individual introns showed variations across cell lines, suggesting 
+      that splicing may be regulated in a cell-type specific manner. Moreover, the 
+      splicing efficiency of introns varied within genes. The efficiency of 
+      co-transcriptional splicing did not correlate with gene length, intron position, 
+      splice site strengths, or the intron/neighboring exons GC content. However, we 
+      identified binding signals from multiple RNA binding proteins (RBPs) that correlated 
+      with splicing efficiency, including core spliceosomal machinery components-such as 
+      SF3B4, U2AF1 and U2AF2 showing higher binding signals in poorly spliced introns. In 
+      addition, multiple RBPs, such as BUD13, PUM1 and SND1, showed preferential binding 
+      in exons that flank introns with high splicing efficiencies. The nascent RNA 
+      splicing patterns presented here across multiple cell types add to our understanding 
+      of the complexity in RNA splicing, wherein RNA-binding proteins may play important 
+      roles in determining splicing outcomes in a cell type- and intron-specific manner.
+CI  - Published by Cold Spring Harbor Laboratory Press for the RNA Society.
+FAU - Bedi, Karan
+AU  - Bedi K
+AUID- ORCID: 0000-0002-7843-738X
+AD  - University of Michigan.
+FAU - Magnuson, Brian R
+AU  - Magnuson BR
+AUID- ORCID: 0000-0002-5301-3302
+AD  - University of Michigan.
+FAU - Narayanan, Ishwarya
+AU  - Narayanan I
+AUID- ORCID: 0000-0002-4666-027X
+AD  - University of Michigan.
+FAU - Paulsen, Michelle
+AU  - Paulsen M
+AD  - University of Michigan.
+FAU - Wilson, Thomas E
+AU  - Wilson TE
+AUID- ORCID: 0000-0002-8345-4985
+AD  - University of Michigan.
+FAU - Ljungman, Mats
+AU  - Ljungman M
+AUID- ORCID: 0000-0003-1553-6695
+AD  - University of Michigan ljungman@umich.edu.
+LA  - eng
+GR  - R01 CA213214/CA/NCI NIH HHS/United States
+GR  - UM1 HG009382/HG/NHGRI NIH HHS/United States
+PT  - Journal Article
+DEP - 20210511
+TA  - RNA
+JT  - RNA (New York, N.Y.)
+JID - 9509184
+SB  - IM
+PMC - PMC8208053
+OTO - NOTNLM
+OT  - RNA binding proteins
+OT  - cell lines
+OT  - cotranscriptional
+OT  - spliceosome
+OT  - splicing
+EDAT- 2021/05/13 06:00
+MHDA- 2021/05/13 06:00
+PMCR- 2022/07/01
+CRDT- 2021/05/12 06:11
+PHST- 2020/12/24 00:00 [received]
+PHST- 2021/05/05 00:00 [accepted]
+PHST- 2022/07/01 00:00 [pmc-release]
+PHST- 2021/05/12 06:11 [entrez]
+PHST- 2021/05/13 06:00 [pubmed]
+PHST- 2021/05/13 06:00 [medline]
+AID - rna.078662.120 [pii]
+AID - RA [pii]
+AID - 10.1261/rna.078662.120 [doi]
+PST - aheadofprint
+SO  - RNA. 2021 May 11;27(7):829-40. doi: 10.1261/rna.078662.120.
+
+PMID- 32665662
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20210309
+LR  - 20210309
+IS  - 1748-7838 (Electronic)
+IS  - 1001-0602 (Print)
+IS  - 1001-0602 (Linking)
+VI  - 30
+IP  - 11
+DP  - 2020 Nov
+TI  - Twin peaks: finding fragile sites with MiDAS-seq.
+PG  - 944-945
+LID - 10.1038/s41422-020-0376-8 [doi]
+FAU - Glover, Thomas W
+AU  - Glover TW
+AD  - Department of Human Genetics, University of Michigan Medical School, Ann Arbor, MI 
+      48109, USA. glover@med.umich.edu.
+AD  - Department of Pathology, University of Michigan Medical School, Ann Arbor, MI 48109, 
+      USA. glover@med.umich.edu.
+FAU - Wilson, Thomas E
+AU  - Wilson TE
+AD  - Department of Human Genetics, University of Michigan Medical School, Ann Arbor, MI 
+      48109, USA.
+AD  - Department of Pathology, University of Michigan Medical School, Ann Arbor, MI 48109, 
+      USA.
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+TA  - Cell Res
+JT  - Cell research
+JID - 9425763
+RN  - 9007-49-2 (DNA)
+SB  - IM
+CON - Cell Res. 2020 Nov;30(11):997-1008. PMID: 32561860
+CON - Cell Res. 2020 Nov;30(11):1009-1023. PMID: 32561861
+MH  - DNA
+MH  - *DNA Replication
+MH  - *Genome, Human
+MH  - Humans
+PMC - PMC7785000
+EDAT- 2020/07/16 06:00
+MHDA- 2021/03/10 06:00
+PMCR- 2021/11/01
+CRDT- 2020/07/16 06:00
+PHST- 2021/11/01 00:00 [pmc-release]
+PHST- 2020/07/16 06:00 [pubmed]
+PHST- 2021/03/10 06:00 [medline]
+PHST- 2020/07/16 06:00 [entrez]
+AID - 10.1038/s41422-020-0376-8 [pii]
+AID - 376 [pii]
+AID - 10.1038/s41422-020-0376-8 [doi]
+PST - ppublish
+SO  - Cell Res. 2020 Nov;30(11):944-945. doi: 10.1038/s41422-020-0376-8.
+
+PMID- 31709421
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20210914
+IS  - 2631-9268 (Electronic)
+IS  - 2631-9268 (Linking)
+VI  - 2
+IP  - 1
+DP  - 2020 Mar
+TI  - Characterization of novel primary miRNA transcription units in human cells using 
+      Bru-seq nascent RNA sequencing.
+PG  - lqz014
+LID - 10.1093/nargab/lqz014 [doi]
+LID - lqz014
+AB  - MicroRNAs (miRNAs) are key contributors to gene regulatory networks. Because miRNAs 
+      are processed from RNA polymerase II transcripts, insight into miRNA regulation 
+      requires a comprehensive understanding of the regulation of primary miRNA 
+      transcripts. We used Bru-seq nascent RNA sequencing and hidden Markov model 
+      segmentation to map primary miRNA transcription units (TUs) across 32 human cell 
+      lines, allowing us to describe TUs encompassing 1443 miRNAs from miRBase and 438 
+      from MirGeneDB. We identified TUs for 61 miRNAs with an unknown CAGE TSS signal for 
+      MirGeneDB miRNAs. Many primary transcripts containing miRNA sequences failed to 
+      generate mature miRNAs, suggesting that miRNA biosynthesis is under both 
+      transcriptional and post-transcriptional control. In addition to constitutive and 
+      cell-type specific TU expression regulated by differential promoter usage, miRNA 
+      synthesis can be regulated by transcription past polyadenylation sites 
+      (transcriptional read through) and promoter divergent transcription (PROMPTs). We 
+      identified 197 miRNA TUs with novel promoters, 97 with transcriptional read-throughs 
+      and 3 miRNA TUs that resemble PROMPTs in at least one cell line. The miRNA TU 
+      annotation data resource described here reveals a greater complexity in miRNA 
+      regulation than previously known and provides a framework for identifying cell-type 
+      specific differences in miRNA transcription in cancer and cell transition states.
+CI  - © The Author(s) 2019. Published by Oxford University Press on behalf of NAR Genomics 
+      and Bioinformatics.
+FAU - Bedi, Karan
+AU  - Bedi K
+AD  - Department of Radiation Oncology, Rogel Cancer Center and Center for RNA 
+      Biomedicine, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Paulsen, Michelle T
+AU  - Paulsen MT
+AD  - Department of Radiation Oncology, Rogel Cancer Center and Center for RNA 
+      Biomedicine, University of Michigan, Ann Arbor, MI 48109, USA.
+FAU - Wilson, Thomas E
+AU  - Wilson TE
+AD  - Department of Pathology and Department of Human Genetics, University of Michigan 
+      Medical School, Ann Arbor, MI 48109, USA.
+FAU - Ljungman, Mats
+AU  - Ljungman M
+AUID- ORCID: 0000-0003-1553-6695
+AD  - Department of Radiation Oncology, Rogel Cancer Center and Center for RNA 
+      Biomedicine, University of Michigan, Ann Arbor, MI 48109, USA.
+AD  - Department of Environmental Health Sciences, School of Public Health, University of 
+      Michigan, Ann Arbor, MI 48109, USA.
+LA  - eng
+GR  - UM1 HG009382/HG/NHGRI NIH HHS/United States
+PT  - Journal Article
+DEP - 20191030
+TA  - NAR Genom Bioinform
+JT  - NAR genomics and bioinformatics
+JID - 101756213
+PMC - PMC6824518
+EDAT- 2019/11/12 06:00
+MHDA- 2019/11/12 06:01
+CRDT- 2019/11/12 06:00
+PHST- 2019/06/20 00:00 [received]
+PHST- 2019/10/07 00:00 [revised]
+PHST- 2019/10/26 00:00 [accepted]
+PHST- 2019/11/12 06:00 [entrez]
+PHST- 2019/11/12 06:00 [pubmed]
+PHST- 2019/11/12 06:01 [medline]
+AID - lqz014 [pii]
+AID - 10.1093/nargab/lqz014 [doi]
+PST - ppublish
+SO  - NAR Genom Bioinform. 2020 Mar;2(1):lqz014. doi: 10.1093/nargab/lqz014. Epub 2019 Oct 
+      30.
+
+PMID- 31321486
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200929
+LR  - 20210201
+IS  - 1432-0983 (Electronic)
+IS  - 0172-8083 (Print)
+IS  - 0172-8083 (Linking)
+VI  - 66
+IP  - 1
+DP  - 2020 Feb
+TI  - Double-strand breaks in motion: implications for chromosomal rearrangement.
+PG  - 1-6
+LID - 10.1007/s00294-019-01015-4 [doi]
+AB  - DNA double-strand breaks (DSBs) must be rejoined properly to prevent the occurrence 
+      of serious genomic rearrangements associated with many human diseases. 
+      Non-homologous end joining (NHEJ) is a DSB repair mechanism known to protect genomic 
+      integrity that is also implicated in creating genomic translocations, inversions, 
+      deletions, and insertions. We recently investigated the impact of the pre-damage 
+      spatial proximity of DSB-bearing loci on the frequency of trans repair by NHEJ and 
+      surprisingly found no correlation between them. In this review, we consider various 
+      models that might account for these unexpected results. While DSB movement is 
+      necessary to explain our findings, many questions remain about the nature and timing 
+      of that motion.
+FAU - Wilson, Thomas E
+AU  - Wilson TE
+AUID- ORCID: 0000-0002-8345-4985
+AD  - Department of Pathology, University of Michigan, Ann Arbor, MI, 48109, USA. 
+      wilsonte@umich.edu.
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI, 48109, USA. 
+      wilsonte@umich.edu.
+FAU - Sunder, Sham
+AU  - Sunder S
+AD  - Department of Pathology, University of Michigan, Ann Arbor, MI, 48109, USA.
+LA  - eng
+GR  - R01 GM120767/GM/NIGMS NIH HHS/United States
+GR  - R01-GM120767/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+PT  - Review
+DEP - 20190718
+TA  - Curr Genet
+JT  - Current genetics
+JID - 8004904
+SB  - IM
+MH  - Animals
+MH  - Chromosome Aberrations
+MH  - *DNA Breaks, Double-Stranded
+MH  - DNA End-Joining Repair
+MH  - Gene Rearrangement
+MH  - Homologous Recombination
+MH  - Humans
+MH  - Models, Genetic
+MH  - *Translocation, Genetic
+PMC - PMC6980467
+MID - NIHMS1535118
+OTO - NOTNLM
+OT  - DNA repair
+OT  - Homologous recombination
+OT  - Movement
+OT  - Non-homologous end joining
+OT  - Nucleus
+EDAT- 2019/07/20 06:00
+MHDA- 2020/09/30 06:00
+CRDT- 2019/07/20 06:00
+PHST- 2019/06/25 00:00 [received]
+PHST- 2019/07/09 00:00 [accepted]
+PHST- 2019/07/06 00:00 [revised]
+PHST- 2019/07/20 06:00 [pubmed]
+PHST- 2020/09/30 06:00 [medline]
+PHST- 2019/07/20 06:00 [entrez]
+AID - 10.1007/s00294-019-01015-4 [pii]
+AID - 10.1007/s00294-019-01015-4 [doi]
+PST - ppublish
+SO  - Curr Genet. 2020 Feb;66(1):1-6. doi: 10.1007/s00294-019-01015-4. Epub 2019 Jul 18.
+
+PMID- 31019070
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200316
+LR  - 20200316
+IS  - 1091-6490 (Electronic)
+IS  - 0027-8424 (Print)
+IS  - 0027-8424 (Linking)
+VI  - 116
+IP  - 19
+DP  - 2019 May 7
+TI  - Frequency of DNA end joining in trans is not determined by the predamage spatial 
+      proximity of double-strand breaks in yeast.
+PG  - 9481-9490
+LID - 10.1073/pnas.1818595116 [doi]
+AB  - DNA double-strand breaks (DSBs) are serious genomic insults that can lead to 
+      chromosomal rearrangements if repaired incorrectly. To gain insight into the nuclear 
+      mechanisms contributing to these rearrangements, we developed an assay in yeast to 
+      measure cis (same site) vs. trans (different site) repair for the majority process 
+      of precise nonhomologous end joining (NHEJ). In the assay, the HO endonuclease gene 
+      is placed between two HO cut sites such that HO expression is self-terminated upon 
+      induction. We further placed an additional cut site in various genomic loci such 
+      that NHEJ in trans led to expression of a LEU2 reporter gene. Consistent with prior 
+      reports, cis NHEJ was more efficient than trans NHEJ. However, unlike homologous 
+      recombination, where spatial distance between a single DSB and donor locus was 
+      previously shown to correlate with repair efficiency, trans NHEJ frequency remained 
+      essentially constant regardless of the position of the two DSB loci, even when they 
+      were on the same chromosome or when two trans repair events were put in competition. 
+      Repair of similar DSBs via single-strand annealing of short terminal direct repeats 
+      showed substantially higher repair efficiency and trans repair frequency, but still 
+      without a strong correlation of trans repair to genomic position. Our results 
+      support a model in which yeast cells mobilize, and perhaps compartmentalize, 
+      multiple DSBs in a manner that no longer reflects the predamage position of two 
+      broken loci.
+FAU - Sunder, Sham
+AU  - Sunder S
+AD  - Department of Pathology, University of Michigan, Ann Arbor, MI 48109.
+FAU - Wilson, Thomas E
+AU  - Wilson TE
+AUID- ORCID: 0000-0002-8345-4985
+AD  - Department of Pathology, University of Michigan, Ann Arbor, MI 48109; 
+      wilsonte@umich.edu.
+AD  - Department of Human Genetics, University of Michigan, Ann Arbor, MI 48109.
+LA  - eng
+GR  - R01 GM120767/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+DEP - 20190424
+TA  - Proc Natl Acad Sci U S A
+JT  - Proceedings of the National Academy of Sciences of the United States of America
+JID - 7505876
+RN  - 0 (Saccharomyces cerevisiae Proteins)
+RN  - EC 1.1.1.85 (3-Isopropylmalate Dehydrogenase)
+RN  - EC 1.1.1.85 (LEU2 protein, S cerevisiae)
+SB  - IM
+MH  - 3-Isopropylmalate Dehydrogenase/biosynthesis/genetics
+MH  - *DNA Breaks, Double-Stranded
+MH  - DNA End-Joining Repair/*physiology
+MH  - Gene Expression Regulation, Fungal/*physiology
+MH  - Genetic Loci/*physiology
+MH  - Genome, Fungal/*physiology
+MH  - *Saccharomyces cerevisiae/genetics/metabolism
+MH  - Saccharomyces cerevisiae Proteins/biosynthesis/genetics
+PMC - PMC6510992
+OTO - NOTNLM
+OT  - *genome rearrangement
+OT  - *homologous recombination
+OT  - *nonhomologous end joining
+OT  - *single-strand annealing
+OT  - *translocation
+COIS- The authors declare no conflict of interest.
+EDAT- 2019/04/26 06:00
+MHDA- 2020/03/17 06:00
+CRDT- 2019/04/26 06:00
+PHST- 2019/04/26 06:00 [pubmed]
+PHST- 2020/03/17 06:00 [medline]
+PHST- 2019/04/26 06:00 [entrez]
+AID - 1818595116 [pii]
+AID - 201818595 [pii]
+AID - 10.1073/pnas.1818595116 [doi]
+PST - ppublish
+SO  - Proc Natl Acad Sci U S A. 2019 May 7;116(19):9481-9490. doi: 
+      10.1073/pnas.1818595116. Epub 2019 Apr 24.
+
+PMID- 30955886
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20200302
+LR  - 20200502
+IS  - 1097-4172 (Electronic)
+IS  - 0092-8674 (Print)
+IS  - 0092-8674 (Linking)
+VI  - 177
+IP  - 4
+DP  - 2019 May 2
+TI  - Genome-wide de novo L1 Retrotransposition Connects Endonuclease Activity with 
+      Replication.
+PG  - 837-851.e28
+LID - S0092-8674(19)30233-8 [pii]
+LID - 10.1016/j.cell.2019.02.050 [doi]
+AB  - L1 retrotransposon-derived sequences comprise approximately 17% of the human genome. 
+      Darwinian selective pressures alter L1 genomic distributions during evolution, 
+      confounding the ability to determine initial L1 integration preferences. Here, we 
+      generated high-confidence datasets of greater than 88,000 engineered L1 insertions 
+      in human cell lines that act as proxies for cells that accommodate 
+      retrotransposition in vivo. Comparing these insertions to a null model, in which L1 
+      endonuclease activity is the sole determinant dictating L1 integration preferences, 
+      demonstrated that L1 insertions are not significantly enriched in genes, transcribed 
+      regions, or open chromatin. By comparison, we provide compelling evidence that the 
+      L1 endonuclease disproportionately cleaves predominant lagging strand DNA 
+      replication templates, while lagging strand 3'-hydroxyl groups may prime 
+      endonuclease-independent L1 retrotransposition in a Fanconi anemia cell line. Thus, 
+      acquisition of an endonuclease domain, in conjunction with the ability to integrate 
+      into replicating DNA, allowed L1 to become an autonomous, interspersed 
+      retrotransposon.
+CI  - Copyright © 2019 Elsevier Inc. All rights reserved.
+FAU - Flasch, Diane A
+AU  - Flasch DA
+AD  - Department of Human Genetics, University of Michigan Medical School, Ann Arbor, 
+      Michigan, 48109, USA. Electronic address: daflasch@umich.edu.
+FAU - Macia, Ángela
+AU  - Macia Á
+AD  - Department of Genomic Medicine, GENYO: Centre for Genomics and Oncology 
+      (Pfizer-University of Granada and Andalusian Regional Government), PTS Granada, 
+      18016, Spain.
+FAU - Sánchez, Laura
+AU  - Sánchez L
+AD  - Department of Genomic Medicine, GENYO: Centre for Genomics and Oncology 
+      (Pfizer-University of Granada and Andalusian Regional Government), PTS Granada, 
+      18016, Spain.
+FAU - Ljungman, Mats
+AU  - Ljungman M
+AD  - Department of Radiation Oncology, University of Michigan Comprehensive Cancer 
+      Center, Translational Oncology Program and Center for RNA Biomedicine, University of 
+      Michigan, Ann Arbor, Michigan, 48109, USA; Department of Environmental Health 
+      Sciences, School of Public Health, University of Michigan, Ann Arbor, Michigan, 
+      48109, USA.
+FAU - Heras, Sara R
+AU  - Heras SR
+AD  - Department of Genomic Medicine, GENYO: Centre for Genomics and Oncology 
+      (Pfizer-University of Granada and Andalusian Regional Government), PTS Granada, 
+      18016, Spain.
+FAU - García-Pérez, José L
+AU  - García-Pérez JL
+AD  - Department of Genomic Medicine, GENYO: Centre for Genomics and Oncology 
+      (Pfizer-University of Granada and Andalusian Regional Government), PTS Granada, 
+      18016, Spain; Medical Research Council Human Genetics Unit, Institute of Genetics 
+      and Molecular Medicine (IGMM), University of Edinburgh, Western General Hospital, 
+      Edinburgh EH4 2XU, UK.
+FAU - Wilson, Thomas E
+AU  - Wilson TE
+AD  - Department of Human Genetics, University of Michigan Medical School, Ann Arbor, 
+      Michigan, 48109, USA; Department of Pathology, University of Michigan Medical 
+      School, Ann Arbor, Michigan, 48109, USA. Electronic address: wilsonte@umich.edu.
+FAU - Moran, John V
+AU  - Moran JV
+AD  - Department of Human Genetics, University of Michigan Medical School, Ann Arbor, 
+      Michigan, 48109, USA; Department of Internal Medicine, University of Michigan 
+      Medical School, Ann Arbor, Michigan, 48109, USA. Electronic address: 
+      moranj@umich.edu.
+LA  - eng
+GR  - UM1 HG009382/HG/NHGRI NIH HHS/United States
+GR  - U01 MH106892/MH/NIMH NIH HHS/United States
+GR  - R01 GM060518/GM/NIGMS NIH HHS/United States
+GR  - T32 HG000040/HG/NHGRI NIH HHS/United States
+GR  - R01 CA200731/CA/NCI NIH HHS/United States
+GR  - R01 GM120767/GM/NIGMS NIH HHS/United States
+GR  - IECS-55007420/HHMI/Howard Hughes Medical Institute/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20190404
+TA  - Cell
+JT  - Cell
+JID - 0413066
+RN  - 0 (Retroelements)
+RN  - EC 3.1.- (Endonucleases)
+SB  - IM
+MH  - Cell Line
+MH  - Endonucleases/genetics/metabolism
+MH  - Genome, Human/genetics
+MH  - Genome-Wide Association Study/methods
+MH  - Genomics
+MH  - HeLa Cells
+MH  - Humans
+MH  - Long Interspersed Nucleotide Elements/*genetics
+MH  - Mutagenesis, Insertional/genetics
+MH  - Retroelements/*genetics
+PMC - PMC6558663
+MID - NIHMS1523125
+OTO - NOTNLM
+OT  - *DNA replication
+OT  - *Fanconi anemia
+OT  - *LINE-1
+OT  - *chromatin
+OT  - *evolution
+OT  - *human genome
+OT  - *integration
+OT  - *retrotransposon
+OT  - *transcription
+OT  - *transposable element
+COIS- DECLARATION OF INTERESTS JVM is an inventor on patent US6150160, is a paid 
+      consultant for Gilead Sciences and a privately held company founded by Flagship 
+      Pioneering, and is on the American Society of Human Genetics Board of Directors. The 
+      other authors do not have competing interests.
+EDAT- 2019/04/09 06:00
+MHDA- 2020/03/03 06:00
+CRDT- 2019/04/09 06:00
+PHST- 2018/09/13 00:00 [received]
+PHST- 2019/01/10 00:00 [revised]
+PHST- 2019/02/25 00:00 [accepted]
+PHST- 2019/04/09 06:00 [pubmed]
+PHST- 2020/03/03 06:00 [medline]
+PHST- 2019/04/09 06:00 [entrez]
+AID - S0092-8674(19)30233-8 [pii]
+AID - 10.1016/j.cell.2019.02.050 [doi]
+PST - ppublish
+SO  - Cell. 2019 May 2;177(4):837-851.e28. doi: 10.1016/j.cell.2019.02.050. Epub 2019 Apr 
+      4.
