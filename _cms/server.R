@@ -48,6 +48,12 @@ server <- function(input, output, session) {
                 else badges <- unique(c(x$badges, changingBadge))
             if(length(badges) == 0) badges <- NULL
             cfg[[c$name]][[x$i]]$badges <<- badges
+            out <- cfg[[c$name]]
+            names(out) <- NULL
+            outFile     <- paste0(rootDir, '/', '_data/', c$name, '.yml')
+            archiveFile <- paste0(rootDir, '/', '_data/_archive/', c$name, '-', Sys.Date(), '.yml')
+            file.copy(outFile, archiveFile, overwrite = FALSE)
+            write_yaml(out, outFile)
         }
         c1 <- item1$collection()
         c2 <- item2$collection()        
@@ -55,7 +61,7 @@ server <- function(input, output, session) {
         x2 <- item2$item()
         if(x1$type != 'project') changeItemBadge(c1, x1, x2$badge, remove)
         if(x2$type != 'project') changeItemBadge(c2, x2, x1$badge, remove)
-        config(cfg)
+        config(cfg)   
     }
     observeEvent(input$removeLinkButton, { changeItemBadges(TRUE) })
     observeEvent(input$addLinkButton,    { changeItemBadges(FALSE) })
