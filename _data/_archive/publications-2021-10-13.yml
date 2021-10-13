@@ -1,0 +1,67 @@
+#-------------------------------------------------------------------------------------
+# in addition to information enumerated here, a PI may _optionally_ choose to 
+# create expanded publication information in _publications/<id>.md
+#-------------------------------------------------------------------------------------
+# Publications are ordered on the Publications page as follows:
+#   descending by year, then descending by pmid
+# thus, newest articles appear first, PubMed articles appear before books or other items
+#-------------------------------------------------------------------------------------
+# the 'id' field is the unique identifier used for tagging and md files
+#-------------------------------------------------------------------------------------
+# "authors[1] lastname et al. year" (e.g., 'Wilson et al. 2021') is used as the badge label
+#-------------------------------------------------------------------------------------
+
+# - id: bazzano_2021 # required, must be a string (e.g., quote a pmid as "00000000")
+#   date: 2021-09-30 # the day the publication appeared
+#   pmid:  00000000   # e.g., 00000000, can be missing or null
+#   pmcid: PMC0000000 # e.g., PMC0000000, can be missing or null  
+#   authors:  
+#     - Last AA
+#     - Lastt B
+#   title:    Title of the manuscript
+#   journal:  Journal or other source
+#   citation: xxxx  # typically volume(issue):page-page, or an online publication id
+#   year:     2021
+#   url:      null # a non-PubMed (Central) link; used only if pmid and pmcid are both null
+#   abstract: text # typically entered using the CMS, use on card
+#   badges:
+#     - TYPE=ID # e.g. person=John_Doe, project=project1 (no spaces)
+      
+- id: bazzano_2021
+  date:  2021-09-21
+  pmid:  34263309
+  pmcid: null
+  authors:  
+    - Bazzano D
+    - Lomonaco S
+    - Wilson TE
+  title:    Mapping yeast mitotic 5' resection at base resolution reveals the sequence and positional dependence of nucleases in vivo
+  journal:  Nucleic Acids Research
+  citation: 10.1093/nar/gkab597
+  year:     2021
+  url: null
+  abstract: adflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjas adflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjasadflkajd aflsdjf adslfkj asdlfkjas fdlkajsdf sdafjsldfkjas dlfkjasd flksdjf asdlfkjsad flkdjsa fsadklfjas  
+  badges:
+    - person=Dominic_Bazzano
+    - resource=cell_protocol
+
+- id: park_2020
+  date:  2020-07-15
+  pmid:  34181717
+  pmcid: PMC8287918
+  authors:  
+    - Park SH
+    - Bennett-Baker P
+    - Ahmed S
+    - Arlt MF
+    - Ljungman M
+    - Glover TW
+    - Wilson TE
+  title:    Locus-specific transcription silencing at the FHIT gene suppresses replication stress-induced copy number variant formation and associated replication delay
+  journal:  Nucleic Acids Research
+  citation: 49(13):7507-7524  
+  year:     2020
+  url: null 
+  badges: 
+    - funding=My_R01
+    - project=project1

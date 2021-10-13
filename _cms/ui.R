@@ -1,37 +1,135 @@
-itemPanel <- "display: flex; margin-bottom: 10px;"
-narrowPanel <- "width: 120px; display: inline-block; padding: 5px; border: 1px solid #ccc;"
-widePanel   <- "width: 200px; display: inline-block; padding: 5px; border: 1px solid #ccc;"
-button <- "margin: 5px 0;"
-ui <- fluidPage(
-    style = "padding: 15px",
-    div(style = itemPanel,
-        div(style = narrowPanel,
-            actionButton('projectsButton1',     'Projects',     width = "100%", style = button),
-            actionButton('peopleButton1',       'People',       width = "100%", style = button),
-            actionButton('publicationsButton1', 'Publications', width = "100%", style = button),
-            actionButton('resourcesButton1',    'Resources',    width = "100%", style = button),
-            actionButton('fundingButton1',      'Funding',      width = "100%", style = button),
-            actionButton('newsfeedButton1',     'Newsfeed',     width = "100%", style = button)
+#----------------------------------------------------------------------
+# pubmed import UI
+#----------------------------------------------------------------------
+pubmedUI <- function(...){
+    tagList(
+        tags$ul(
+            tags$li("go to ", "PubMed"), #a("PubMed", href = "https://pubmed.ncbi.nlm.nih.gov/")),
+            tags$li("execute a search"),
+            tags$li("set Display Options to 'PubMed'"),
+            tags$li("copy entire contents to clipboad (e.g., Ctrl-a, Ctrl-C"),
+            tags$li("paste into the box below (e.g., Ctrl-V")
         ),
-        div(id = "itemPanel1",  style = widePanel, uiOutput("items1")),
-        div(id = "badgePanel1", style = widePanel, uiOutput("badges1")) 
-    ),
-    # ,
-    # div(id = "sisterPanel1", style = widePanel, uiOutput("sisters1"))
-
-    div(style = itemPanel,
-        div(style = narrowPanel,
-            actionButton('projectsButton2',     'Projects',     width = "100%", style = button),
-            actionButton('peopleButton2',       'People',       width = "100%", style = button),
-            actionButton('publicationsButton2', 'Publications', width = "100%", style = button),
-            actionButton('resourcesButton2',    'Resources',    width = "100%", style = button),
-            actionButton('fundingButton2',      'Funding',      width = "100%", style = button),
-            actionButton('newsfeedButton2',     'Newsfeed',     width = "100%", style = button)
-        ),
-        div(id = "itemPanel2",  style = widePanel, uiOutput("items2")),
-        div(id = "badgePanel2", style = widePanel, uiOutput("badges2")) 
+        textAreaInput('pubmedImport', 'Paste PubMed formatted citations list here', rows = 5, width = '100%'),
+        uiOutput('confirmPubmedImport')
     )
-    # ,
-    # div(id = "sisterPanel2", style = widePanel, uiOutput("sisters2")) 
+}
 
-)
+#----------------------------------------------------------------------
+# images viewing and link generation
+#----------------------------------------------------------------------
+imagesUI <- function(...){
+    fluidRow(
+        tags$div(
+            style = "margin: 10px;",
+            "To add an image, drag and drop it into Visual Studio Code into the proper folder under 'assets/images'. You may need to reload this browser." # nolint
+        ),
+        box(
+            width = 7,
+            title = "File Selector",
+            status = 'primary',
+            solidHeader = TRUE,
+            collapsible = TRUE,
+            # custom search box
+            shinyTree(
+                "fileTree",
+                checkbox = FALSE,
+                search = FALSE,
+                searchtime = 250,
+                dragAndDrop = FALSE,
+                types = NULL,
+                theme = "default",
+                themeIcons = FALSE,
+                themeDots = TRUE,
+                sort = FALSE,
+                unique = FALSE,
+                wholerow = TRUE,
+                stripes = FALSE,
+                multiple = FALSE,
+                animation = 200,
+                contextmenu = FALSE
+            )
+        ),
+        box(
+            width = 5,
+            title = "Selected Image",
+            status = 'primary',
+            solidHeader = TRUE,
+            textInput('imagePathCopy', '', ''),
+            textOutput('imageSize'),
+            imageOutput('selectedImage')
+        )
+    )
+}
+
+#----------------------------------------------------------------------
+# badge generation and item linking
+#----------------------------------------------------------------------
+badgesUI <- function(...){
+    source('itemSelector.R', local = TRUE)
+    source('itemReporter.R', local = TRUE)
+    tagList(fluidRow(
+        itemReporterUI('item1', 1),
+        box(
+            width = 2,
+            title = "LINK",
+            status = 'primary',
+            solidHeader = TRUE,
+            uiOutput('linkAction')
+        ),
+        itemReporterUI('item2', 2)
+    ),
+    fluidRow(
+        itemSelectorUI('item1', 1),
+        itemSelectorUI('item2', 2)
+    ))
+}
+
+#----------------------------------------------------------------------
+# set up the CMS page layout
+#----------------------------------------------------------------------
+# htmlHeadElements <- function(){
+#         tags$head(
+#         # tags$link(rel = "icon", type = "image/png", href = "logo/favicon-16x16.png"), # favicon
+#         # tags$link(href = "framework.css", rel = "stylesheet", type = "text/css"), # framework js and css
+#         # tags$script(src = "framework.js", type = "text/javascript", charset = "utf-8"),
+#         tags$script(src = "ace/src-min-noconflict/ace.js", type = "text/javascript", charset = "utf-8")
+#     )
+# }
+getTabMenuItem <- function(tabId, tabLabel){
+    menuItem(
+        tags$div(tabLabel,  class = "sidebar-action"), 
+        tabName = tabId
+    )  
+}
+getTabItem <- function(tabId, uiFn){
+    tabItem(
+        tabName = tabId, 
+        uiFn(tabId)
+    )
+}
+ui <- function(...){ 
+    dashboardPage(
+        dashboardHeader(
+            title = "umich-labs",
+            titleWidth = "175px"
+        ),
+        dashboardSidebar(
+            sidebarMenu(id = "sidebarMenu",  
+                getTabMenuItem('pubmed', 'Import Pubmed'),        
+                getTabMenuItem('images', 'Images'),        
+                getTabMenuItem('badges', 'Badges')
+            ),
+            # htmlHeadElements(), # yes, place the <head> content here (even though it seems odd)
+            width = "175px" # must be here, not in CSS
+        ),
+        dashboardBody(
+            useShinyjs(), # enable shinyjs
+            tabItems(              
+                getTabItem('pubmed', pubmedUI),
+                getTabItem('images', imagesUI),
+                getTabItem('badges', badgesUI)
+            )
+        )
+    )
+}

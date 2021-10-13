@@ -1,103 +1,63 @@
-MainButtons <- list(
-    projectsButton = list(collection = 'projects', itemType = 'project'), 
-    peopleButton = list(collection = 'people', itemType = 'person'), 
-    publicationsButton = list(collection = 'publications', itemType = 'publication'), 
-    resourcesButton = list(collection = 'resources', itemType = 'resource'), 
-    fundingButton = list(collection = 'funding', itemType = 'funding'), 
-    newsfeedButton = list(collection = 'newsfeed', itemType = 'post')
-)
-Collections <- list(
-    project = 'projects',
-    person = 'people',
-    publication = 'publications',
-    resource = 'resources',
-    funding = 'funding',
-    post = 'newsfeed'
-)
-button <- "margin: 5px 0;"
-server <- function(input, output) { 
+# main CMS server function
+server <- function(input, output, session) { 
     source('utilities.R', local = TRUE)
 
-    # initialize variables
-    mainButtons <- c(reactiveVal(NULL), reactiveVal(NULL))
-    collections <- c(reactiveVal(NULL), reactiveVal(NULL))
-    itemTypes   <- c(reactiveVal(NULL), reactiveVal(NULL))
-    itemIs      <- c(reactiveVal(NULL), reactiveVal(NULL))
-    badgeJs     <- c(reactiveVal(NULL), reactiveVal(NULL))
+    # load all site data
+    source('config.R', local = TRUE)
+    config <- reactiveVal( loadSiteConfig() )
 
+    # handle PubMed import
+    confirmPubmedData <- reactiveVal(NULL)
+    source('importPubMed.R', local = TRUE)
+    observeEvent(input$pubmedImport, { importPubMed() })
+    output$confirmPubmedImport <- renderUI({ confirmPubmedImport() })
 
-    # # extract the item of a clicked badge
-    # output$sisters <- renderUI({
+    # handle images viewing and path generation
+    source('images.R', local = TRUE)
 
-    #     message('output$sisters')
-    #     req(badgeJ())
-    #     badge <- config[[collection()]][[itemI()]]$badges[[badgeJ()]]
-    #     badge <- strsplit(badge, '=')[[1]]
-    #     items <- config[[collections[[badge[1]]]]]
-    #     match <- sapply(items, function(x) x$id == badge[2])
-    #     sister <- items[match][[1]]
+    # handle badge generation
+    source('itemSelector.R', local = TRUE)
+    source('itemReporter.R', local = TRUE)
+    item1 <- itemSelectorServer('item1', 1)
+    item2 <- itemSelectorServer('item2', 2)
+    itemReporterServer('item1', 1, item1)
+    itemReporterServer('item2', 2, item2)
 
-    #     str(sister)
-
-    #     lapply(seq_along(sister$badges), function(k){
-    #         buttonId <- paste0('sister_', k)
-
-    #         print(sister$badges[k]) 
-    #         actionButton(buttonId, sister$badges[k], width = "100%", style = button)
-    #     })
-    # })
-
-    # # load existing badges
-    # output$badges <- renderUI({
-    #     req(itemI())
-    #     badges <- config[[collection()]][[itemI()]]$badges
-    #     lapply(seq_along(badges), function(j){
-    #         buttonId <- paste0('badge_', j)
-    #         actionButton(buttonId, badges[j], width = "100%", style = button)
-    #     })
-    # })
-    # lapply(1:100, function(j){
-    #     buttonId <- paste0('badge_', j)
-    #     observeEvent(input[[buttonId]], {
-    #         badgeJ(j)
-    #     })
-    # })
-
-    # load a set of items
-    lapply(1:2, function(n){
-        output[[paste0('items', n)]] <- renderUI({
-            req(mainButtons[[n]]())
-            collection <- MainButtons[[mainButtons[[n]]()]]$collection
-            items <- config[[collection]]        
-            lapply(seq_along(items), function(i){
-                buttonId <- paste0('item_', n, '_', i)   
-                actionButton(buttonId, items[[i]]$id, width = "100%", style = button)
-            })
-        })
-        lapply(1:100, function(i){
-            buttonId <- paste0('item_', n, '_', i)   
-            observeEvent(input[[buttonId]], {
-                badgeJs[[n]](NULL)
-                itemIs[[n]](i)
-            })
-        })
+    # handle item linking
+    output$linkAction <- renderUI({
+        req(item1$item())
+        req(item2$item())
+        x1 <- item1$item()
+        x2 <- item2$item()
+        req(x1$type != 'post') # can't tag posts in UI (must edit _content file), and items never tag posts
+        req(x2$type != 'post')
+        req(x1$type != x2$type) # we never link items of the same type
+        if((x1$badge %in% x2$badges && x2$badge %in% x1$badges) ||
+           (x1$type == 'project' && x1$badge %in% x2$badges) || # projects are not tagged, and items can tag projects
+           (x2$type == 'project' && x2$badge %in% x1$badges)){
+            actionButton('removeLinkButton', "REMOVE", width = "100%", style = button)
+        } else {
+            actionButton('addLinkButton', "ADD", width = "100%", style = button)
+        }
     })
-
-    # react to collection selection
-    lapply(1:2, function(n){
-        lapply(names(MainButtons), function(buttonName){
-            buttonId <- paste0(buttonName, n)
-            print(buttonId)
-            observeEvent(input[[buttonId]], {
-                badgeJs[[n]](NULL)
-                itemIs[[n]](NULL)
-                mainButtons[[n]](buttonName)
-            })            
-        })
+    observeEvent(input$addLinkButton, {
+        x1 <- item1$item()
+        x2 <- item2$item()
+        c1 <- item1$collection() # a list of items, same as a _data collection, except NAMED
+        c2 <- item2$collection()
+        if(x1$type != 'project'){
+            message('will tag')
+            message(x1$badge)
+        }
+        if(x2$type != 'project'){
+            message('will tag')
+            message(x2$badge)
+        }
     })
+    observeEvent(input$addLinkButton, {
+        x1 <- item1$item()
+        x2 <- item2$item()
+        c1 <- item1$collection()
+        c2 <- item2$collection()
+    })  
 }
-
-# List of 6
-#  $ people      :List of 3
-#   ..$ :List of 9
-#   .. ..$ id     : chr "John_Doe"
