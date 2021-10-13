@@ -1,0 +1,6 @@
+{% assign event = site.data.events | where_exp: "item", "item.id == badge_id" | first %}
+{% if event %}
+    <div class="{{ col_class }}">
+        {% include cards/event-card.html %}
+    </div> 
+{% endif %}

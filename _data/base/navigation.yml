@@ -13,17 +13,20 @@
 - text: Publications # simpler data set set in publications.yml
   href: /publications/ 
 
-- text: News # extended event descriptions in _posts .md files
-  href: /newsfeed/  
+- text: Resources # simpler data set set in funding.yml
+  href: /resources/  
 
 - text: More
   menu: # Dropdown menu (one level deep only) 
 
-  - text: Resources # simpler data set set in funding.yml
-    href: /resources/  
+  - text: Events # simpler data set set in events.yml
+    href: /events/  
 
   - text: Funding # simpler data set set in funding.yml
     href: /funding/  
+
+  - text: News # extended event descriptions in _posts .md files
+    href: /newsfeed/  
 
   - text: Contact # simple page unto itself, no connections to other data types
     href: /contact/

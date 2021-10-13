@@ -3,7 +3,12 @@
 
 {% if filtered.size > 0 %}
 <div class="row publications">
-{% if layout.embedded_lists %}<h4 class="col mt-2">Publications</h4>{% endif %}
+{% if layout.embedded_lists %}
+<h4 class="col mt-2"><a class="section-header-link" href="{{ 'publications' | relative_url }}">
+    Publications
+    <i class="fa fa-caret-right" style="font-size: 0.8em;"></i>
+</a></h4>
+{% endif %}
 
 {% assign group_by_year = filtered | group_by: "year" %}
 {% assign by_year_desc = group_by_year | sort: "name" | reverse %}

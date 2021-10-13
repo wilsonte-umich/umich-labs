@@ -3,6 +3,7 @@ title: Research Project 3
 subtitle: This is my third project
 description: This is slightly longer description of my third project which is deliberately being made very long, too long to fit properly on the card
 order: 1
+active: true
 # card_image: "/assets/images/vintage-newspaper-print-downsize.jpg"
 card_title: Project 3 # used if card_image is null; defaults to title
 categories: 

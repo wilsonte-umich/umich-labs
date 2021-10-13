@@ -1,6 +1,6 @@
 ---
 layout: newsfeed
-title: Events and accolades
+title: News Blog
 subtitle: null
 banner_image: /assets/images/vintage-newspaper-print-downsize.jpg
 permalink: /newsfeed/

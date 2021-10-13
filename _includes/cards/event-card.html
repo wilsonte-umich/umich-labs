@@ -1,0 +1,38 @@
+{% assign collection = site.events %}
+{% assign item_id = event.id %}
+{% assign collection_name = "events" %}
+{% assign item_type = "event" %}
+{% assign slug = event.id %}
+{% include base/optional-item-link-prep.html %}
+
+<a id="{{ event.id }}"></a>
+<div class="card event-card mb-3">
+    <div class="card-body">
+        <div>
+            {% capture link_html %}
+                <strong>{{ event.title }}</strong>
+            {% endcapture %}
+            {% include base/optional-item-link.html link_html=link_html %}
+            
+            <span class="float-right">{% include base/recent-news-link.html %}</span>
+        </div> 
+
+        {% capture link_html %}
+            <div>{{ event.type | capitalize }}</div> 
+            <div>{{ event.date | date: "%B %e, %Y" }}</div> 
+        {% endcapture %}
+        {% include base/optional-item-link.html link_html=link_html %}        
+        <div><a class="external-link" href="{{ event.url }}">{{ event.url }}</a></div>         
+        {% capture link_html %}
+            {% if page.layout == 'events' %}
+            <div class="mt-1 pl-4">{{ event.description | truncatewords: site.max_words_card_long }}</div>
+            {% endif %}  
+        {% endcapture %}
+        {% include base/optional-item-link.html link_html=link_html %}
+    </div>
+
+    {% if page.layout == 'events' %}
+        {% assign item = event %}    
+        {% include base/badges.html %}  
+    {% endif %}  
+</div>

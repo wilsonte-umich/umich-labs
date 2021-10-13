@@ -1,0 +1,14 @@
+---
+layout: base/base
+description: Template for events page
+remark: See also page.layout == 'events' in head.html and jumbotron.html
+type: event
+---
+
+<div class="row">
+    <div class="col">
+        {{ content }}
+    </div>
+</div>
+  
+{% include lists/events.html %}

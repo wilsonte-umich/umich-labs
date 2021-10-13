@@ -1,0 +1,12 @@
+#-------------------------------------------------------------------------------------
+# in addition to information enumerated in _data/events.yml, a PI may 
+# _optionally_ choose to have an expanded page of information in _events/<id>.md
+#-------------------------------------------------------------------------------------
+# Jekyll frontmatter for each file that is created is as follows:
+# ---
+# title: title # shown in the top banner
+# subtitle: A bit more explanation # shown in the top banner
+# card_image: "/assets/images/restricted/portal_blur_200px.png" # optional image for the top banner
+# card_title: null # used if card_image is null; defaults to title
+# ---
+#-------------------------------------------------------------------------------------

@@ -20,9 +20,9 @@ force_wide_person: true
     badge_script="lists/post-card/post-person.html" %}
 
   {% include lists/post-card/post-list.html 
-    item_type="publication" 
-    collection_name="Publications" 
-    badge_script="lists/post-card/post-publication.html" %}
+    item_type="project" 
+    collection_name="Projects" 
+    badge_script="lists/post-card/post-project.html" %}
 
   {% include lists/post-card/post-list.html 
     item_type="resource" 
@@ -30,13 +30,18 @@ force_wide_person: true
     badge_script="lists/post-card/post-resource.html" %}
 
   {% include lists/post-card/post-list.html 
+    item_type="event" 
+    collection_name="Events" 
+    badge_script="lists/post-card/post-event.html" %}
+
+  {% include lists/post-card/post-list.html 
+    item_type="publication" 
+    collection_name="Publications" 
+    badge_script="lists/post-card/post-publication.html" %}
+
+  {% include lists/post-card/post-list.html 
     item_type="funding" 
     collection_name="Funding" 
     badge_script="lists/post-card/post-funding.html" %}
-
-  {% include lists/post-card/post-list.html 
-    item_type="project" 
-    collection_name="Projects" 
-    badge_script="lists/post-card/post-project.html" %}
 
 </div>

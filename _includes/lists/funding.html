@@ -3,7 +3,12 @@
 
 {% if filtered.size > 0 %}
 <div class="row funding">
-{% if layout.embedded_lists %}<h4 class="col mt-2">Funding</h4>{% endif %}
+{% if layout.embedded_lists %}
+<h4 class="col mt-2"><a class="section-header-link" href="{{ 'funding' | relative_url }}">
+    Funding
+    <i class="fa fa-caret-right" style="font-size: 0.8em;"></i>
+</a></h4>
+{% endif %}
 
 {% for funding in filtered | sort: "end_date" | reverse %}
     <div class="{% if page.layout == 'funding' %}col-xl-6{% else %}col-12{% endif %}">

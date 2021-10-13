@@ -1,0 +1,20 @@
+{% assign collection = site.data.events %}
+{% include lists/filtered-list.html %}
+
+{% if filtered.size > 0 %}
+<div class="row events">
+{% if layout.embedded_lists %}
+<h4 class="col mt-2"><a class="section-header-link" href="{{ 'events' | relative_url }}">
+    Events
+    <i class="fa fa-caret-right" style="font-size: 0.8em;"></i>
+</a></h4>
+{% endif %}
+
+{% for event in filtered %}
+    <div class="{% if page.layout == 'events' %}col-xl-6{% else %}col-12{% endif %}">
+    {% include cards/event-card.html %}
+    </div>
+{% endfor %}
+
+</div>
+{% endif %}

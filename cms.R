@@ -1,5 +1,6 @@
 # initialize
 library(yaml)
+library(shiny)
 setwd(dirname(parent.frame(2)$ofile))
 config <- list()
 
@@ -23,10 +24,9 @@ for(type in contentTypes){
         }
     }
 }
-print(config$publications[[1]])
 
 # extract all known badges
-badgeTypes <- c('projects', dataTypes)
+badgeTypes <- c(contentTypes, dataTypes) # c('projects', dataTypes)
 types <- list(
     projects = 'project',
     newsfeed = 'post',
@@ -64,5 +64,11 @@ if(isBadBadge) {
     # stop("stopping with bad badges")
 }
 
-message("declared badges:")
-print(declaredBadges)
+# message("declared badges:")
+# print(declaredBadges)
+
+
+# str(config)
+
+setwd('_cms')
+runApp(launch.browser = FALSE, port = 8000)

@@ -1,0 +1,39 @@
+#-------------------------------------------------------------------------------------
+# in addition to information enumerated here, a PI may _optionally_ choose to 
+# create expanded event information in _events/<id>.md
+#-------------------------------------------------------------------------------------
+# Events are ordered on the Events page as follows:
+#   by descending _date order
+#-------------------------------------------------------------------------------------
+# the 'id' field is the unique identifier used for tagging and md files
+# '_' characters are removed from the 'id' field to create the name used in Badges
+#-------------------------------------------------------------------------------------
+
+# - id: Lab_Party_2021 # internal identifier used in newsfeed posts and other places
+#   title: Lab Party 2021
+#   type: Social Event
+#   date: 2021-11-15
+#   description: All lab members past and present are invited to join us in Ann Arbor. Please follow the link to find out where it will be held.
+#   location: null # where the event will be held
+#   url: https://link.to.location/
+#   badges: 
+#     - project=project3 # e.g. person=John_Doe, project=project1 (no spaces)
+
+- id: Lab_Party_2021
+  title: Lab Party 2021
+  type: Social Event
+  date: 2021-11-15
+  description: All lab members past and present are invited to join us in Ann Arbor. Please follow the link to find out where it will be held.
+  location: Doe Estates
+  url: https://link.to.location/
+  badges: null
+
+- id: 1st_Annual_Symposium
+  title: 1st Annual Doe Laboratory Research Symposium
+  type: Symposium
+  date: 2020-08-01
+  description: The public is welcome to this event which will feature awesome speakers.
+  location: Kahn Auditorium
+  url: null
+  badges: 
+    - project=project3

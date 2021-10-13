@@ -1,6 +1,6 @@
 ---
 layout: base/base
-type: funding
+type: event
 embedded_lists: true
 suppress_narrow_ticker: true
 ---
@@ -11,9 +11,7 @@ suppress_narrow_ticker: true
 <div class="row">
   <div class="col-md-10 mx-auto {{ item_class }}">
     {{ content }}
-    {% include lists/resources.html %}    
-    {% include lists/events.html %}  
-    {% include lists/publications.html %}
+    {% include lists/funding.html %}
   </div>
 
   {% include lists/news-ticker.html %}

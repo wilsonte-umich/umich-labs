@@ -70,22 +70,28 @@ collections:
     link: hash_always
     output: true   
     hue: 270 # purple
+  events: 
+    name: events
+    item: event
+    link: hash_always
+    output: true   
+    hue: 180 # cyan
   newsfeed: 
     name: newsfeed
     item: post
     link: never
     output: true
-    hue: 180 # cyan
+    hue: 315 # magenta
 
 # eight equally spaced color hues: 
-# 0 red
-# 45 gold
+# 0 red = resources
+# 45 gold = people
 # 90 limegreen
-# 135 green
-# 180 cyan
-# 225 blue
-# 270 purple
-# 315 magenta
+# 135 green = funding
+# 180 cyan = events
+# 225 blue = projects, also default banner color
+# 270 purple = publications
+# 315 magenta = newsfeed (color never used on live page)
 
 #-------------------------------------------------------------------------------------
 # frontmatter defaults; only developers should edit this section
@@ -126,6 +132,13 @@ defaults:
     values:
       permalink: "/resources/:slug/"
       layout: "items/resource" 
+  -
+    scope:
+      path: ""
+      type: "events"
+    values:
+      permalink: "/events/:slug/"
+      layout: "items/event" 
   -
     scope:
       path: ""
