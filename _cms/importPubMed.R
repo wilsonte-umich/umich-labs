@@ -115,11 +115,12 @@ importPubMed <- function(){
     }
 
     # pass data to confirmation
+    dates <- sapply(publications, function(x) x$date)
     confirmPubmedData(list(
         nNewCitations = nNewCitations,
         nChangedCitations = nChangedCitations,
         newPublications = newPublications,
-        publications = publications
+        publications = publications[rev(order(dates))] # ensure newest comes at top of list
     ))
 }
 

@@ -28,7 +28,7 @@ itemSelectorUI <- function(id, i) {
     box(
         width = 6,
         style = "padding: 0; margin: 0;",
-        title = paste0("Item #", i),
+        title = paste0("Select Item #", i),
         status = 'primary',
         solidHeader = TRUE,
         div(style = "display: flex;",

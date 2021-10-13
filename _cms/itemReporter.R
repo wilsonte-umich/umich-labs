@@ -7,7 +7,7 @@ itemReporterUI <- function(id, i) {
     ns <- NS(id)
     box(
         width = 5,
-        title = paste("Item #", i),
+        title = paste("Item #", i, " Badge"),
         status = 'primary',
         solidHeader = TRUE,
         textInput(ns('itemCopy'), '', '')

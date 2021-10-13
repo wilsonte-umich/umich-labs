@@ -7,8 +7,8 @@ pubmedUI <- function(...){
             tags$li("go to ", "PubMed"), #a("PubMed", href = "https://pubmed.ncbi.nlm.nih.gov/")),
             tags$li("execute a search"),
             tags$li("set Display Options to 'PubMed'"),
-            tags$li("copy entire contents to clipboad (e.g., Ctrl-a, Ctrl-C"),
-            tags$li("paste into the box below (e.g., Ctrl-V")
+            tags$li("copy entire contents to clipboad (e.g., Ctrl-A, Ctrl-C)"),
+            tags$li("paste into the box below (e.g., Ctrl-V)")
         ),
         textAreaInput('pubmedImport', 'Paste PubMed formatted citations list here', rows = 5, width = '100%'),
         uiOutput('confirmPubmedImport')
@@ -20,9 +20,10 @@ pubmedUI <- function(...){
 #----------------------------------------------------------------------
 imagesUI <- function(...){
     fluidRow(
-        tags$div(
-            style = "margin: 10px;",
-            "To add an image, drag and drop it into Visual Studio Code into the proper folder under 'assets/images'. You may need to reload this browser." # nolint
+        tags$ul(
+            tags$li("To add an image, drag and drop it into Visual Studio Code into the proper folder under 'assets/images'."), # nolint
+            tags$li("You may need to reload this browser."),
+            tags$li("Copy the file path into 'card_image' or other image tag.")
         ),
         box(
             width = 7,
@@ -68,21 +69,27 @@ imagesUI <- function(...){
 badgesUI <- function(...){
     source('itemSelector.R', local = TRUE)
     source('itemReporter.R', local = TRUE)
-    tagList(fluidRow(
-        itemReporterUI('item1', 1),
-        box(
-            width = 2,
-            title = "LINK",
-            status = 'primary',
-            solidHeader = TRUE,
-            uiOutput('linkAction')
+    tagList(
+        tags$ul(
+            tags$li("Select two items and click ADD or REMOVE to establish a badge link between them."), # nolint
+            tags$li("Copy a badge into a news post's markdown file as needed.")
+        ),     
+        fluidRow(
+            itemReporterUI('item1', 1),
+            box(
+                width = 2,
+                title = "-LINK-",
+                status = 'primary',
+                solidHeader = TRUE,
+                uiOutput('linkAction')
+            ),
+            itemReporterUI('item2', 2)
         ),
-        itemReporterUI('item2', 2)
-    ),
-    fluidRow(
-        itemSelectorUI('item1', 1),
-        itemSelectorUI('item2', 2)
-    ))
+        fluidRow(
+            itemSelectorUI('item1', 1),
+            itemSelectorUI('item2', 2)
+        )
+    )
 }
 
 #----------------------------------------------------------------------
@@ -116,9 +123,9 @@ ui <- function(...){
         ),
         dashboardSidebar(
             sidebarMenu(id = "sidebarMenu",  
-                getTabMenuItem('pubmed', 'Import Pubmed'),        
-                getTabMenuItem('images', 'Images'),        
-                getTabMenuItem('badges', 'Badges')
+                getTabMenuItem('badges', 'Badges'),
+                getTabMenuItem('images', 'Images'),                  
+                getTabMenuItem('pubmed', 'Import Pubmed')      
             ),
             # htmlHeadElements(), # yes, place the <head> content here (even though it seems odd)
             width = "175px" # must be here, not in CSS

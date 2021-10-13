@@ -40,24 +40,23 @@ server <- function(input, output, session) {
             actionButton('addLinkButton', "ADD", width = "100%", style = button)
         }
     })
-    observeEvent(input$addLinkButton, {
-        x1 <- item1$item()
-        x2 <- item2$item()
-        c1 <- item1$collection() # a list of items, same as a _data collection, except NAMED
-        c2 <- item2$collection()
-        if(x1$type != 'project'){
-            message('will tag')
-            message(x1$badge)
+    changeItemBadges <- function(remove){
+        cfg <- config()
+        changeItemBadge <- function(c, x, changingBadge, remove){
+            if(is.null(x$badges)) x$badges <- character()     
+            if(remove) badges <- x$badges[x$badges != changingBadge]
+                else badges <- unique(c(x$badges, changingBadge))
+            if(length(badges) == 0) badges <- NULL
+            cfg[[c$name]][[x$i]]$badges <<- badges
         }
-        if(x2$type != 'project'){
-            message('will tag')
-            message(x2$badge)
-        }
-    })
-    observeEvent(input$addLinkButton, {
-        x1 <- item1$item()
-        x2 <- item2$item()
         c1 <- item1$collection()
-        c2 <- item2$collection()
-    })  
+        c2 <- item2$collection()        
+        x1 <- item1$item()
+        x2 <- item2$item()
+        if(x1$type != 'project') changeItemBadge(c1, x1, x2$badge, remove)
+        if(x2$type != 'project') changeItemBadge(c2, x2, x1$badge, remove)
+        config(cfg)
+    }
+    observeEvent(input$removeLinkButton, { changeItemBadges(TRUE) })
+    observeEvent(input$addLinkButton,    { changeItemBadges(FALSE) })
 }
