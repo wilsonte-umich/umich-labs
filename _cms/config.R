@@ -40,7 +40,10 @@ loadSiteConfig <- function(){
             if(!endsWith(file, "_README") && !endsWith(file, "_archive")){
                 id <- rev(strsplit(file, '/')[[1]])[1]
                 id <- strsplit(id, '\\.')[[1]][1]
-                config[[type]][[id]] <- read_yaml(file)
+                x <- slurpFile(file)
+                x <- gsub('\r', '', x)
+                x <- strsplit(x, "---\n")[[1]]
+                config[[type]][[id]] <- read_yaml(text = paste0("---\n", x[2]))
                 config[[type]][[id]]$id <- id 
             }
         }
