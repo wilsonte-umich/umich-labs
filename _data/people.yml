@@ -23,7 +23,7 @@
 #   github: null
 #   twitter: null
 #   description: Solved really important problems in project 2.
-#   status: current # or "past"
+#   status: active # or "collaborator" or "past"
 #   current_position: PhD student, Genetics and Genomics Program, University of Michigan # optional, to indicate where people are now
 #   badges:
 #     - TYPE=ID # e.g. person=John_Doe, project=project1 (no spaces)
@@ -40,7 +40,7 @@
   email: jdoe@umich.edu
   github: jdoe-umich
   twitter: null
-  status: current
+  status: active
 
 #-------------------------------------------------------------------------------------
 # current group members
@@ -55,7 +55,7 @@
   github: null
   twitter: null
   description: Master of all trades, fills many roles as needed
-  status: current
+  status: active
   badges:
     - project=project1
 

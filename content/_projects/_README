@@ -16,6 +16,8 @@
 # subtitle: A bit more explanation # shown in the top banner
 # description: A little bit longer description of the project, but not too long # shown in a card
 # card_image: "/assets/images/restricted/portal_blur_200px.png" # optional image to illustrate the card
+# order: 2
+# active: true
 # card_title: null # used if card_image is null; defaults to title
 # categories: # allow Projects to be related to each other and viewed together via search badges on the Projects page
 #     - DNA Repair

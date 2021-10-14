@@ -9,6 +9,12 @@
 </div>
 {% endif %}
 
+{% if status_group.name == "collaborator" %}
+<div class="col mb-4 pt-4" style="border-top: 1px solid #ccc;">
+<h4>{{ status_group.name | capitalize}}s and colleagues</h4>
+</div>
+{% endif %}
+
 <div class="row people mb-4">
 {% for person in status_group.items %}
     {% include cards/person-card.html %}
