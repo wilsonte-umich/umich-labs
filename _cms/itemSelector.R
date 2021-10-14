@@ -70,7 +70,8 @@ item <- reactive({
         id = item$id,
         type = collection()$itemType,
         badge = paste(collection()$itemType, item$id, sep = "="), # this items badge (for use by others)
-        badges = item$badges # the badges declared by this item
+        badges = item$badges, # the badges declared by this item
+        title = item$title
     )
 })
 itemI <- reactiveVal(NULL)

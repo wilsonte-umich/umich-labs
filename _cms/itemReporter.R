@@ -7,10 +7,13 @@ itemReporterUI <- function(id, i) {
     ns <- NS(id)
     box(
         width = 5,
+        height = '185px',
+        style = "overflow: clip;",
         title = paste("Item #", i, " Badge"),
         status = 'primary',
         solidHeader = TRUE,
-        textInput(ns('itemCopy'), '', '')
+        textInput(ns('itemCopy'), '', ''),
+        tags$div(tags$strong(textOutput(ns('itemTitle'))))
     )
 }
 #----------------------------------------------------------------------
@@ -26,6 +29,13 @@ itemReporterServer <- function(id, i, item) {
 observe({
     req(item$item())
     updateTextInput(session, 'itemCopy', value = item$item()$badge)
+})
+
+# show the title to help identify the item
+output$itemTitle <- renderText({
+    req(item$item())
+    str(item$item)
+    item$item()$title
 })
 
 # module return value
