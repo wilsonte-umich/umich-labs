@@ -16,3 +16,11 @@ categories:
 This is complete description of my first project.
 
 Keep adding markdown here. See pages/home.md for hints.
+
+This is an example of a PubMed citation {% include citation.html search="wilson te michigan" %}.
+
+{% include figure.html  
+    image="assets/images/chemical-reaction-science-chemistry.jpg"
+    title="This is the 'title' provided to figure.html."
+    caption="This is the text in the 'caption' provided to figure.html."
+%}
