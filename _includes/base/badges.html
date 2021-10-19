@@ -2,7 +2,7 @@
 {% if item.badges %}
 <div class="card-footer">
 
-{% for badge in item.badges %}
+{% for badge in item.badges | sort %}
   {% assign parts = badge | split: "=" %}
   {% assign badge_type  = parts[0] | strip %}
   {% assign badge_value = parts[1] | strip %}
