@@ -4,16 +4,17 @@
     {% assign col_width = 8 %}
 {% endif %}
 
+{% capture caption %}
+<p class="mb-1">
+    <strong>{{ include.title }}</strong>
+    {{ include.caption }}
+</p>
+{% endcapture %}
+
 <div class="row m-4 p-2" style="border: 1px solid grey; border-radius: 10px; font-size: 0.925em;">
-    <div class="col d-none d-xl-block">
-        <strong><p class="mb-1">{{ include.title }}</p></strong>
-        <p class="mb-1">{{ include.caption }}</p>
-    </div>
+    <div class="col d-none d-xl-block">{{ caption }}</div>
     <div class="col-12 col-xl-{{ col_width }}">
         <img src="{{ include.image | relative_url }}" style="width: 100%;" />
     </div>
-    <div class="col d-xl-none mt-2">
-        <strong><p class="mb-1">{{ include.title }}</p></strong>
-        <p class="mb-1">{{ include.caption }}</p>
-    </div>    
+    <div class="col d-xl-none mt-2">{{ caption }}</div>
 </div>
