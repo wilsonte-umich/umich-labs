@@ -73,6 +73,10 @@
 }
 
 // projects 
+.project-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
 .project-card:hover {
   box-shadow: 4px 4px 8px #aaa;
   border: 1px solid #aaa;
