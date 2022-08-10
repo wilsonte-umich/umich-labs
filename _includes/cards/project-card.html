@@ -1,5 +1,5 @@
 <a id="{{ project.id }}"></a>
-<div class="card {{ include.hide }}" 
+<div class="card project-card {{ include.hide }}" 
      data-categories="{% for category in project.categories %}{{ category | strip }}|{% endfor %}">
   {% unless layout.suppress_project_image %}
     <a href="{{ project.url | relative_url }}">

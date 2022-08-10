@@ -72,11 +72,18 @@
   overflow-x: clip;
 }
 
+// projects 
+.project-card:hover {
+  box-shadow: 4px 4px 8px #aaa;
+  border: 1px solid #aaa;
+}
+
 // newsfeed posts
 .post-card {
-  border: none;
+  border: 1px solid transparent;
   border-top: 1px solid grey;
   border-radius: 0;
+  padding: 5px;
 
   .card-body {
     padding: 0;
@@ -88,9 +95,13 @@
     padding: 0;
   }
 }
+.post-card:hover {
+  box-shadow: 4px 4px 8px #aaa;
+  border-left: 1px solid #ccc;
+}
 
 // publications
-.publication-card {
+.publication-card, .funding-card, .resource-card, .event-card {
   border: none;
   border-top: 1px solid grey;
   border-left: 1px solid grey;
@@ -100,18 +111,22 @@
   .external-link {
     color: $link-color !important; 
   }
-}
 
-// funding and resources
-.funding-card, .resource-card, .event-card {
-  border-radius: 10px;
-  .external-link {
-    color: $link-color !important; 
-  }
   .external-link:hover {
     color: lighten($link-color, 10%) !important;
   }
 }
+
+// funding and resources
+// .funding-card, .resource-card, .event-card {
+//   border-radius: 10px;
+//   .external-link {
+//     color: $link-color !important; 
+//   }
+//   .external-link:hover {
+//     color: lighten($link-color, 10%) !important;
+//   }
+// }
 
 .recent-news {
   display: inline-block;
